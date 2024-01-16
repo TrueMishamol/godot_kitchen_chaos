@@ -1,4 +1,14 @@
 [gd_resource type="Environment" format=3 uid="uid://bw4vsin1ri5u6"]
 
 [resource]
-background_color = Color(0.635294, 0.635294, 0.635294, 1)
+background_mode = 1
+background_color = Color(0.847059, 0.776471, 0.764706, 1)
+tonemap_mode = 2
+tonemap_exposure = 0.6
+tonemap_white = 1.5
+ssao_radius = 0.3
+ssao_intensity = 4.0
+glow_enabled = true
+adjustment_enabled = true
+adjustment_contrast = 1.2
+adjustment_saturation = 1.2
