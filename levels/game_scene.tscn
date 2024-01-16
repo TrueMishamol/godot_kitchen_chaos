@@ -15,7 +15,7 @@ shader_parameter/SOFTNESS = 1.3
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ih6li"]
 material = ExtResource("3_2g30f")
-size = Vector2(16, 16)
+size = Vector2(32, 32)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jj6lt"]
 size = Vector3(16, 1, 16)
@@ -38,7 +38,7 @@ size_flags_vertical = 4
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 21.5, 21.3)
-fov = 15.0
+fov = 25.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.64784, 0.538657, -0.538657, 1.38313e-08, 0.707107, 0.707107, 0.761776, -0.458092, 0.458093, 0, 0, 0)

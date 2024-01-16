@@ -1,31 +1,38 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@export var player_visual: Node3D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+const MAX_SPEED = 7
+const ACCELERATION = 30
+const FRICTION = 30
+const ROTATION_ACCELERATION = 10
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+func  _physics_process(delta):
+	_player_movement(delta)
+	
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+func  _player_movement(delta):
+	var input_direction = Input.get_vector("left", "right", "up", "down").normalized()
+	var output_velocity: Vector2 = Vector2(velocity.x, velocity.z)
+	
+	if input_direction == Vector2.ZERO:
+		# Slows
+		if output_velocity.length() > (FRICTION * delta):
+			output_velocity -= output_velocity.normalized() * (FRICTION * delta)
+		else:
+			output_velocity = Vector2.ZERO
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		# Speeds
+		output_velocity += (input_direction * ACCELERATION * delta)
+		output_velocity = output_velocity.limit_length(MAX_SPEED)
+		
+	velocity = Vector3(output_velocity.x, 0, output_velocity.y)
 	move_and_slide()
+	
+	# Rotate
+	if input_direction != Vector2.ZERO:
+		player_visual.rotation.y = lerp_angle(player_visual.rotation.y, atan2(input_direction.x * 100, input_direction.y * 100), delta * ROTATION_ACCELERATION)
+	# Funny:
+	#player_visual.look_at(Vector3(input_direction.x, input_direction.x, input_direction.y))
