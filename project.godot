@@ -12,7 +12,18 @@ config_version=5
 
 config/name="Kitchen Chaos"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://audio/": "pink",
+"res://levels/": "purple",
+"res://nodes/": "blue",
+"res://scripts/": "green",
+"res://ui/": "yellow",
+"res://visual/": "orange"
+}
 
 [rendering]
 
