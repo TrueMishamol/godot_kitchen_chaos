@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dapea8nhysiyw"
-path="res://.godot/imported/Tomato.fbx-cc04a46d4e53657e1ba56e8e6d7f2c7a.scn"
+uid="uid://dpdy1hfop160"
+path="res://.godot/imported/tomato.fbx-f52cc8e2170572d8b3397efed7dcb829.scn"
 
 [deps]
 
-source_file="res://visual/meshes/Tomato.fbx"
-dest_files=["res://.godot/imported/Tomato.fbx-cc04a46d4e53657e1ba56e8e6d7f2c7a.scn"]
+source_file="res://visual/meshes/tomato.fbx"
+dest_files=["res://.godot/imported/tomato.fbx-f52cc8e2170572d8b3397efed7dcb829.scn"]
 
 [params]
 

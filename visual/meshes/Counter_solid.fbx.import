@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p812f1ktxri1"
-path="res://.godot/imported/Counter_solid.fbx-53b1bf90fded97df5a1fcb1ecad27458.scn"
+uid="uid://cg510thrp4agv"
+path="res://.godot/imported/counter_solid.fbx-5660ed388622a3d5580e3874816490b1.scn"
 
 [deps]
 
-source_file="res://visual/meshes/Counter_solid.fbx"
-dest_files=["res://.godot/imported/Counter_solid.fbx-53b1bf90fded97df5a1fcb1ecad27458.scn"]
+source_file="res://visual/meshes/counter_solid.fbx"
+dest_files=["res://.godot/imported/counter_solid.fbx-5660ed388622a3d5580e3874816490b1.scn"]
 
 [params]
 

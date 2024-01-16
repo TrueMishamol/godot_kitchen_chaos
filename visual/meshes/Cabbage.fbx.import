@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bds85gti8fk3a"
-path="res://.godot/imported/Cabbage.fbx-895c182dc27abf4fe90ead3e0d977e2e.scn"
+uid="uid://bi0gewjuml4b5"
+path="res://.godot/imported/cabbage.fbx-346b4f72fd9c2106e4123a3034b65bf7.scn"
 
 [deps]
 
-source_file="res://visual/meshes/Cabbage.fbx"
-dest_files=["res://.godot/imported/Cabbage.fbx-895c182dc27abf4fe90ead3e0d977e2e.scn"]
+source_file="res://visual/meshes/cabbage.fbx"
+dest_files=["res://.godot/imported/cabbage.fbx-346b4f72fd9c2106e4123a3034b65bf7.scn"]
 
 [params]
 
@@ -29,6 +29,13 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Lettuce": {
+"use_external/enabled": true,
+"use_external/path": "res://visual/meshes/materials/Lettuce.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

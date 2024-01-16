@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1rcenvhankdj"
-path="res://.godot/imported/Counter_hole.fbx-bbaf4ce2d44abd725d52fcd9264eb975.scn"
+uid="uid://dmv4102673sgh"
+path="res://.godot/imported/counter_hole.fbx-d2ca82a81941f013e64d3de42709739b.scn"
 
 [deps]
 
-source_file="res://visual/meshes/Counter_hole.fbx"
-dest_files=["res://.godot/imported/Counter_hole.fbx-bbaf4ce2d44abd725d52fcd9264eb975.scn"]
+source_file="res://visual/meshes/counter_hole.fbx"
+dest_files=["res://.godot/imported/counter_hole.fbx-d2ca82a81941f013e64d3de42709739b.scn"]
 
 [params]
 

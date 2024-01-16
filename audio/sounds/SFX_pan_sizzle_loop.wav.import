@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://d20tp58yf7tpg"
-path="res://.godot/imported/SFX_pan_sizzle_loop.wav-ab0c8065889b78565c59b20a0bf9529b.sample"
+uid="uid://dkrbs5n4uedoc"
+path="res://.godot/imported/sfx_pan_sizzle_loop.wav-46f58d433e174cf7b0f8047906d83166.sample"
 
 [deps]
 
-source_file="res://audio/sounds/SFX_pan_sizzle_loop.wav"
-dest_files=["res://.godot/imported/SFX_pan_sizzle_loop.wav-ab0c8065889b78565c59b20a0bf9529b.sample"]
+source_file="res://audio/sounds/sfx_pan_sizzle_loop.wav"
+dest_files=["res://.godot/imported/sfx_pan_sizzle_loop.wav-46f58d433e174cf7b0f8047906d83166.sample"]
 
 [params]
 

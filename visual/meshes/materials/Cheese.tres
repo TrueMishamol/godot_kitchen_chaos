@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bcwchrd2u1bqv"]
+
+[ext_resource type="Texture2D" uid="uid://dyvbync3yopyj" path="res://visual/meshes/textures/cheese_albedo_transparency.png" id="1_pwp1p"]
+[ext_resource type="Texture2D" uid="uid://bmxyou5csued4" path="res://visual/meshes/textures/cheese_metallic_smoothness.png" id="2_xopt7"]
+[ext_resource type="Texture2D" uid="uid://6rq5empfa8wh" path="res://visual/meshes/textures/cheese_normal.png" id="3_tukxs"]
+
+[resource]
+resource_name = "Cheese"
+albedo_texture = ExtResource("1_pwp1p")
+metallic = 1.0
+metallic_texture = ExtResource("2_xopt7")
+roughness = 0.272166
+normal_enabled = true
+normal_texture = ExtResource("3_tukxs")

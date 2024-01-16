@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Kitchen Chaos"
+run/main_scene="res://levels/game_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [file_customization]
@@ -28,3 +29,4 @@ folder_colors={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.533333, 0.858824, 1, 1)

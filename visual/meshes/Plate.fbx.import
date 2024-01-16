@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://clxpf5h4on3ua"
-path="res://.godot/imported/Plate.fbx-1770c553c874b3f3480393dae607021b.scn"
+uid="uid://ly0rhox25gpk"
+path="res://.godot/imported/plate.fbx-d1fded5e2e70f40c84756dffbc7ba625.scn"
 
 [deps]
 
-source_file="res://visual/meshes/Plate.fbx"
-dest_files=["res://.godot/imported/Plate.fbx-1770c553c874b3f3480393dae607021b.scn"]
+source_file="res://visual/meshes/plate.fbx"
+dest_files=["res://.godot/imported/plate.fbx-d1fded5e2e70f40c84756dffbc7ba625.scn"]
 
 [params]
 

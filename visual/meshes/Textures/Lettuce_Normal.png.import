@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cno6mec4rltyt"
-path="res://.godot/imported/Lettuce_Normal.png-9eefe7dfad68d8d48799276baccf74ea.ctex"
+uid="uid://cg4oiwst7ki1m"
+path="res://.godot/imported/lettuce_normal.png-79c89379468ba9d6587993e28f7c3e92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://visual/meshes/Textures/Lettuce_Normal.png"
-dest_files=["res://.godot/imported/Lettuce_Normal.png-9eefe7dfad68d8d48799276baccf74ea.ctex"]
+source_file="res://visual/meshes/textures/lettuce_normal.png"
+dest_files=["res://.godot/imported/lettuce_normal.png-79c89379468ba9d6587993e28f7c3e92.ctex"]
 
 [params]
 

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://nu7ydhexe2b"]
+
+[ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
+[ext_resource type="Material" uid="uid://dcq1hfago7gr1" path="res://visual/materials/floor_material.tres" id="2_wtikb"]
+[ext_resource type="PackedScene" uid="uid://c673cga3acaor" path="res://visual/meshes/all_models.fbx" id="3_kceg4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ih6li"]
+material = ExtResource("2_wtikb")
+size = Vector2(10, 10)
+
+[node name="GameScene" type="Node3D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_6cva3")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.804417, 0.594065, 0, -0.594065, 0.804417, 0, 4.72651, 4.1974)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0.353554, -0.353553, 0, 0.707107, 0.707107, 0.5, -0.612372, 0.612372, 0, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ih6li")
+
+[node name="Root Scene" parent="." instance=ExtResource("3_kceg4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0756904, 0, -0.549758)
