@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://nu7ydhexe2b"]
+[gd_scene load_steps=9 format=3 uid="uid://nu7ydhexe2b"]
 
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
 [ext_resource type="Material" uid="uid://dcq1hfago7gr1" path="res://visual/materials/floor_material.tres" id="2_wtikb"]
 [ext_resource type="PackedScene" uid="uid://c673cga3acaor" path="res://visual/meshes/all_models.fbx" id="3_kceg4"]
 [ext_resource type="Shader" path="res://visual/shaders/vignette.gdshader" id="4_f47hb"]
+[ext_resource type="PackedScene" uid="uid://dudcit0gacxdp" path="res://nodes/player.tscn" id="5_6mk6w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
 shader = ExtResource("4_f47hb")
@@ -16,6 +17,9 @@ shader_parameter/SOFTNESS = 1.3
 [sub_resource type="PlaneMesh" id="PlaneMesh_ih6li"]
 material = ExtResource("2_wtikb")
 size = Vector2(16, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jj6lt"]
+size = Vector3(16, 1, 16)
 
 [node name="GameScene" type="Node3D"]
 
@@ -41,8 +45,17 @@ fov = 15.0
 transform = Transform3D(0.64784, 0.538657, -0.538657, 1.38313e-08, 0.707107, 0.707107, 0.761776, -0.458092, 0.458093, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Floor" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("PlaneMesh_ih6li")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_jj6lt")
 
 [node name="Root Scene" parent="." instance=ExtResource("3_kceg4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0756904, 0, -1.75143)
+
+[node name="Player" parent="." instance=ExtResource("5_6mk6w")]
