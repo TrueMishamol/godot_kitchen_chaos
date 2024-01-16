@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://c61fy6yt4ini7"]
-
-[resource]
-resource_name = "Meat"
-albedo_color = Color(1, 1, 1, 1)
-metallic = 0.4
-roughness = 0.272166

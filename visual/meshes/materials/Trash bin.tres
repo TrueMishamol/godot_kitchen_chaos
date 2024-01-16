@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b4yqwt2e11bav"]
-
-[resource]
-resource_name = "Trash bin"
-albedo_color = Color(1, 1, 1, 1)
-metallic = 0.4
-roughness = 0.272166
