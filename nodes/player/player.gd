@@ -8,6 +8,8 @@ const ACCELERATION = 30
 const FRICTION = 30
 const ROTATION_ACCELERATION = 10
 
+var _is_walking: bool = true
+
 
 func  _physics_process(delta):
 	_player_movement(delta)
@@ -36,3 +38,8 @@ func  _player_movement(delta):
 		player_visual.rotation.y = lerp_angle(player_visual.rotation.y, atan2(input_direction.x * 100, input_direction.y * 100), delta * ROTATION_ACCELERATION)
 	# Funny:
 	#player_visual.look_at(Vector3(input_direction.x, input_direction.x, input_direction.y))
+	
+	_is_walking = output_velocity != Vector2.ZERO
+
+func is_walking() -> bool:
+	return _is_walking

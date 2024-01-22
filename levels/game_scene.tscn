@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://visual/materials/floor.material" id="3_2g30f"]
 [ext_resource type="Shader" path="res://visual/shaders/vignette.gdshader" id="4_f47hb"]
-[ext_resource type="PackedScene" uid="uid://dudcit0gacxdp" path="res://nodes/player.tscn" id="5_6mk6w"]
+[ext_resource type="PackedScene" uid="uid://dudcit0gacxdp" path="res://nodes/player/player.tscn" id="5_6mk6w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
 shader = ExtResource("4_f47hb")

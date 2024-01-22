@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dudcit0gacxdp"]
 
-[ext_resource type="Script" path="res://nodes/player.gd" id="1_j5l0c"]
+[ext_resource type="Script" path="res://nodes/player/player.gd" id="1_j5l0c"]
 [ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://visual/prefabs_visuals/player_visual.scn" id="2_f7g7d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ncesq"]
@@ -13,4 +13,5 @@ player_visual = NodePath("PlayerVisual")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ncesq")
 
-[node name="PlayerVisual" parent="." instance=ExtResource("2_f7g7d")]
+[node name="PlayerVisual" parent="." node_paths=PackedStringArray("_player") instance=ExtResource("2_f7g7d")]
+_player = NodePath("..")
