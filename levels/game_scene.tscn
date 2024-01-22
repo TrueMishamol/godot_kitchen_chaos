@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://nu7ydhexe2b"]
+[gd_scene load_steps=11 format=3 uid="uid://nu7ydhexe2b"]
 
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://visual/materials/floor.material" id="3_2g30f"]
 [ext_resource type="Shader" path="res://visual/shaders/vignette.gdshader" id="4_f47hb"]
 [ext_resource type="PackedScene" uid="uid://dudcit0gacxdp" path="res://nodes/player/player.tscn" id="5_6mk6w"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_7dwy2"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_oaf6v"]
+[ext_resource type="Resource" uid="uid://x08nkug8rot1" path="res://visual/enviroment/phantom_camera_resource.tres" id="7_ur1ug"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
 shader = ExtResource("4_f47hb")
@@ -36,10 +39,6 @@ size_flags_vertical = 4
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("1_6cva3")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 21.5, 21.3)
-fov = 25.0
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.64784, 0.538657, -0.538657, 1.38313e-08, 0.707107, 0.707107, 0.761776, -0.458092, 0.458093, 0, 0, 0)
 shadow_enabled = true
@@ -55,3 +54,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_jj6lt")
 
 [node name="Player" parent="." instance=ExtResource("5_6mk6w")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
+fov = 25.0
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("5_7dwy2")
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
+script = ExtResource("6_oaf6v")
+priority_override = false
+priority = 0
+follow_mode = 2
+follow_target = NodePath("../Player")
+follow_parameters/target_offset = Vector3(0, 21, 21)
+follow_parameters/damping = true
+follow_parameters/damping_value = 8.0
+look_at_mode = 2
+look_at_target = NodePath("../Player")
+look_at_parameters/look_at_target_offset = Vector3(0, 0, 0)
+tween_parameters = null
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = ExtResource("7_ur1ug")
