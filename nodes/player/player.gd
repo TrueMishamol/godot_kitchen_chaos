@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-@export var player_visual: Node3D
+@export var raycast: RayCast3D
 
 const MAX_SPEED = 7
 const ACCELERATION = 30
@@ -13,7 +13,8 @@ var _is_walking: bool = true
 
 func  _physics_process(delta):
 	_player_movement(delta)
-	
+	_handle_interactions()
+
 
 func  _player_movement(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down").normalized()
@@ -35,11 +36,17 @@ func  _player_movement(delta):
 	
 	# Rotate
 	if input_direction != Vector2.ZERO:
-		player_visual.rotation.y = lerp_angle(player_visual.rotation.y, atan2(input_direction.x * 100, input_direction.y * 100), delta * ROTATION_ACCELERATION)
-	# Funny:
-	#player_visual.look_at(Vector3(input_direction.x, input_direction.x, input_direction.y))
-	
+		rotation.y = lerp_angle(rotation.y, atan2(input_direction.x * 100, input_direction.y * 100), delta * ROTATION_ACCELERATION)
+
 	_is_walking = output_velocity != Vector2.ZERO
+
 
 func is_walking() -> bool:
 	return _is_walking
+
+
+func _handle_interactions():
+	if Input.is_action_just_pressed("interact"):
+		var collider = raycast.get_collider()
+		if collider != null:
+			print(collider)
