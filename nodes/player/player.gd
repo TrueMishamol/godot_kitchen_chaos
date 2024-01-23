@@ -49,4 +49,4 @@ func _handle_interactions():
 	if Input.is_action_just_pressed("interact"):
 		var collider = raycast.get_collider()
 		if collider != null:
-			print(collider)
+			collider.interact()

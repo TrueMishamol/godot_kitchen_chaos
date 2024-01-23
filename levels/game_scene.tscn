@@ -48,7 +48,7 @@ mesh = SubResource("PlaneMesh_ih6li")
 [node name="Player" parent="." instance=ExtResource("5_6mk6w")]
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
+transform = Transform3D(0.999998, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
 fov = 25.0
 script = ExtResource("5_b38jn")
 camera = NodePath(".")
@@ -59,7 +59,7 @@ noise_shake_strength = 2.0
 script = ExtResource("5_7dwy2")
 
 [node name="PhantomCamera3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
+transform = Transform3D(0.999998, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
 script = ExtResource("6_oaf6v")
 priority_override = false
 priority = 0

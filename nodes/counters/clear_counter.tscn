@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://gjl6ihtwoqh7"]
+[gd_scene load_steps=4 format=3 uid="uid://gjl6ihtwoqh7"]
 
 [ext_resource type="PackedScene" uid="uid://cwo8y6cu6uh42" path="res://visual/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.scn" id="1_3g18m"]
+[ext_resource type="Script" path="res://nodes/counters/clear_counter.gd" id="1_omp2w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_exner"]
 size = Vector3(1.51172, 1.31616, 1.36133)
@@ -8,6 +9,7 @@ size = Vector3(1.51172, 1.31616, 1.36133)
 [node name="ClearCounter" type="StaticBody3D"]
 collision_layer = 4
 collision_mask = 0
+script = ExtResource("1_omp2w")
 
 [node name="ClearCounter_Visual" parent="." instance=ExtResource("1_3g18m")]
 
