@@ -1,12 +1,139 @@
-[gd_scene load_steps=11 format=3 uid="uid://nu7ydhexe2b"]
+[gd_scene load_steps=13 format=3 uid="uid://nu7ydhexe2b"]
 
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://visual/materials/floor.material" id="3_2g30f"]
 [ext_resource type="Shader" path="res://visual/shaders/vignette.gdshader" id="4_f47hb"]
 [ext_resource type="PackedScene" uid="uid://dudcit0gacxdp" path="res://nodes/player/player.tscn" id="5_6mk6w"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_7dwy2"]
+[ext_resource type="Script" path="res://scripts/camera_shake.gd" id="5_b38jn"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_oaf6v"]
 [ext_resource type="Resource" uid="uid://x08nkug8rot1" path="res://visual/enviroment/phantom_camera_resource.tres" id="7_ur1ug"]
+
+[sub_resource type="GDScript" id="GDScript_3r441"]
+script/source = "#@tool
+extends Node3D
+
+
+@export var generate = true:
+	set(input):
+		generate_3dnoise()
+
+@export var noise_dimention := 64
+
+
+func generate_3dnoise():
+	var fast_noise = FastNoiseLite.new()
+	fast_noise.frequency = 0.1
+	
+	var imgs = []
+	for i in range (noise_dimention):
+		var img = fast_noise.get_image(noise_dimention,noise_dimention,false,true) # The last arg is 3d = true
+		imgs.append(img)
+		fast_noise.offset += Vector3(0,0,1)
+	var image3d = ImageTexture3D.new()
+	image3d.create(imgs[0].get_format(), noise_dimention, noise_dimention, noise_dimention, false, imgs)
+	
+	#var img = fast_noise.get_image(noise_dimention,noise_dimention,false,true) # The last arg is 3d = true
+	#var image3d = ImageTexture3D.new()
+	#image3d.create(imgs[0].get_format(), noise_dimention, noise_dimention, noise_dimention, false, imgs)
+
+	
+	print(\"Generated 3D noise\")
+	pass
+
+
+
+
+# _____________________________________________
+#
+#
+## How quickly to move through the noise
+#@export var NOISE_SHAKE_SPEED: float = 1.0
+##@export var NOISE_SWAY_SPEED: float = 1.0
+## Noise returns values in the range (-1, 1)
+## So this is how much to multiply the returned value by
+#@export var NOISE_SHAKE_STRENGTH: float = 8.0
+##@export var NOISE_SWAY_STRENGTH: float = 10.0
+## The starting range of possible offsets using random values
+##@export var RANDOM_SHAKE_STRENGTH: float = 30.0
+## Multiplier for lerping the shake strength to zero
+#@export var SHAKE_DECAY_RATE: float = 0.0
+#
+#@export var camera: Camera3D
+#
+#enum ShakeType {
+	#Random,
+	#Noise,
+	#Sway
+#}
+#
+##@onready var random_shake = $ui/button_container/random_shake
+##@onready var noise_shake = $ui/button_container/noise_shake
+##@onready var noise_sway = $ui/button_container/noise_sway
+#
+#@onready var noise: NoiseTexture2D = NoiseTexture2D.new()
+## Used to keep track of where we are in the noise
+## so that we can smoothly move through it
+#var noise_i: float = 0.0
+#@onready var rand = RandomNumberGenerator.new()
+#var shake_type: int = ShakeType.Random
+#var shake_strength: float = 0.0
+#
+#func _ready() -> void:
+	#rand.randomize()
+	#
+	## Randomize the generated noise
+	##noise.seed = rand.randi()
+	## Period affects how quickly the noise changes values
+	##noise.period = 2
+	#
+	##random_shake.connect(\"pressed\", self, \"apply_random_shake\")
+	##noise_shake.connect(\"pressed\", self, \"apply_noise_shake\")
+	##noise_sway.connect(\"pressed\", self, \"apply_noise_sway\")
+	#
+##func apply_random_shake() -> void:
+	##shake_strength = RANDOM_SHAKE_STRENGTH
+	##shake_type = ShakeType.Random
+	#
+#func apply_noise_shake() -> void:
+	#shake_strength = NOISE_SHAKE_STRENGTH
+	#shake_type = ShakeType.Noise
+	#
+#func apply_noise_sway() -> void:
+	#shake_type = ShakeType.Sway
+	#
+#func _process(delta: float) -> void:
+	## Fade out the intensity over time
+	#shake_strength = lerp(shake_strength, 0.0, SHAKE_DECAY_RATE * delta)
+	#
+	#var shake_offset: Vector2
+	#
+	##match shake_type:
+		##ShakeType.Random:
+			##shake_offset = get_random_offset()
+		##ShakeType.Noise:
+	#shake_offset = get_noise_offset(delta, NOISE_SHAKE_SPEED, shake_strength)
+		##ShakeType.Sway:
+			##shake_offset = get_noise_offset(delta, NOISE_SWAY_SPEED, NOISE_SWAY_STRENGTH)
+	#
+	## Shake by adjusting camera.offset so we can move the camera around the level via it's position
+	#camera.offset = shake_offset
+#
+#func get_noise_offset(delta: float, speed: float, strength: float) -> Vector2:
+	#noise_i += delta * speed
+	## Set the x values of each call to 'get_noise_2d' to a different value
+	## so that our x and y vectors will be reading from unrelated areas of noise
+	#return Vector2(
+		#noise.noise.get_noise_2d(1, noise_i) * strength,
+		#noise.noise.get_noise_2d(100, noise_i) * strength
+	#)
+#
+#func get_random_offset() -> Vector2:
+	#return Vector2(
+		#rand.randf_range(-shake_strength, shake_strength),
+		#rand.randf_range(-shake_strength, shake_strength)
+	#)
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
 shader = ExtResource("4_f47hb")
@@ -24,6 +151,7 @@ size = Vector2(32, 32)
 size = Vector3(16, 1, 16)
 
 [node name="GameScene" type="Node3D"]
+script = SubResource("GDScript_3r441")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -55,9 +183,13 @@ shape = SubResource("BoxShape3D_jj6lt")
 
 [node name="Player" parent="." instance=ExtResource("5_6mk6w")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("camera")]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
 fov = 25.0
+script = ExtResource("5_b38jn")
+camera = NodePath(".")
+noise_shake_speed = 6.0
+noise_shake_strength = 2.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("5_7dwy2")
