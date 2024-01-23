@@ -47,6 +47,6 @@ func is_walking() -> bool:
 
 func _handle_interactions():
 	if Input.is_action_just_pressed("interact"):
-		var collider = raycast.get_collider()
+		var collider: ClearCounter = raycast.get_collider() as ClearCounter
 		if collider != null:
 			collider.interact()
