@@ -18,6 +18,7 @@ config/icon="res://ui/app_icons/bread_icon.png"
 [autoload]
 
 ApplicationControls="*res://scripts/application_controls.gd"
+Singleton="*res://scripts/singleton.gd"
 
 [display]
 

@@ -45,7 +45,8 @@ shadow_enabled = true
 [node name="Floor" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_ih6li")
 
-[node name="Player" parent="." instance=ExtResource("5_6mk6w")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("5_6mk6w")]
+unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("camera")]
 transform = Transform3D(0.999998, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
@@ -78,3 +79,9 @@ camera_3D_resource = ExtResource("7_ur1ug")
 
 [node name="ClearCounter" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="ClearCounter2" parent="." instance=ExtResource("9_5pofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="ClearCounter3" parent="." instance=ExtResource("9_5pofm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)

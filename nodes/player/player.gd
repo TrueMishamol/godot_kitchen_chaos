@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 
@@ -8,15 +9,22 @@ const ACCELERATION = 30
 const FRICTION = 30
 const ROTATION_ACCELERATION = 10
 
+signal on_selected_counter_changed(selected_counter: ClearCounter)
+
 var _is_walking: bool = true
+var _selected_counter: ClearCounter;
+
+
+func _init():
+	Singleton.player = self
 
 
 func  _physics_process(delta):
-	_player_movement(delta)
+	_handle_movement(delta)
 	_handle_interactions()
 
 
-func  _player_movement(delta):
+func  _handle_movement(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down").normalized()
 	var output_velocity: Vector2 = Vector2(velocity.x, velocity.z)
 	
@@ -46,7 +54,18 @@ func is_walking() -> bool:
 
 
 func _handle_interactions():
-	if Input.is_action_just_pressed("interact"):
-		var collider: ClearCounter = raycast.get_collider() as ClearCounter
-		if collider != null:
+	var collider: ClearCounter = raycast.get_collider() as ClearCounter
+	
+	if collider != null:
+		if collider != _selected_counter:
+			_set_selected_counter(collider)
+		if Input.is_action_just_pressed("interact"):
 			collider.interact()
+	else:
+		if _selected_counter != null:
+			_set_selected_counter(null)
+
+
+func _set_selected_counter(counter):
+	_selected_counter = counter
+	on_selected_counter_changed.emit(_selected_counter)
