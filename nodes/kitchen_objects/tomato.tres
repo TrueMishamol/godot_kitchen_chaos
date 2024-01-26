@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRes" load_steps=3 format=3 uid="uid://bvfb5u1k4pgt0"]
+
+[ext_resource type="PackedScene" uid="uid://cwrwuk1epi2df" path="res://nodes/kitchen_objects/tomato.tscn" id="1_app5p"]
+[ext_resource type="Script" path="res://nodes/kitchen_objects/kitchen_object_res.gd" id="1_l01rk"]
+
+[resource]
+script = ExtResource("1_l01rk")
+node = ExtResource("1_app5p")
+sprite = "res://ui/icons/tomato.png"
+object_name = "Tomato"

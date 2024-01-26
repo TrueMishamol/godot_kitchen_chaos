@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="KitchenObjectRes" load_steps=3 format=3 uid="uid://c6r18lkyq5ks1"]
+
+[ext_resource type="Script" path="res://nodes/kitchen_objects/kitchen_object_res.gd" id="1_iemas"]
+[ext_resource type="PackedScene" uid="uid://d4leedjjoq610" path="res://nodes/kitchen_objects/cheese_block.tscn" id="1_n0651"]
+
+[resource]
+script = ExtResource("1_iemas")
+node = ExtResource("1_n0651")
+sprite = "res://ui/icons/cheese_block.png"
+object_name = "Cheese Block"

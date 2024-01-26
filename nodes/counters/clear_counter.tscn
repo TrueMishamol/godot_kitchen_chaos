@@ -9,10 +9,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_exner"]
 size = Vector3(1.51172, 1.31616, 1.36133)
 
-[node name="ClearCounter" type="StaticBody3D"]
+[node name="ClearCounter" type="StaticBody3D" node_paths=PackedStringArray("_counter_top_point")]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_omp2w")
+_counter_top_point = NodePath("CounterTopPoint")
 
 [node name="ClearCounter_Visual" parent="." instance=ExtResource("1_3g18m")]
 
@@ -34,3 +35,6 @@ surface_material_override/0 = ExtResource("5_l7jku")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.628459, 0.0283813)
 shape = SubResource("BoxShape3D_exner")
+
+[node name="CounterTopPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
