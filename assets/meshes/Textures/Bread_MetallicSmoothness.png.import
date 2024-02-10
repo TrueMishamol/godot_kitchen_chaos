@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b41oisvbdwwt3"
-path.s3tc="res://.godot/imported/Bread_MetallicSmoothness.png-5f2a2b180fe473650eb50e4cc0999d0b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bread_MetallicSmoothness.png-06a84f69627c48a5a2e246f48ffa81c3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Bread_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/Bread_MetallicSmoothness.png-5f2a2b180fe473650eb50e4cc0999d0b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Bread_MetallicSmoothness.png-06a84f69627c48a5a2e246f48ffa81c3.s3tc.ctex"]
 
 [params]
 

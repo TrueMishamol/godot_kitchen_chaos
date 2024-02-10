@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cesmp4hnhs01r"
-path="res://.godot/imported/Stove Counter.gltf-3f8750a5b6429159ab3188a99786ef8a.scn"
+path="res://.godot/imported/Stove Counter.gltf-eb562b6589c1b885f791827021b95ae4.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Stove Counter.gltf"
-dest_files=["res://.godot/imported/Stove Counter.gltf-3f8750a5b6429159ab3188a99786ef8a.scn"]
+dest_files=["res://.godot/imported/Stove Counter.gltf-eb562b6589c1b885f791827021b95ae4.scn"]
 
 [params]
 

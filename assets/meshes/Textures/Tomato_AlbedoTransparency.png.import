@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ye7jo7rb8ibh"
-path.s3tc="res://.godot/imported/Tomato_AlbedoTransparency.png-cb8fa3b516da012fc2913df53a3d2ec3.s3tc.ctex"
+path.s3tc="res://.godot/imported/Tomato_AlbedoTransparency.png-7869f31f0f712750a0e61f05d6913dd7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Tomato_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/Tomato_AlbedoTransparency.png-cb8fa3b516da012fc2913df53a3d2ec3.s3tc.ctex"]
+dest_files=["res://.godot/imported/Tomato_AlbedoTransparency.png-7869f31f0f712750a0e61f05d6913dd7.s3tc.ctex"]
 
 [params]
 

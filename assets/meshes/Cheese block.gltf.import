@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmhl0bapipsxh"
-path="res://.godot/imported/Cheese block.gltf-344a4602f8cff03dea82a227fce51520.scn"
+path="res://.godot/imported/Cheese block.gltf-e61fb4e4b838bbf4a88705be2faef69e.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Cheese block.gltf"
-dest_files=["res://.godot/imported/Cheese block.gltf-344a4602f8cff03dea82a227fce51520.scn"]
+dest_files=["res://.godot/imported/Cheese block.gltf-e61fb4e4b838bbf4a88705be2faef69e.scn"]
 
 [params]
 

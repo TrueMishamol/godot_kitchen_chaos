@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5ba02pljcpne"
-path="res://.godot/imported/Single door.gltf-16f20c540d34fe53f15b6e09af4ea49b.scn"
+path="res://.godot/imported/Single door.gltf-d6e058eb14f08031d7b74c0fd40b45cc.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Single door.gltf"
-dest_files=["res://.godot/imported/Single door.gltf-16f20c540d34fe53f15b6e09af4ea49b.scn"]
+dest_files=["res://.godot/imported/Single door.gltf-d6e058eb14f08031d7b74c0fd40b45cc.scn"]
 
 [params]
 

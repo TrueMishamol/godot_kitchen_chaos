@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dljlrl3gn7sgu"
-path="res://.godot/imported/Cabbage slice_shaped.gltf-717206e59bb55cadb0121b7a57245afe.scn"
+path="res://.godot/imported/Cabbage slice_shaped.gltf-2be4ec1490737365202a3fed109e14d2.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Cabbage slice_shaped.gltf"
-dest_files=["res://.godot/imported/Cabbage slice_shaped.gltf-717206e59bb55cadb0121b7a57245afe.scn"]
+dest_files=["res://.godot/imported/Cabbage slice_shaped.gltf-2be4ec1490737365202a3fed109e14d2.scn"]
 
 [params]
 

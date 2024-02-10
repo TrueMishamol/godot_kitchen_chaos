@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm1s6qxxlfh0k"
-path.s3tc="res://.godot/imported/Cheese_Normal.png-8c52d69fbe78da5f4c9e440290498dee.s3tc.ctex"
+path.s3tc="res://.godot/imported/Cheese_Normal.png-b5229cb845fbb2d18e2a829af4f1ae4e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Cheese_Normal.png"
-dest_files=["res://.godot/imported/Cheese_Normal.png-8c52d69fbe78da5f4c9e440290498dee.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cheese_Normal.png-b5229cb845fbb2d18e2a829af4f1ae4e.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5p264ir2eg7c"
-path.s3tc="res://.godot/imported/Kitchen Counter_MetallicSmoothness.png-28a7aa586fa2fb8b70de44f0fde4d89a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Kitchen Counter_MetallicSmoothness.png-61622a8341adf03ada4235cae7eef944.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Kitchen Counter_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/Kitchen Counter_MetallicSmoothness.png-28a7aa586fa2fb8b70de44f0fde4d89a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Kitchen Counter_MetallicSmoothness.png-61622a8341adf03ada4235cae7eef944.s3tc.ctex"]
 
 [params]
 

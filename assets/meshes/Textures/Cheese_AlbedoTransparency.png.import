@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://div11urxjue48"
-path.s3tc="res://.godot/imported/Cheese_AlbedoTransparency.png-7c26edaed4117824e255f5673ffc350e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Cheese_AlbedoTransparency.png-34a19dc69867a8f2233dc21728c287cb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Cheese_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/Cheese_AlbedoTransparency.png-7c26edaed4117824e255f5673ffc350e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cheese_AlbedoTransparency.png-34a19dc69867a8f2233dc21728c287cb.s3tc.ctex"]
 
 [params]
 

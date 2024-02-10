@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfbdebge5dot4"
-path="res://.godot/imported/Counter_hole.gltf-464d9eff747dae6edd9e5a44cd2d5dad.scn"
+path="res://.godot/imported/Counter_hole.gltf-735793d7798a49f6469401ab61f0f7cc.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Counter_hole.gltf"
-dest_files=["res://.godot/imported/Counter_hole.gltf-464d9eff747dae6edd9e5a44cd2d5dad.scn"]
+dest_files=["res://.godot/imported/Counter_hole.gltf-735793d7798a49f6469401ab61f0f7cc.scn"]
 
 [params]
 

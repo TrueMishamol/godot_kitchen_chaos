@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1dum8tew6tt4"
-path="res://.godot/imported/Double doors.gltf-c0ec1e08b11a02e15a7f6efd7e7efdce.scn"
+path="res://.godot/imported/Double doors.gltf-81c00dba62291f654157214f0c25319e.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Double doors.gltf"
-dest_files=["res://.godot/imported/Double doors.gltf-c0ec1e08b11a02e15a7f6efd7e7efdce.scn"]
+dest_files=["res://.godot/imported/Double doors.gltf-81c00dba62291f654157214f0c25319e.scn"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3m62x3lhxq52"
-path.s3tc="res://.godot/imported/Stove_Normal.png-7c85ab03af2d5e92f2c3b59a67c7f143.s3tc.ctex"
+path.s3tc="res://.godot/imported/Stove_Normal.png-ee5a611ce0fd5e6b3f1063aa15b580fd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Stove_Normal.png"
-dest_files=["res://.godot/imported/Stove_Normal.png-7c85ab03af2d5e92f2c3b59a67c7f143.s3tc.ctex"]
+dest_files=["res://.godot/imported/Stove_Normal.png-ee5a611ce0fd5e6b3f1063aa15b580fd.s3tc.ctex"]
 
 [params]
 

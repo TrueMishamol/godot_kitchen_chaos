@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbslkwb0sm65m"
-path="res://.godot/imported/Bread bottom.gltf-40ed04c6c9d14f8ce6c6920ce7033d2a.scn"
+path="res://.godot/imported/Bread bottom.gltf-9480c038e13325aed657a4c68cefc356.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Bread bottom.gltf"
-dest_files=["res://.godot/imported/Bread bottom.gltf-40ed04c6c9d14f8ce6c6920ce7033d2a.scn"]
+dest_files=["res://.godot/imported/Bread bottom.gltf-9480c038e13325aed657a4c68cefc356.scn"]
 
 [params]
 

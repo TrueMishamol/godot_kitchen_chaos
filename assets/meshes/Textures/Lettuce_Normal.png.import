@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co8tm40qppsdm"
-path.s3tc="res://.godot/imported/Lettuce_Normal.png-60d5ad7c404487e9095088bb3eed04cf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Lettuce_Normal.png-18c05749d96f68a3c21bb8d171945772.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Lettuce_Normal.png"
-dest_files=["res://.godot/imported/Lettuce_Normal.png-60d5ad7c404487e9095088bb3eed04cf.s3tc.ctex"]
+dest_files=["res://.godot/imported/Lettuce_Normal.png-18c05749d96f68a3c21bb8d171945772.s3tc.ctex"]
 
 [params]
 

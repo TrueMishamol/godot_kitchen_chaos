@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1g4ek58im3gu"
-path.s3tc="res://.godot/imported/Cheese_MetallicSmoothness.png-66511df07d66d2683eeb94530ac1e9d7.s3tc.ctex"
+path.s3tc="res://.godot/imported/Cheese_MetallicSmoothness.png-09b5daea6568133970c0275c51f4e8cd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Cheese_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/Cheese_MetallicSmoothness.png-66511df07d66d2683eeb94530ac1e9d7.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cheese_MetallicSmoothness.png-09b5daea6568133970c0275c51f4e8cd.s3tc.ctex"]
 
 [params]
 

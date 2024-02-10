@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhllbkeblvvt3"
-path.s3tc="res://.godot/imported/Knife_AlbedoTransparency.png-c8d1ca64d7bfd1ec9ca679ccc82a6723.s3tc.ctex"
+path.s3tc="res://.godot/imported/Knife_AlbedoTransparency.png-fba71b18a079c0b31d598339ee3a7395.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Knife_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/Knife_AlbedoTransparency.png-c8d1ca64d7bfd1ec9ca679ccc82a6723.s3tc.ctex"]
+dest_files=["res://.godot/imported/Knife_AlbedoTransparency.png-fba71b18a079c0b31d598339ee3a7395.s3tc.ctex"]
 
 [params]
 

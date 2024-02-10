@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dbalkmknb7kil"
-path="res://.godot/imported/Chopping Board.gltf-6d7d1aef5a89eed853a80345c0c55a86.scn"
+path="res://.godot/imported/Chopping Board.gltf-f764e8d57d7e184956e9a84cfbd15723.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Chopping Board.gltf"
-dest_files=["res://.godot/imported/Chopping Board.gltf-6d7d1aef5a89eed853a80345c0c55a86.scn"]
+dest_files=["res://.godot/imported/Chopping Board.gltf-f764e8d57d7e184956e9a84cfbd15723.scn"]
 
 [params]
 

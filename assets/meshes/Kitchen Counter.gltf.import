@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cax4b1upm2j6"
-path="res://.godot/imported/Kitchen Counter.gltf-e3b8aa0cd39e8644dfbae9dfd65fb9db.scn"
+path="res://.godot/imported/Kitchen Counter.gltf-130fbef5dfb82f32aefb7228f1aee6e8.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Kitchen Counter.gltf"
-dest_files=["res://.godot/imported/Kitchen Counter.gltf-e3b8aa0cd39e8644dfbae9dfd65fb9db.scn"]
+dest_files=["res://.godot/imported/Kitchen Counter.gltf-130fbef5dfb82f32aefb7228f1aee6e8.scn"]
 
 [params]
 

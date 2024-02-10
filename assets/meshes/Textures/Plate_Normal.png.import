@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce72ckhigo1y"
-path.s3tc="res://.godot/imported/Plate_Normal.png-ad723bdfccf036ebff8cfb5dbff237d6.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plate_Normal.png-54712335a16f137d372c3605b2b9077b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Plate_Normal.png"
-dest_files=["res://.godot/imported/Plate_Normal.png-ad723bdfccf036ebff8cfb5dbff237d6.s3tc.ctex"]
+dest_files=["res://.godot/imported/Plate_Normal.png-54712335a16f137d372c3605b2b9077b.s3tc.ctex"]
 
 [params]
 

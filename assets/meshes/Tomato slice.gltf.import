@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://db0tslt3qg4uf"
-path="res://.godot/imported/Tomato slice.gltf-6f94c485b86e5b2aa7124dc8a8465acc.scn"
+path="res://.godot/imported/Tomato slice.gltf-2746ee5c729b0f544950c3598de0bb34.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Tomato slice.gltf"
-dest_files=["res://.godot/imported/Tomato slice.gltf-6f94c485b86e5b2aa7124dc8a8465acc.scn"]
+dest_files=["res://.godot/imported/Tomato slice.gltf-2746ee5c729b0f544950c3598de0bb34.scn"]
 
 [params]
 

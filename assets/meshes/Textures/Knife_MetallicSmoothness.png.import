@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlak1k4rb5av3"
-path.s3tc="res://.godot/imported/Knife_MetallicSmoothness.png-36d8e85033beaef5c15a8aa291e168be.s3tc.ctex"
+path.s3tc="res://.godot/imported/Knife_MetallicSmoothness.png-75f1b712848858486f68cf7e29b679c2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Knife_MetallicSmoothness.png"
-dest_files=["res://.godot/imported/Knife_MetallicSmoothness.png-36d8e85033beaef5c15a8aa291e168be.s3tc.ctex"]
+dest_files=["res://.godot/imported/Knife_MetallicSmoothness.png-75f1b712848858486f68cf7e29b679c2.s3tc.ctex"]
 
 [params]
 

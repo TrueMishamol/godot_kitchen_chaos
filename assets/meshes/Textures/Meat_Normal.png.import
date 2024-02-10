@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hwwqvonarvdj"
-path.s3tc="res://.godot/imported/Meat_Normal.png-01b1a25516ea43f07f7107b7c59c09d2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Meat_Normal.png-8eb36bf5442a7438b2aadc61d051fbdd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Meat_Normal.png"
-dest_files=["res://.godot/imported/Meat_Normal.png-01b1a25516ea43f07f7107b7c59c09d2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Meat_Normal.png-8eb36bf5442a7438b2aadc61d051fbdd.s3tc.ctex"]
 
 [params]
 

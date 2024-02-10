@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dg2th4bl0ij26"
-path="res://.godot/imported/Counter_solid.gltf-b5df05f7dec2d71d2ca1d7f8e77f55a3.scn"
+path="res://.godot/imported/Counter_solid.gltf-de4baef7c48bc4ad90e9423c8493741a.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Counter_solid.gltf"
-dest_files=["res://.godot/imported/Counter_solid.gltf-b5df05f7dec2d71d2ca1d7f8e77f55a3.scn"]
+dest_files=["res://.godot/imported/Counter_solid.gltf-de4baef7c48bc4ad90e9423c8493741a.scn"]
 
 [params]
 

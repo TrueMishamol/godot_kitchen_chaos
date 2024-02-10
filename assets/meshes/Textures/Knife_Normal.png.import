@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://50la3si7822j"
-path.s3tc="res://.godot/imported/Knife_Normal.png-2703ffe5a27fb5ef9248067a8270e34e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Knife_Normal.png-6b19347ccd06cc4ada23138cf4df05e2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/meshes/Textures/Knife_Normal.png"
-dest_files=["res://.godot/imported/Knife_Normal.png-2703ffe5a27fb5ef9248067a8270e34e.s3tc.ctex"]
+dest_files=["res://.godot/imported/Knife_Normal.png-6b19347ccd06cc4ada23138cf4df05e2.s3tc.ctex"]
 
 [params]
 
