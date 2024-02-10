@@ -36,8 +36,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addon
 folder_colors={
 "res://Assets/": "red",
 "res://addons/": "red",
-"res://assets/": "yellow",
-"res://assets/audio/": "pink",
+"res://assets/": "pink",
 "res://levels/": "purple",
 "res://nodes/": "blue",
 "res://scripts/": "green",
