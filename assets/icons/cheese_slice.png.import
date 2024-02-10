@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd326q4tqvt1o"
-path="res://.godot/imported/arrow.png-ffc247adcd14a3a988de1107a5a1b689.ctex"
+uid="uid://d168b2cmofk5i"
+path="res://.godot/imported/cheese_slice.png-eaf5d2e67f20b47f758eb4a4e5b826d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/textures/arrow.png"
-dest_files=["res://.godot/imported/arrow.png-ffc247adcd14a3a988de1107a5a1b689.ctex"]
+source_file="res://assets/icons/cheese_slice.png"
+dest_files=["res://.godot/imported/cheese_slice.png-eaf5d2e67f20b47f758eb4a4e5b826d7.ctex"]
 
 [params]
 

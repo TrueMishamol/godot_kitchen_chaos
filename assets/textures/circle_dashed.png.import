@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2jkyr6n3qxeh"
-path="res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"
+uid="uid://cxh4pop4pulbr"
+path="res://.godot/imported/circle_dashed.png-7dad239c18c9e737931c91a8f1871023.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/textures/kitchen_chaos_logo.png"
-dest_files=["res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"]
+source_file="res://assets/textures/circle_dashed.png"
+dest_files=["res://.godot/imported/circle_dashed.png-7dad239c18c9e737931c91a8f1871023.ctex"]
 
 [params]
 

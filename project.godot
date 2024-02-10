@@ -13,7 +13,7 @@ config_version=5
 config/name="Kitchen Chaos"
 run/main_scene="res://levels/game_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://ui/app_icons/bread_icon.png"
+config/icon="res://assets/app_icons/bread_icon.png"
 
 [autoload]
 
@@ -41,7 +41,7 @@ folder_colors={
 "res://levels/": "purple",
 "res://nodes/": "blue",
 "res://scripts/": "green",
-"res://ui/": "yellow",
+"res://assets/": "yellow",
 "res://visual/": "orange"
 }
 

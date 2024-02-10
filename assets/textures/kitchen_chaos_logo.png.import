@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doy5lpv8u242e"
-path="res://.godot/imported/meat_patty_uncooked.png-b36d43402e23e97dfc55b48ab23ba13b.ctex"
+uid="uid://2jkyr6n3qxeh"
+path="res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/icons/meat_patty_uncooked.png"
-dest_files=["res://.godot/imported/meat_patty_uncooked.png-b36d43402e23e97dfc55b48ab23ba13b.ctex"]
+source_file="res://assets/textures/kitchen_chaos_logo.png"
+dest_files=["res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"]
 
 [params]
 

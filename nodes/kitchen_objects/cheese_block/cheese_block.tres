@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_aeoaw")
 node = "res://nodes/kitchen_objects/cheese_block/cheese_block.tscn"
-sprite = "res://ui/icons/cheese_block.png"
+sprite = "res://assets/icons/cheese_block.png"
 object_name = "Cheese Block"

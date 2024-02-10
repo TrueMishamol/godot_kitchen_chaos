@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hifvvmxpjks2"
-path="res://.godot/imported/tomato_slice.png-177f138a21faa1a7b3996c6602933388.ctex"
+uid="uid://boy487qvm4jnt"
+path="res://.godot/imported/cheese_block.png-6f17a2df412f59fe246c4901dda16b09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/icons/tomato_slice.png"
-dest_files=["res://.godot/imported/tomato_slice.png-177f138a21faa1a7b3996c6602933388.ctex"]
+source_file="res://assets/icons/cheese_block.png"
+dest_files=["res://.godot/imported/cheese_block.png-6f17a2df412f59fe246c4901dda16b09.ctex"]
 
 [params]
 

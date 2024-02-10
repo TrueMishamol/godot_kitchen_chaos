@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxh4pop4pulbr"
-path="res://.godot/imported/circle_dashed.png-7dad239c18c9e737931c91a8f1871023.ctex"
+uid="uid://byyq05bfktwjm"
+path="res://.godot/imported/bread.png-d2ab405060eb5502741b5401b4ccf63c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/textures/circle_dashed.png"
-dest_files=["res://.godot/imported/circle_dashed.png-7dad239c18c9e737931c91a8f1871023.ctex"]
+source_file="res://assets/icons/bread.png"
+dest_files=["res://.godot/imported/bread.png-d2ab405060eb5502741b5401b4ccf63c.ctex"]
 
 [params]
 

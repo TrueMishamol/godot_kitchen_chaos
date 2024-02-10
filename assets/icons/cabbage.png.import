@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7l4xjj6aksst"
-path="res://.godot/imported/white_1x_1.png-71a9f97378839970195d6e4d0e1eda55.ctex"
+uid="uid://b1ugrkxy43308"
+path="res://.godot/imported/cabbage.png-978cf90037cb4364511113f23fba9669.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/textures/white_1x_1.png"
-dest_files=["res://.godot/imported/white_1x_1.png-71a9f97378839970195d6e4d0e1eda55.ctex"]
+source_file="res://assets/icons/cabbage.png"
+dest_files=["res://.godot/imported/cabbage.png-978cf90037cb4364511113f23fba9669.ctex"]
 
 [params]
 

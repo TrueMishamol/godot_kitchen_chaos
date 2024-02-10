@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0a7ttojhf7bw"
-path="res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"
+uid="uid://dd326q4tqvt1o"
+path="res://.godot/imported/arrow.png-ffc247adcd14a3a988de1107a5a1b689.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/icons/cabbage_slices.png"
-dest_files=["res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"]
+source_file="res://assets/textures/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-ffc247adcd14a3a988de1107a5a1b689.ctex"]
 
 [params]
 

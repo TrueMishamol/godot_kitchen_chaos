@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://ui/textures/gradient_vertical.png"
+source_file="res://assets/textures/gradient_vertical.png"
 dest_files=["res://.godot/imported/gradient_vertical.png-ac0203ddd2417e565b0128961efa16c8.ctex"]
 
 [params]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d168b2cmofk5i"
-path="res://.godot/imported/cheese_slice.png-eaf5d2e67f20b47f758eb4a4e5b826d7.ctex"
+uid="uid://0a7ttojhf7bw"
+path="res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/icons/cheese_slice.png"
-dest_files=["res://.godot/imported/cheese_slice.png-eaf5d2e67f20b47f758eb4a4e5b826d7.ctex"]
+source_file="res://assets/icons/cabbage_slices.png"
+dest_files=["res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"]
 
 [params]
 

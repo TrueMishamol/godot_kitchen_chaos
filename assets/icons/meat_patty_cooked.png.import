@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqhv0kqhcxmml"
-path="res://.godot/imported/bread_icon.png-a2e05d3f30e955fb51a05106e559a95c.ctex"
+uid="uid://cieiqo2j8l3rr"
+path="res://.godot/imported/meat_patty_cooked.png-d2eb44b097ab0fc5df546d527cdbda61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/app_icons/bread_icon.png"
-dest_files=["res://.godot/imported/bread_icon.png-a2e05d3f30e955fb51a05106e559a95c.ctex"]
+source_file="res://assets/icons/meat_patty_cooked.png"
+dest_files=["res://.godot/imported/meat_patty_cooked.png-d2eb44b097ab0fc5df546d527cdbda61.ctex"]
 
 [params]
 
