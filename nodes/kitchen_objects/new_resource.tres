@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="KitchenObjectRes" load_steps=2 format=3 uid="uid://bnmpj7ouhrs2r"]
-
-[ext_resource type="Script" path="res://nodes/kitchen_objects/kitchen_object_res.gd" id="1_y4uva"]
-
-[resource]
-script = ExtResource("1_y4uva")
-sprite = null
-object_name = ""
