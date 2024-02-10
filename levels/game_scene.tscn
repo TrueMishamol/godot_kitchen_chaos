@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://nu7ydhexe2b"]
+[gd_scene load_steps=13 format=3 uid="uid://nu7ydhexe2b"]
 
 [ext_resource type="PackedScene" uid="uid://bvqey5meokoef" path="res://visual/enviroment/world_environment.tscn" id="1_6cva3"]
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://visual/materials/floor.material" id="3_2g30f"]
@@ -8,9 +8,8 @@
 [ext_resource type="Script" path="res://scripts/camera_shake.gd" id="5_b38jn"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_oaf6v"]
 [ext_resource type="Resource" uid="uid://x08nkug8rot1" path="res://visual/enviroment/phantom_camera_resource.tres" id="7_ur1ug"]
-[ext_resource type="PackedScene" uid="uid://gjl6ihtwoqh7" path="res://nodes/counters/clear_counter.tscn" id="9_5pofm"]
-[ext_resource type="Resource" uid="uid://bvfb5u1k4pgt0" path="res://nodes/kitchen_objects/tomato.tres" id="10_j6amt"]
-[ext_resource type="Resource" uid="uid://c6r18lkyq5ks1" path="res://nodes/kitchen_objects/cheese_block.tres" id="11_mjt4k"]
+[ext_resource type="PackedScene" uid="uid://gjl6ihtwoqh7" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="9_5pofm"]
+[ext_resource type="Resource" uid="uid://cb5hb2p6qojd4" path="res://nodes/kitchen_objects/cheese_block/cheese_block.tres" id="11_mjt4k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
 shader = ExtResource("4_f47hb")
@@ -81,7 +80,6 @@ camera_3D_resource = ExtResource("7_ur1ug")
 
 [node name="ClearCounter" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
-_kitchen_object_res = ExtResource("10_j6amt")
 
 [node name="ClearCounter2" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4)
@@ -89,4 +87,3 @@ _kitchen_object_res = ExtResource("11_mjt4k")
 
 [node name="ClearCounter3" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -4)
-_kitchen_object_res = ExtResource("10_j6amt")

@@ -8,5 +8,5 @@ extends StaticBody3D
 
 func interact():
 	print("Interact!")
-	var tomato = _kitchen_object_res.node.instantiate()
+	var tomato = load(_kitchen_object_res.node).instantiate()
 	_counter_top_point.add_child(tomato)

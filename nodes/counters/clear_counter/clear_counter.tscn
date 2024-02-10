@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://gjl6ihtwoqh7"]
+[gd_scene load_steps=8 format=3 uid="uid://gjl6ihtwoqh7"]
 
 [ext_resource type="PackedScene" uid="uid://cwo8y6cu6uh42" path="res://visual/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.scn" id="1_3g18m"]
-[ext_resource type="Script" path="res://nodes/counters/clear_counter.gd" id="1_omp2w"]
+[ext_resource type="Script" path="res://nodes/counters/clear_counter/clear_counter.gd" id="1_omp2w"]
+[ext_resource type="Resource" uid="uid://c1pvcyid0jyd8" path="res://nodes/kitchen_objects/tomato/tomato.tres" id="2_ekiqw"]
 [ext_resource type="Script" path="res://nodes/counters/selected_counter_visual.gd" id="3_etlph"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh" id="4_xow2b"]
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://visual/materials/counter_selected.material" id="5_l7jku"]
@@ -13,6 +14,7 @@ size = Vector3(1.51172, 1.31616, 1.36133)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_omp2w")
+_kitchen_object_res = ExtResource("2_ekiqw")
 _counter_top_point = NodePath("CounterTopPoint")
 
 [node name="ClearCounter_Visual" parent="." instance=ExtResource("1_3g18m")]
