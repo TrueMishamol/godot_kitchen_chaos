@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgd2sxq1st0gm"
-path="res://.godot/imported/plate.png-df21384c4eb01a8cb0a5c04262632024.ctex"
+path="res://.godot/imported/plate.png-8227a3c41d539889c240825044c9ff75.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/icons/plate.png"
-dest_files=["res://.godot/imported/plate.png-df21384c4eb01a8cb0a5c04262632024.ctex"]
+dest_files=["res://.godot/imported/plate.png-8227a3c41d539889c240825044c9ff75.ctex"]
 
 [params]
 

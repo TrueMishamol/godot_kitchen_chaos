@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcmb3w1hfylsm"
-path="res://.godot/imported/tick_border.png-e296c15881c83bd4bdc86477fee0072f.ctex"
+path="res://.godot/imported/tick_border.png-1566f737f4bf737b4a60cd44ef5140ed.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/textures/tick_border.png"
-dest_files=["res://.godot/imported/tick_border.png-e296c15881c83bd4bdc86477fee0072f.ctex"]
+dest_files=["res://.godot/imported/tick_border.png-1566f737f4bf737b4a60cd44ef5140ed.ctex"]
 
 [params]
 

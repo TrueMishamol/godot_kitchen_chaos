@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0a7ttojhf7bw"
-path="res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"
+path="res://.godot/imported/cabbage_slices.png-94c669edb35b4d7c1d67a4ce79e45ec6.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/icons/cabbage_slices.png"
-dest_files=["res://.godot/imported/cabbage_slices.png-a24857a653eb176f7cd42446ef520bcc.ctex"]
+dest_files=["res://.godot/imported/cabbage_slices.png-94c669edb35b4d7c1d67a4ce79e45ec6.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byyq05bfktwjm"
-path="res://.godot/imported/bread.png-d2ab405060eb5502741b5401b4ccf63c.ctex"
+path="res://.godot/imported/bread.png-890d607558d8f2d2aef60932d246aa95.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/icons/bread.png"
-dest_files=["res://.godot/imported/bread.png-d2ab405060eb5502741b5401b4ccf63c.ctex"]
+dest_files=["res://.godot/imported/bread.png-890d607558d8f2d2aef60932d246aa95.ctex"]
 
 [params]
 

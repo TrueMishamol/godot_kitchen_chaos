@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bykpevlrjx3vt"
-path="res://.godot/imported/meat_patty_burned.png-87a701a1d399bcec373b40675a604675.ctex"
+path="res://.godot/imported/meat_patty_burned.png-547ce54b8725c1e096e29fddab2c9ec1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/icons/meat_patty_burned.png"
-dest_files=["res://.godot/imported/meat_patty_burned.png-87a701a1d399bcec373b40675a604675.ctex"]
+dest_files=["res://.godot/imported/meat_patty_burned.png-547ce54b8725c1e096e29fddab2c9ec1.ctex"]
 
 [params]
 

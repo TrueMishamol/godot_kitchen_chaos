@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgiwaiqej66mx"
-path="res://.godot/imported/tomato.png-079d2382b078e8f39d3b39bf2e91d830.ctex"
+path="res://.godot/imported/tomato.png-758468140470cab42147a41c67b8c150.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/icons/tomato.png"
-dest_files=["res://.godot/imported/tomato.png-079d2382b078e8f39d3b39bf2e91d830.ctex"]
+dest_files=["res://.godot/imported/tomato.png-758468140470cab42147a41c67b8c150.ctex"]
 
 [params]
 

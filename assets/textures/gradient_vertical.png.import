@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjbig0vms7b7v"
-path="res://.godot/imported/gradient_vertical.png-ac0203ddd2417e565b0128961efa16c8.ctex"
+path="res://.godot/imported/gradient_vertical.png-7aed21dc7af7ae73ef06a340b8f61325.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/textures/gradient_vertical.png"
-dest_files=["res://.godot/imported/gradient_vertical.png-ac0203ddd2417e565b0128961efa16c8.ctex"]
+dest_files=["res://.godot/imported/gradient_vertical.png-7aed21dc7af7ae73ef06a340b8f61325.ctex"]
 
 [params]
 

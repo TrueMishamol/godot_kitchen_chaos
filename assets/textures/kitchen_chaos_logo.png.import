@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2jkyr6n3qxeh"
-path="res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"
+path="res://.godot/imported/kitchen_chaos_logo.png-01b99b103e13296dc0ed51a41ff62a78.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/textures/kitchen_chaos_logo.png"
-dest_files=["res://.godot/imported/kitchen_chaos_logo.png-798a91189703ba9f456f7e58f4c1b9c7.ctex"]
+dest_files=["res://.godot/imported/kitchen_chaos_logo.png-01b99b103e13296dc0ed51a41ff62a78.ctex"]
 
 [params]
 
