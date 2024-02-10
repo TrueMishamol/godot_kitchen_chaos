@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Plate_MetallicSmoothness.png"
+source_file="res://assets/meshes/Textures/Plate_MetallicSmoothness.png"
 dest_files=["res://.godot/imported/Plate_MetallicSmoothness.png-486a4273d4c05ec49004120aadf1f075.s3tc.ctex"]
 
 [params]

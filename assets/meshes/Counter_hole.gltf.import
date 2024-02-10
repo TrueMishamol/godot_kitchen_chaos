@@ -8,7 +8,7 @@ path="res://.godot/imported/Counter_hole.gltf-464d9eff747dae6edd9e5a44cd2d5dad.s
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Counter_hole.gltf"
+source_file="res://assets/meshes/Counter_hole.gltf"
 dest_files=["res://.godot/imported/Counter_hole.gltf-464d9eff747dae6edd9e5a44cd2d5dad.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Kitchen Counter": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Counter_hole.Kitchen Counter.material"
+"use_external/path": "res://assets/meshes/extracted/Counter_hole.Kitchen Counter.material"
 }
 },
 "meshes": {
 "Counter_001": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Counter_hole.Counter_001.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Counter_hole.Counter_001.mesh"
 },
 "Root Scene_Counter_001": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Counter_hole.Counter_001.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Counter_hole.Counter_001.mesh"
 }
 },
 "nodes": {

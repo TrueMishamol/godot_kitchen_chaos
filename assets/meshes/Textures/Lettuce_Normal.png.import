@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Lettuce_Normal.png"
+source_file="res://assets/meshes/Textures/Lettuce_Normal.png"
 dest_files=["res://.godot/imported/Lettuce_Normal.png-60d5ad7c404487e9095088bb3eed04cf.s3tc.ctex"]
 
 [params]

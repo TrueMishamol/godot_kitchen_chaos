@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Meat_Normal.png"
+source_file="res://assets/meshes/Textures/Meat_Normal.png"
 dest_files=["res://.godot/imported/Meat_Normal.png-01b1a25516ea43f07f7107b7c59c09d2.s3tc.ctex"]
 
 [params]

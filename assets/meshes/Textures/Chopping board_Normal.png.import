@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Chopping board_Normal.png"
+source_file="res://assets/meshes/Textures/Chopping board_Normal.png"
 dest_files=["res://.godot/imported/Chopping board_Normal.png-07cd42270aeef6d560e513582f823232.s3tc.ctex"]
 
 [params]

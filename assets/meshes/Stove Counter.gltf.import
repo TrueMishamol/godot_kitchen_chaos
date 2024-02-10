@@ -8,7 +8,7 @@ path="res://.godot/imported/Stove Counter.gltf-3f8750a5b6429159ab3188a99786ef8a.
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Stove Counter.gltf"
+source_file="res://assets/meshes/Stove Counter.gltf"
 dest_files=["res://.godot/imported/Stove Counter.gltf-3f8750a5b6429159ab3188a99786ef8a.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Stove": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Stove Counter.Stove.material"
+"use_external/path": "res://assets/meshes/extracted/Stove Counter.Stove.material"
 }
 },
 "meshes": {
 "Cube_004": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Stove Counter.Cube_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Stove Counter.Cube_004.mesh"
 },
 "Root Scene_Cube_004": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Stove Counter.Cube_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Stove Counter.Cube_004.mesh"
 }
 },
 "nodes": {

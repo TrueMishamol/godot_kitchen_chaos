@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Kitchen Counter_Normal.png"
+source_file="res://assets/meshes/Textures/Kitchen Counter_Normal.png"
 dest_files=["res://.godot/imported/Kitchen Counter_Normal.png-f87000e9f9377ba79f634b3a49409a53.s3tc.ctex"]
 
 [params]

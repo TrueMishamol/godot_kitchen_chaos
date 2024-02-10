@@ -8,7 +8,7 @@ path="res://.godot/imported/Bread bottom.gltf-40ed04c6c9d14f8ce6c6920ce7033d2a.s
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Bread bottom.gltf"
+source_file="res://assets/meshes/Bread bottom.gltf"
 dest_files=["res://.godot/imported/Bread bottom.gltf-40ed04c6c9d14f8ce6c6920ce7033d2a.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Bread": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Bread bottom.Bread.material"
+"use_external/path": "res://assets/meshes/extracted/Bread bottom.Bread.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Bread bottom.bread for burget bottom.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Bread bottom.bread for burget bottom.mesh"
 },
 "bread for burget bottom": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Bread bottom.bread for burget bottom.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Bread bottom.bread for burget bottom.mesh"
 }
 },
 "nodes": {

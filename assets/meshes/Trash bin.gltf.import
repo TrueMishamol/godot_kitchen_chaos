@@ -8,7 +8,7 @@ path="res://.godot/imported/Trash bin.gltf-f5b0f17762210e1079da22fab5b234db.scn"
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Trash bin.gltf"
+source_file="res://assets/meshes/Trash bin.gltf"
 dest_files=["res://.godot/imported/Trash bin.gltf-f5b0f17762210e1079da22fab5b234db.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Trash bin": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Trash bin.Trash bin.material"
+"use_external/path": "res://assets/meshes/extracted/Trash bin.Trash bin.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Trash bin.trash bin.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Trash bin.trash bin.mesh"
 },
 "trash bin": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Trash bin.trash bin.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Trash bin.trash bin.mesh"
 }
 },
 "nodes": {

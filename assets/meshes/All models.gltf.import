@@ -8,7 +8,7 @@ path="res://.godot/imported/All models.gltf-0cf39365cef489f999c8862d29df96aa.scn
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/All models.gltf"
+source_file="res://assets/meshes/All models.gltf"
 dest_files=["res://.godot/imported/All models.gltf-0cf39365cef489f999c8862d29df96aa.scn"]
 
 [params]
@@ -34,98 +34,98 @@ _subresources={
 "materials": {
 "Bread": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Bread.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Bread.material"
 },
 "Cheese": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Cheese.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Cheese.material"
 },
 "Chopping board": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Chopping board.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Chopping board.material"
 },
 "Frying pan": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Frying pan.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Frying pan.material"
 },
 "Kitchen Counter": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Kitchen Counter.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Kitchen Counter.material"
 },
 "Knife": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Knife.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Knife.material"
 },
 "Lettuce": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Lettuce.material"
 },
 "Meat": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Meat.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Meat.material"
 },
 "Plate": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Plate.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Plate.material"
 },
 "Stove": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Stove.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Stove.material"
 },
 "Tomato": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Tomato.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Tomato.material"
 },
 "Trash bin": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/All models.Trash bin.material"
+"use_external/path": "res://assets/meshes/extracted/All models.Trash bin.material"
 }
 },
 "meshes": {
 "Cooked meat patty": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cooked meat patty.mesh"
 },
 "Cube": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube.mesh"
 },
 "Cube_004": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube_004.mesh"
 },
 "Cube_005": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube_005.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube_005.mesh"
 },
 "Cylinder_003": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cylinder_003.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cylinder_003.mesh"
 },
 "Lettuce": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce.mesh"
 },
 "Lettuce slice_flat": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce slice_flat.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce slice_flat.mesh"
 },
 "Lettuce slice_shaped": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce slice_shaped.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce slice_shaped.mesh"
 },
 "Plane_002": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Plane_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Plane_002.mesh"
 },
 "Root Scene_Cooked meat patty": {
 "generate/lightmap_uv": 0,
@@ -135,7 +135,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cooked meat patty.mesh"
 },
 "Root Scene_Cube": {
 "generate/lightmap_uv": 0,
@@ -145,7 +145,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube.mesh"
 },
 "Root Scene_Cube_004": {
 "generate/lightmap_uv": 0,
@@ -155,7 +155,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube_004.mesh"
 },
 "Root Scene_Cube_005": {
 "generate/lightmap_uv": 0,
@@ -165,7 +165,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cube_005.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cube_005.mesh"
 },
 "Root Scene_Cylinder_003": {
 "generate/lightmap_uv": 0,
@@ -175,7 +175,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Cylinder_003.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Cylinder_003.mesh"
 },
 "Root Scene_Lettuce": {
 "generate/lightmap_uv": 0,
@@ -185,7 +185,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce.mesh"
 },
 "Root Scene_Lettuce slice_flat": {
 "generate/lightmap_uv": 0,
@@ -195,7 +195,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce slice_flat.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce slice_flat.mesh"
 },
 "Root Scene_Lettuce slice_shaped": {
 "generate/lightmap_uv": 0,
@@ -205,7 +205,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Lettuce slice_shaped.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Lettuce slice_shaped.mesh"
 },
 "Root Scene_Plane_002": {
 "generate/lightmap_uv": 0,
@@ -215,7 +215,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Plane_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Plane_002.mesh"
 },
 "Root Scene_Tomato": {
 "generate/lightmap_uv": 0,
@@ -225,7 +225,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Tomato.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Tomato.mesh"
 },
 "Root Scene_Tomato slice": {
 "generate/lightmap_uv": 0,
@@ -235,7 +235,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Tomato slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Tomato slice.mesh"
 },
 "Root Scene_Uncooked meat patty": {
 "generate/lightmap_uv": 0,
@@ -245,7 +245,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Uncooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Uncooked meat patty.mesh"
 },
 "Root Scene_bread for burger top": {
 "generate/lightmap_uv": 0,
@@ -255,7 +255,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.bread for burger top.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.bread for burger top.mesh"
 },
 "Root Scene_bread for burget bottom": {
 "generate/lightmap_uv": 0,
@@ -265,7 +265,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.bread for burget bottom.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.bread for burget bottom.mesh"
 },
 "Root Scene_burned meat patty": {
 "generate/lightmap_uv": 0,
@@ -275,7 +275,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.burned meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.burned meat patty.mesh"
 },
 "Root Scene_cheese block": {
 "generate/lightmap_uv": 0,
@@ -285,7 +285,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.cheese block.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.cheese block.mesh"
 },
 "Root Scene_cheese slice": {
 "generate/lightmap_uv": 0,
@@ -295,7 +295,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.cheese slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.cheese slice.mesh"
 },
 "Root Scene_plate": {
 "generate/lightmap_uv": 0,
@@ -305,7 +305,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.plate.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.plate.mesh"
 },
 "Root Scene_trash bin": {
 "generate/lightmap_uv": 0,
@@ -315,57 +315,57 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.trash bin.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.trash bin.mesh"
 },
 "Tomato": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Tomato.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Tomato.mesh"
 },
 "Tomato slice": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Tomato slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Tomato slice.mesh"
 },
 "Uncooked meat patty": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.Uncooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.Uncooked meat patty.mesh"
 },
 "bread for burger top": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.bread for burger top.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.bread for burger top.mesh"
 },
 "bread for burget bottom": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.bread for burget bottom.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.bread for burget bottom.mesh"
 },
 "burned meat patty": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.burned meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.burned meat patty.mesh"
 },
 "cheese block": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.cheese block.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.cheese block.mesh"
 },
 "cheese slice": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.cheese slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.cheese slice.mesh"
 },
 "plate": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.plate.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.plate.mesh"
 },
 "trash bin": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/All models.trash bin.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/All models.trash bin.mesh"
 }
 },
 "nodes": {

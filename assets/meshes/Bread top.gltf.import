@@ -8,7 +8,7 @@ path="res://.godot/imported/Bread top.gltf-880fe0add3307333f5651de2928f5567.scn"
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Bread top.gltf"
+source_file="res://assets/meshes/Bread top.gltf"
 dest_files=["res://.godot/imported/Bread top.gltf-880fe0add3307333f5651de2928f5567.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Bread": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Bread top.Bread.material"
+"use_external/path": "res://assets/meshes/extracted/Bread top.Bread.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Bread top.bread for burger top.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Bread top.bread for burger top.mesh"
 },
 "bread for burger top": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Bread top.bread for burger top.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Bread top.bread for burger top.mesh"
 }
 },
 "nodes": {

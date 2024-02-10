@@ -8,7 +8,7 @@ path="res://.godot/imported/Cheese block.gltf-344a4602f8cff03dea82a227fce51520.s
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Cheese block.gltf"
+source_file="res://assets/meshes/Cheese block.gltf"
 dest_files=["res://.godot/imported/Cheese block.gltf-344a4602f8cff03dea82a227fce51520.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Cheese": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Cheese block.Cheese.material"
+"use_external/path": "res://assets/meshes/extracted/Cheese block.Cheese.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Cheese block.cheese block.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Cheese block.cheese block.mesh"
 },
 "cheese block": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Cheese block.cheese block.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Cheese block.cheese block.mesh"
 }
 },
 "nodes": {

@@ -8,7 +8,7 @@ path="res://.godot/imported/Chopping Board.gltf-6d7d1aef5a89eed853a80345c0c55a86
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Chopping Board.gltf"
+source_file="res://assets/meshes/Chopping Board.gltf"
 dest_files=["res://.godot/imported/Chopping Board.gltf-6d7d1aef5a89eed853a80345c0c55a86.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Chopping board": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Chopping Board.Chopping board.material"
+"use_external/path": "res://assets/meshes/extracted/Chopping Board.Chopping board.material"
 }
 },
 "meshes": {
 "Cube_005": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Chopping Board.Cube_005.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Chopping Board.Cube_005.mesh"
 },
 "Root Scene_Cube_005": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Chopping Board.Cube_005.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Chopping Board.Cube_005.mesh"
 }
 },
 "nodes": {

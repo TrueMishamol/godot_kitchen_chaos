@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Plate_AlbedoTransparency.png"
+source_file="res://assets/meshes/Textures/Plate_AlbedoTransparency.png"
 dest_files=["res://.godot/imported/Plate_AlbedoTransparency.png-9a051308bf3a85f85f2288c4a0892d0c.s3tc.ctex"]
 
 [params]

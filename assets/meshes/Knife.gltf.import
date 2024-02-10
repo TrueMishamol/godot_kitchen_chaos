@@ -8,7 +8,7 @@ path="res://.godot/imported/Knife.gltf-daa6297d4aed34488de4938c7e2abf84.scn"
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Knife.gltf"
+source_file="res://assets/meshes/Knife.gltf"
 dest_files=["res://.godot/imported/Knife.gltf-daa6297d4aed34488de4938c7e2abf84.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Knife": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Knife.Knife.material"
+"use_external/path": "res://assets/meshes/extracted/Knife.Knife.material"
 }
 },
 "meshes": {
 "Plane_002": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Knife.Plane_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Knife.Plane_002.mesh"
 },
 "Root Scene_Plane_002": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Knife.Plane_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Knife.Plane_002.mesh"
 }
 },
 "nodes": {

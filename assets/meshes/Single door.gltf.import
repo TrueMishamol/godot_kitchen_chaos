@@ -8,7 +8,7 @@ path="res://.godot/imported/Single door.gltf-16f20c540d34fe53f15b6e09af4ea49b.sc
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Single door.gltf"
+source_file="res://assets/meshes/Single door.gltf"
 dest_files=["res://.godot/imported/Single door.gltf-16f20c540d34fe53f15b6e09af4ea49b.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Kitchen Counter": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Single door.Kitchen Counter.material"
+"use_external/path": "res://assets/meshes/extracted/Single door.Kitchen Counter.material"
 }
 },
 "meshes": {
 "Counter_004": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Single door.Counter_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Single door.Counter_004.mesh"
 },
 "Root Scene_Counter_004": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Single door.Counter_004.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Single door.Counter_004.mesh"
 }
 },
 "nodes": {

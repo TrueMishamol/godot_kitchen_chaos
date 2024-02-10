@@ -8,7 +8,7 @@ path="res://.godot/imported/Uncooked meat patty.gltf-8b431bc3976afd35427c7c135b6
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Uncooked meat patty.gltf"
+source_file="res://assets/meshes/Uncooked meat patty.gltf"
 dest_files=["res://.godot/imported/Uncooked meat patty.gltf-8b431bc3976afd35427c7c135b60f177.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Meat": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Uncooked meat patty.Meat.material"
+"use_external/path": "res://assets/meshes/extracted/Uncooked meat patty.Meat.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Uncooked meat patty.Uncooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Uncooked meat patty.Uncooked meat patty.mesh"
 },
 "Uncooked meat patty": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Uncooked meat patty.Uncooked meat patty.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Uncooked meat patty.Uncooked meat patty.mesh"
 }
 },
 "nodes": {

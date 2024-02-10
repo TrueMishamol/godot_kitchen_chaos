@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Kitchen Counter_MetallicSmoothness.png"
+source_file="res://assets/meshes/Textures/Kitchen Counter_MetallicSmoothness.png"
 dest_files=["res://.godot/imported/Kitchen Counter_MetallicSmoothness.png-28a7aa586fa2fb8b70de44f0fde4d89a.s3tc.ctex"]
 
 [params]

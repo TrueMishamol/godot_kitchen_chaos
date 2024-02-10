@@ -8,7 +8,7 @@ path="res://.godot/imported/Double doors.gltf-c0ec1e08b11a02e15a7f6efd7e7efdce.s
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Double doors.gltf"
+source_file="res://assets/meshes/Double doors.gltf"
 dest_files=["res://.godot/imported/Double doors.gltf-c0ec1e08b11a02e15a7f6efd7e7efdce.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Kitchen Counter": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Double doors.Kitchen Counter.material"
+"use_external/path": "res://assets/meshes/extracted/Double doors.Kitchen Counter.material"
 }
 },
 "meshes": {
 "Counter_002": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Double doors.Counter_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Double doors.Counter_002.mesh"
 },
 "Root Scene_Counter_002": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Double doors.Counter_002.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Double doors.Counter_002.mesh"
 }
 },
 "nodes": {

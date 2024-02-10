@@ -8,7 +8,7 @@ path="res://.godot/imported/Kitchen Counter.gltf-e3b8aa0cd39e8644dfbae9dfd65fb9d
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Kitchen Counter.gltf"
+source_file="res://assets/meshes/Kitchen Counter.gltf"
 dest_files=["res://.godot/imported/Kitchen Counter.gltf-e3b8aa0cd39e8644dfbae9dfd65fb9db.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Kitchen Counter": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Kitchen Counter.material"
+"use_external/path": "res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material"
 }
 },
 "meshes": {
 "Counter": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Kitchen Counter.Counter.mesh"
 },
 "Root Scene_Counter": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Kitchen Counter.Counter.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Kitchen Counter.Counter.mesh"
 }
 },
 "nodes": {

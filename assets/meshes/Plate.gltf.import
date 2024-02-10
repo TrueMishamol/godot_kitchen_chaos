@@ -8,7 +8,7 @@ path="res://.godot/imported/Plate.gltf-7f48b444afe2776e97078d1d28e389b5.scn"
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Plate.gltf"
+source_file="res://assets/meshes/Plate.gltf"
 dest_files=["res://.godot/imported/Plate.gltf-7f48b444afe2776e97078d1d28e389b5.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Plate": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Plate.Plate.material"
+"use_external/path": "res://assets/meshes/extracted/Plate.Plate.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Plate.plate.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Plate.plate.mesh"
 },
 "plate": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Plate.plate.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Plate.plate.mesh"
 }
 },
 "nodes": {

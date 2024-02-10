@@ -8,7 +8,7 @@ path="res://.godot/imported/Cabbage slice_flat.gltf-5e99d0a9fa8ad0b0bd1e519920af
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Cabbage slice_flat.gltf"
+source_file="res://assets/meshes/Cabbage slice_flat.gltf"
 dest_files=["res://.godot/imported/Cabbage slice_flat.gltf-5e99d0a9fa8ad0b0bd1e519920af80c9.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Lettuce": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Cabbage slice_flat.Lettuce.material"
+"use_external/path": "res://assets/meshes/extracted/Cabbage slice_flat.Lettuce.material"
 }
 },
 "meshes": {
 "Lettuce slice_flat": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Cabbage slice_flat.Lettuce slice_flat.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Cabbage slice_flat.Lettuce slice_flat.mesh"
 },
 "Root Scene_Lettuce slice_flat": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Cabbage slice_flat.Lettuce slice_flat.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Cabbage slice_flat.Lettuce slice_flat.mesh"
 }
 },
 "nodes": {

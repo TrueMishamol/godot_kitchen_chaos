@@ -11,7 +11,7 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Textures/Kitchen Counter_AlbedoTransparency.png"
+source_file="res://assets/meshes/Textures/Kitchen Counter_AlbedoTransparency.png"
 dest_files=["res://.godot/imported/Kitchen Counter_AlbedoTransparency.png-a95a612163e59d677d55eb67abf5f781.s3tc.ctex"]
 
 [params]

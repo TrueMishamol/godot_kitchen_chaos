@@ -8,7 +8,7 @@ path="res://.godot/imported/Frying Pan.gltf-05ee728420189d58e9a30675d182fd51.scn
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Frying Pan.gltf"
+source_file="res://assets/meshes/Frying Pan.gltf"
 dest_files=["res://.godot/imported/Frying Pan.gltf-05ee728420189d58e9a30675d182fd51.scn"]
 
 [params]
@@ -34,14 +34,14 @@ _subresources={
 "materials": {
 "Frying pan": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Frying Pan.Frying pan.material"
+"use_external/path": "res://assets/meshes/extracted/Frying Pan.Frying pan.material"
 }
 },
 "meshes": {
 "Cylinder_003": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Frying Pan.Cylinder_003.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Frying Pan.Cylinder_003.mesh"
 },
 "Root Scene_Cylinder_003": {
 "generate/lightmap_uv": 0,
@@ -51,7 +51,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Frying Pan.Cylinder_003.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Frying Pan.Cylinder_003.mesh"
 }
 },
 "nodes": {

@@ -8,7 +8,7 @@ path="res://.godot/imported/Tomato slice.gltf-6f94c485b86e5b2aa7124dc8a8465acc.s
 
 [deps]
 
-source_file="res://Assets/_Assets/Meshes/Tomato slice.gltf"
+source_file="res://assets/meshes/Tomato slice.gltf"
 dest_files=["res://.godot/imported/Tomato slice.gltf-6f94c485b86e5b2aa7124dc8a8465acc.scn"]
 
 [params]
@@ -34,7 +34,7 @@ _subresources={
 "materials": {
 "Tomato": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/_Assets/Meshes/extracted/Tomato slice.Tomato.material"
+"use_external/path": "res://assets/meshes/extracted/Tomato slice.Tomato.material"
 }
 },
 "meshes": {
@@ -46,12 +46,12 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Tomato slice.Tomato slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Tomato slice.Tomato slice.mesh"
 },
 "Tomato slice": {
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Assets/_Assets/Meshes/extracted/Tomato slice.Tomato slice.mesh"
+"save_to_file/path": "res://assets/meshes/extracted/Tomato slice.Tomato slice.mesh"
 }
 },
 "nodes": {
