@@ -1,4 +1,5 @@
 #@tool
+class_name KitchenObject
 extends Node3D
 
 
@@ -17,3 +18,7 @@ func _process(_delta):
 	#print (get_tree().current_scene.scene_file_path)
 	#scene = get_tree().edited_scene_root.get_script().get_path()
 	##scene = get_tree().
+
+
+func get_resource() -> KitchenObjectRes:
+	return _kitchen_object_res
