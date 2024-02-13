@@ -18,13 +18,14 @@ func _input(event: InputEvent) -> void:
 			_kitchen_object.set_clear_counter(_second_clear_counter)
 
 
-func interact():
+func interact(player: Player):
 	if _kitchen_object == null:
 		var kitchen_object_instance = load(_kitchen_object_res.node).instantiate()
 		_counter_top_point.add_child(kitchen_object_instance)
 		
 		kitchen_object_instance.set_clear_counter(self)
 	else:
+		_kitchen_object.set_clear_counter(player)
 		print(_kitchen_object.get_clear_counter())
 
 

@@ -60,7 +60,7 @@ func _handle_interactions():
 		if collider != _selected_counter:
 			_set_selected_counter(collider)
 		if Input.is_action_just_pressed("interact"):
-			collider.interact()
+			collider.interact(self)
 	else:
 		if _selected_counter != null:
 			_set_selected_counter(null)
