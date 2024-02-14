@@ -4,15 +4,6 @@ extends StaticBody3D
 
 @export var _kitchen_object_parent: KitchenObjectParent
 @export var _kitchen_object_res: KitchenObjectRes
-@export var _second_clear_counter: ClearCounter
-@export var _testing: bool = false
-	
-
-func _input(event: InputEvent) -> void:
-	if _testing && event.is_action_pressed("test"):
-		print("test")
-		if _kitchen_object_parent.has_kitchen_object():
-			_kitchen_object_parent.get_kitchen_object().set_kitchen_object_parent(_second_clear_counter._kitchen_object_parent)
 
 
 func interact(new_kitchen_object_parent: KitchenObjectParent):

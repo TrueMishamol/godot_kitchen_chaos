@@ -78,10 +78,8 @@ tween_on_load = true
 inactive_update_mode = 0
 camera_3D_resource = ExtResource("7_ur1ug")
 
-[node name="ClearCounter" parent="." node_paths=PackedStringArray("_second_clear_counter") instance=ExtResource("9_5pofm")]
+[node name="ClearCounter" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
-_second_clear_counter = NodePath("../ClearCounter2")
-_testing = true
 
 [node name="ClearCounter2" parent="." instance=ExtResource("9_5pofm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4)
