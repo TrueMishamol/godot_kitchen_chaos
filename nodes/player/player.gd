@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 
 @export var raycast: RayCast3D
+@export var kitchen_object_parent: KitchenObjectParent
 
 const MAX_SPEED = 7
 const ACCELERATION = 30
@@ -60,7 +61,8 @@ func _handle_interactions():
 		if collider != _selected_counter:
 			_set_selected_counter(collider)
 		if Input.is_action_just_pressed("interact"):
-			collider.interact(self)
+			#! Give kitchen_object_parent
+			collider.interact(kitchen_object_parent)
 	else:
 		if _selected_counter != null:
 			_set_selected_counter(null)

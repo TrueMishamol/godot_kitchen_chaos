@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dudcit0gacxdp"]
+[gd_scene load_steps=5 format=3 uid="uid://dudcit0gacxdp"]
 
 [ext_resource type="Script" path="res://nodes/player/player.gd" id="1_j5l0c"]
 [ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://visual/prefabs_visuals/player_visual.scn" id="2_f7g7d"]
+[ext_resource type="PackedScene" uid="uid://06brol67bbb7" path="res://nodes/kitchen_object_parent.tscn" id="3_lvehm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ncesq"]
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("raycast")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("raycast", "kitchen_object_parent")]
 collision_layer = 2
 collision_mask = 5
 axis_lock_linear_y = true
@@ -13,6 +14,7 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_j5l0c")
 raycast = NodePath("RayCast3D")
+kitchen_object_parent = NodePath("KitchenObjectParent")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -26,3 +28,6 @@ transform = Transform3D(1.3, 0, 0, 0, -5.68248e-08, 1.3, 0, -1.3, -5.68248e-08, 
 collision_mask = 4
 debug_shape_custom_color = Color(1, 0.439216, 0, 1)
 debug_shape_thickness = 5
+
+[node name="KitchenObjectParent" parent="." instance=ExtResource("3_lvehm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0.7)
