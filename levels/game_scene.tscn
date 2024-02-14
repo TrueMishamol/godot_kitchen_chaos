@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/camera_shake.gd" id="5_b38jn"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_oaf6v"]
 [ext_resource type="Resource" uid="uid://x08nkug8rot1" path="res://visual/enviroment/phantom_camera_resource.tres" id="7_ur1ug"]
-[ext_resource type="PackedScene" uid="uid://gjl6ihtwoqh7" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="9_5pofm"]
+[ext_resource type="PackedScene" uid="uid://cg05ovt0dnolr" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="9_5pofm"]
 [ext_resource type="Resource" uid="uid://cb5hb2p6qojd4" path="res://nodes/kitchen_objects/cheese_block/cheese_block.tres" id="11_mjt4k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_goeoh"]
