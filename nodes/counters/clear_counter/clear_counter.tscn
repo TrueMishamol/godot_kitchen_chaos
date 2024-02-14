@@ -11,12 +11,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_exner"]
 size = Vector3(1.51172, 1.31616, 1.36133)
 
-[node name="ClearCounter" type="StaticBody3D" node_paths=PackedStringArray("kitchen_object_parent", "_counter_top_point")]
+[node name="ClearCounter" type="StaticBody3D" node_paths=PackedStringArray("_kitchen_object_parent")]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_omp2w")
-kitchen_object_parent = NodePath("CounterTopPoint")
-_counter_top_point = NodePath("CounterTopPoint")
+_kitchen_object_parent = NodePath("CounterTopPoint")
 _kitchen_object_res = ExtResource("2_ekiqw")
 
 [node name="ClearCounter_Visual" parent="." instance=ExtResource("1_3g18m")]

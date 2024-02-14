@@ -6,15 +6,15 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ncesq"]
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("raycast", "kitchen_object_parent")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_raycast", "_kitchen_object_parent")]
 collision_layer = 2
 collision_mask = 5
 axis_lock_linear_y = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_j5l0c")
-raycast = NodePath("RayCast3D")
-kitchen_object_parent = NodePath("KitchenObjectParent")
+_raycast = NodePath("RayCast3D")
+_kitchen_object_parent = NodePath("KitchenObjectParent")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
