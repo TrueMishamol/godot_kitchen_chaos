@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4leedjjoq610"]
 
-[ext_resource type="Script" path="res://nodes/kitchen_objects/kitchen_object.gd" id="1_80r8b"]
+[ext_resource type="Script" uid="uid://bbfqcvaa2qwxi" path="res://nodes/kitchen_objects/kitchen_object.gd" id="1_80r8b"]
 [ext_resource type="PackedScene" uid="uid://6tn07jagudvx" path="res://visual/prefabs_visuals/kitchen_objects_visuals/cheese_block_visual_prefab.scn" id="1_pnet7"]
 [ext_resource type="Resource" uid="uid://cb5hb2p6qojd4" path="res://nodes/kitchen_objects/cheese_block/cheese_block.tres" id="2_7sgqp"]
 

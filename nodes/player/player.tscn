@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dudcit0gacxdp"]
 
-[ext_resource type="Script" path="res://nodes/player/player.gd" id="1_j5l0c"]
+[ext_resource type="Script" uid="uid://doq62omacsatx" path="res://nodes/player/player.gd" id="1_j5l0c"]
 [ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://visual/prefabs_visuals/player_visual.scn" id="2_f7g7d"]
 [ext_resource type="PackedScene" uid="uid://06brol67bbb7" path="res://nodes/kitchen_object_parent.tscn" id="3_lvehm"]
 

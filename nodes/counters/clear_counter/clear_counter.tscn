@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cg05ovt0dnolr"]
 
 [ext_resource type="PackedScene" uid="uid://ccvrgvv8jo18d" path="res://nodes/counters/clear_counter/_base_counter.tscn" id="1_7jnmc"]
-[ext_resource type="Script" path="res://nodes/counters/clear_counter/clear_counter.gd" id="2_6cjmb"]
+[ext_resource type="Script" uid="uid://cwstwicnxctg" path="res://nodes/counters/clear_counter/clear_counter.gd" id="2_6cjmb"]
 [ext_resource type="Resource" uid="uid://c1pvcyid0jyd8" path="res://nodes/kitchen_objects/tomato/tomato.tres" id="2_ekiqw"]
 [ext_resource type="PackedScene" uid="uid://cwo8y6cu6uh42" path="res://visual/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.scn" id="3_6w3wb"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="4_tkf0t"]

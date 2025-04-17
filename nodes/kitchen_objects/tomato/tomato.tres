@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="KitchenObjectRes" load_steps=2 format=3 uid="uid://c1pvcyid0jyd8"]
 
-[ext_resource type="Script" path="res://nodes/kitchen_objects/kitchen_object_res.gd" id="1_pa1ba"]
+[ext_resource type="Script" uid="uid://bhrfgq52o37ef" path="res://nodes/kitchen_objects/kitchen_object_res.gd" id="1_pa1ba"]
 
 [resource]
 script = ExtResource("1_pa1ba")
