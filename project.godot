@@ -11,12 +11,23 @@ config_version=5
 [application]
 
 config/name="Kitchen Chaos"
+config/description="Code Monkey's tutorial
+Recrafted by Mishamol"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="cool_cyan_donut/kitchen_chaos"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [dotnet]
 
-project/assembly_name="Kitchen Chaos"
+project/assembly_name="KitchenChaos"
 
 [file_customization]
 
