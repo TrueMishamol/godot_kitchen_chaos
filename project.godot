@@ -16,7 +16,7 @@ Recrafted by Mishamol"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="cool_cyan_donut/kitchen_chaos"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://5wn1sfu5b3p8"
 
 [display]
 
