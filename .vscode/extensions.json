@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"ms-dotnettools.vscode-dotnet-runtime",
+		"aaron-bond.better-comments",
+		"ms-dotnettools.csharp",
+		"neikeq.godot-csharp-vscode",
+		"editorconfig.editorconfig",
+		"jamessauer.gdscript-theme",
+		"geequlim.godot-tools",
+		"pkief.material-icon-theme",
+		"ms-vscode.mono-debug"
+	]
+}
