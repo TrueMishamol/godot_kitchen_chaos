@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkwke2thkkciu"
-path.s3tc="res://.godot/imported/meat_normal.png-c5c50c140df038c0676d9e50724274e5.s3tc.ctex"
+uid="uid://dko1bbk8gmmah"
+path.s3tc="res://.godot/imported/Meat_Normal.png-559941640e1d975b9b3f77aa3a85d17c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/meshes/textures/meat_normal.png"
-dest_files=["res://.godot/imported/meat_normal.png-c5c50c140df038c0676d9e50724274e5.s3tc.ctex"]
+source_file="res://assets/meshes/textures/Meat_Normal.png"
+dest_files=["res://.godot/imported/Meat_Normal.png-559941640e1d975b9b3f77aa3a85d17c.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/meshes/textures/Meat_Normal.png"
+roughness/src_normal="res://assets/meshes/Textures/Meat_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

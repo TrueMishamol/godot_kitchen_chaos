@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbg8hn8t1t0mm"
-path.s3tc="res://.godot/imported/tomato_normal.png-6d000899d547c7ee9ec6ceb36d62c3f5.s3tc.ctex"
+uid="uid://nd5xvfdlvvn2"
+path.s3tc="res://.godot/imported/Tomato_Normal.png-d529e600fb65d09839bee945cb6190b3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/meshes/textures/tomato_normal.png"
-dest_files=["res://.godot/imported/tomato_normal.png-6d000899d547c7ee9ec6ceb36d62c3f5.s3tc.ctex"]
+source_file="res://assets/meshes/textures/Tomato_Normal.png"
+dest_files=["res://.godot/imported/Tomato_Normal.png-d529e600fb65d09839bee945cb6190b3.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/meshes/textures/Tomato_Normal.png"
+roughness/src_normal="res://assets/meshes/Textures/Tomato_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

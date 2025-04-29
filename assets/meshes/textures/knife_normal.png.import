@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1j2okfq1u83v"
-path.s3tc="res://.godot/imported/knife_normal.png-1c9fedb36aef7f91f68478e44eab2801.s3tc.ctex"
+uid="uid://dcshhyapsew2n"
+path.s3tc="res://.godot/imported/Knife_Normal.png-5e6e12f5ba0baeeec74ff3f81ef702e3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/meshes/textures/knife_normal.png"
-dest_files=["res://.godot/imported/knife_normal.png-1c9fedb36aef7f91f68478e44eab2801.s3tc.ctex"]
+source_file="res://assets/meshes/textures/Knife_Normal.png"
+dest_files=["res://.godot/imported/Knife_Normal.png-5e6e12f5ba0baeeec74ff3f81ef702e3.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/meshes/textures/Knife_Normal.png"
+roughness/src_normal="res://assets/meshes/Textures/Knife_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

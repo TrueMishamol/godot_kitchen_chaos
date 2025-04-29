@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://27ll854dbauv"
-path.s3tc="res://.godot/imported/bread_normal.png-5ae59e846b3c1d552eaf6fef35016c2f.s3tc.ctex"
+uid="uid://bbcbht4qj1413"
+path.s3tc="res://.godot/imported/Bread_Normal.png-85e5818b3be0591603e880850f29ea27.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/meshes/textures/bread_normal.png"
-dest_files=["res://.godot/imported/bread_normal.png-5ae59e846b3c1d552eaf6fef35016c2f.s3tc.ctex"]
+source_file="res://assets/meshes/textures/Bread_Normal.png"
+dest_files=["res://.godot/imported/Bread_Normal.png-85e5818b3be0591603e880850f29ea27.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/meshes/textures/Bread_Normal.png"
+roughness/src_normal="res://assets/meshes/Textures/Bread_Normal.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
