@@ -1,6 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=11 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_shake/camera_shake.tscn" id="4_b5spy"]
+[ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="Material" uid="uid://cnx2opb4tred8" path="res://visuals/shader_materials/gradient/wall.tres" id="6_kk2rg"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
@@ -34,9 +36,16 @@ light_energy = 0.6
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 21.5, 21.3)
+transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 30, 30)
 current = true
 fov = 20.0
+
+[node name="CameraShake" parent="Camera3D" node_paths=PackedStringArray("_Camera") instance=ExtResource("4_b5spy")]
+_Camera = NodePath("..")
+
+[node name="CameraFollow" parent="Camera3D" node_paths=PackedStringArray("_Camera", "_Target") instance=ExtResource("5_utbpp")]
+_Camera = NodePath("..")
+_Target = NodePath("../../Player")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_ycayy")
