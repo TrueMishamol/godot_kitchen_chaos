@@ -8,7 +8,17 @@ public partial class Movement : Node {
 	[Export] private float _Friction = 20.0f;
 	[Export] private float _RotationAcceleration = 10.0f;
 
-	private Player _player;
+	public Player Player { private get; set; }
+	public bool IsWalking {
+		get {
+			return _inputDirection != Vector2.Zero;
+		}
+	}
+	// public bool IsMoving {
+	// 	get {
+	// 		return _horizontalVelocity != Vector2.Zero;
+	// 	}
+	// }
 
 	private Vector2 _inputDirection = Vector2.Zero;
 	private Vector2 _horizontalVelocity = Vector2.Zero;
@@ -18,34 +28,24 @@ public partial class Movement : Node {
 
 
 	public override void _PhysicsProcess(double delta) {
-		if (_player == null)
+		if (Player == null)
 			return;
 
-		if (!_player.IsMultiplayerAuthority())
+		if (!Player.IsMultiplayerAuthority())
 			return;
 
 		_inputDirection = Input.GetVector("go_left", "go_right", "go_forward", "go_back").Normalized();
-		_horizontalVelocity = new Vector2(_player.Velocity.X, _player.Velocity.Z);
+		_horizontalVelocity = new Vector2(Player.Velocity.X, Player.Velocity.Z);
 		_verticalVelocity = 0;
 
 		HandleMovement((float)delta);
 
-		_player.Velocity = new Vector3(_horizontalVelocity.X, _verticalVelocity, _horizontalVelocity.Y);
-		_player.MoveAndSlide();
+		Player.Velocity = new Vector3(_horizontalVelocity.X, _verticalVelocity, _horizontalVelocity.Y);
+		Player.MoveAndSlide();
 
 		HandleRotation((float)delta);
 	}
 
-
-
-
-	public bool IsMoving() {
-		return _horizontalVelocity != Vector2.Zero;
-	}
-
-	public void SetPlayer(Player player) {
-		_player = player;
-	}
 
 
 
@@ -67,10 +67,10 @@ public partial class Movement : Node {
 	private void HandleRotation(float delta) {
 		if (_inputDirection != Vector2.Zero) {
 			float targetAngle = Mathf.Atan2(_inputDirection.X * 100f, _inputDirection.Y * 100f);
-			_player.Rotation = new Vector3(
-				_player.Rotation.X,
-				Mathf.LerpAngle(_player.Rotation.Y, targetAngle, delta * _RotationAcceleration),
-				_player.Rotation.Z
+			Player.Rotation = new Vector3(
+				Player.Rotation.X,
+				Mathf.LerpAngle(Player.Rotation.Y, targetAngle, delta * _RotationAcceleration),
+				Player.Rotation.Z
 			);
 		}
 	}

@@ -5,6 +5,7 @@ public partial class Player : CharacterBody3D {
 
 
 	[Export] private Movement _Movement;
+	[Export] private PlayerVisual _PlayerVisual;
 
 
 
@@ -19,6 +20,7 @@ public partial class Player : CharacterBody3D {
 	}
 
 	public override void _Ready() {
-		_Movement?.SetPlayer(this);
+		_Movement.Player = this;
+		_PlayerVisual.PlayerMovement = _Movement;
 	}
 }

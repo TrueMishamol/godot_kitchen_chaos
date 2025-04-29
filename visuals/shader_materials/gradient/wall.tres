@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cnx2opb4tred8"]
+
+[ext_resource type="Shader" uid="uid://ceye8hf05gwsy" path="res://visuals/shader_materials/gradient/gradient.gdshader" id="1_wodc3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wodc3")
+shader_parameter/_TopColor = Color(0.231, 0.393, 0.518, 1)
+shader_parameter/_BottomColor = Color(0.205547, 0.281753, 0.414423, 1)

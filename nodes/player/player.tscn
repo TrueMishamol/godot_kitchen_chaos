@@ -2,16 +2,15 @@
 
 [ext_resource type="Script" uid="uid://p5vsqgowb28t" path="res://nodes/player/Player.cs" id="1_4raw8"]
 [ext_resource type="Script" uid="uid://d0ys77qx4m5jq" path="res://nodes/player/Movement.cs" id="2_khfle"]
+[ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://assets/prefabs_visuals/player_visual.scn" id="3_fn53c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
 radius = 0.35
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_b5spy"]
-radius = 0.35
-
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Movement")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Movement", "_PlayerVisual")]
 script = ExtResource("1_4raw8")
 _Movement = NodePath("Movement")
+_PlayerVisual = NodePath("PlayerVisual")
 
 [node name="Movement" type="Node" parent="."]
 script = ExtResource("2_khfle")
@@ -20,6 +19,4 @@ script = ExtResource("2_khfle")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_kk2rg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_b5spy")
+[node name="PlayerVisual" parent="." instance=ExtResource("3_fn53c")]
