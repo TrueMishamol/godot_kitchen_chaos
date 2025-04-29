@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=4]
+
+[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_6jpfn"]
+[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_wkmo7"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Stove Counter.Cube_004.mesh" id="3_vgrj4"]
+[ext_resource type="Material" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="4_xncvk"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Frying Pan.gltf" id="5_spb4e"]
+[ext_resource type="Material" path="res://assets/materials/stove_red_glow.material" id="6_f1piw"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
+resource_name = "Quad"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, 0, 1.00001, 1, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AQAAAAIAAwABAAIA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAL8AAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAAAAAAAAvwAAAD8AAAAA/////////7//////////v/////////+//////////78=")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_eb1ek"]
+data = PackedVector3Array(-0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0)
+
+[node name="StoveCounter_Visual" type="Node3D"]
+
+[node name="Counter" type="Node3D" parent="."]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Counter"]
+gi_mode = 2
+mesh = ExtResource("1_6jpfn")
+surface_material_override/0 = ExtResource("2_wkmo7")
+
+[node name="Stove" type="Node3D" parent="."]
+transform = Transform3D(1.67, 0, 0, 0, 1.67, 0, 0, 0, 1.67, -0.043, 1.431, 0.07)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Stove"]
+gi_mode = 2
+mesh = ExtResource("3_vgrj4")
+surface_material_override/0 = ExtResource("4_xncvk")
+
+[node name="Frying Pan" parent="." instance=ExtResource("5_spb4e")]
+transform = Transform3D(1.3793, 0, 1.44828, 0, 2, 0, -1.44828, 0, 1.3793, -0.048, 1.375, 0)
+
+[node name="SizzlingParticles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.047, 1.432, -0.018)
+
+[node name="ParticleSystem" type="Node" parent="SizzlingParticles"]
+
+[node name="ParticleSystemRenderer" type="Node" parent="SizzlingParticles"]
+
+[node name="StoveOnVisual" type="Node3D" parent="."]
+transform = Transform3D(0.828344, 0, 0, 0, -4.00075e-08, -1, 0, 0.915266, -4.37114e-08, -0.047, 1.395, -0.039)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="StoveOnVisual"]
+gi_mode = 2
+mesh = SubResource("ArrayMesh_btesd")
+surface_material_override/0 = ExtResource("6_f1piw")
+
+[node name="MeshCollider" type="StaticBody3D" parent="StoveOnVisual"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StoveOnVisual/MeshCollider"]
+shape = SubResource("ConcavePolygonShape3D_eb1ek")
+
+[editable path="Frying Pan"]

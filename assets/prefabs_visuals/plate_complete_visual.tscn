@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/bread_visual_prefab.scn" id="1_kuxmg"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/meat_patty_cooked_visual_prefab.scn" id="2_p6b4d"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/tomato_slices_visual_prefab.scn" id="3_a0e8p"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/cheese_slices_visual_prefab.scn" id="4_i6ca4"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/cabbage_sliced_visual_prefab.scn" id="5_t6b4k"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/meat_patty_burned_visual_prefab.scn" id="6_qrynq"]
+
+[node name="PlateCompleteVisual" type="Node3D"]
+
+[node name="Bread" parent="." instance=ExtResource("1_kuxmg")]
+
+[node name="MeatPattyCooked" parent="." instance=ExtResource("2_p6b4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166, 0)
+
+[node name="TomatoSlices" parent="." instance=ExtResource("3_a0e8p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.272, 0)
+
+[node name="CheeseSlices" parent="." instance=ExtResource("4_i6ca4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
+
+[node name="CabbageSliced" parent="." instance=ExtResource("5_t6b4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29, 0)
+
+[node name="MeatPattyBurned" parent="." instance=ExtResource("6_qrynq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166, 0)
+
+[editable path="Bread"]
+[editable path="Bread/Bread bottom"]
+[editable path="Bread/Bread top"]
+[editable path="MeatPattyCooked"]
+[editable path="MeatPattyCooked/Cooked meat patty"]
+[editable path="TomatoSlices"]
+[editable path="TomatoSlices/Tomato slice"]
+[editable path="TomatoSlices/Tomato slice (1)"]
+[editable path="TomatoSlices/Tomato slice (2)"]
+[editable path="CheeseSlices"]
+[editable path="CheeseSlices/Cheese slice"]
+[editable path="CheeseSlices/Cheese slice (1)"]
+[editable path="CheeseSlices/Cheese slice (2)"]
+[editable path="CabbageSliced"]
+[editable path="CabbageSliced/Lattuce slice_shaped"]
+[editable path="CabbageSliced/Lattuce slice_shaped (1)"]
+[editable path="CabbageSliced/Lattuce slice_shaped (2)"]
+[editable path="CabbageSliced/Lattuce slice_shaped (3)"]
+[editable path="CabbageSliced/Lattuce slice_shaped (4)"]
+[editable path="MeatPattyBurned"]
+[editable path="MeatPattyBurned/Burned meat patty"]

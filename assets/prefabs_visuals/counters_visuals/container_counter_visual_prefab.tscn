@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=4]
+
+[ext_resource type="AnimationLibrary" path="res://assets/animations/container_counter/container_counter_library.res" id="1_y6cfu"]
+[ext_resource type="AnimationNodeBlendTree" path="res://assets/animations/container_counter/container_counter_controller.res" id="2_cedse"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Counter_solid.gltf" id="3_g8ica"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Counter_hole.gltf" id="4_pmfpm"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Single door.gltf" id="5_5bnm7"]
+[ext_resource type="Material" path="res://assets/materials/black.material" id="6_gt3dl"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
+resource_name = "Quad"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, 0, 1.00001, 1, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AQAAAAIAAwABAAIA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAL8AAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAAAAAAAAvwAAAD8AAAAA/////////7//////////v/////////+//////////78=")
+}]
+
+[node name="ContainerCounter_Visual" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("1_y6cfu")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+deterministic = false
+root_motion_track = NodePath("%GeneralSkeleton:Root")
+root_motion_local = false
+tree_root = ExtResource("2_cedse")
+anim_player = NodePath("../AnimationPlayer")
+metadata/OpenClose = false
+metadata/guid_fileid_to_animation_name = {
+"7e9192aa6090c834589ba44fb1d962a7:7400000": "ContainerClosed",
+"f8c1f20930651254f9dad32e4686d44d:7400000": "ContainerOpenClose"
+}
+
+[node name="Counter_solid" parent="." instance=ExtResource("3_g8ica")]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, -0.00601022, 0, 0)
+
+[node name="Counter_hole" parent="." instance=ExtResource("4_pmfpm")]
+transform = Transform3D(1.65, 0, 0, 0, -6.99382e-08, 1.65, 0, -1.6, -7.21238e-08, 0.00900274, 0.68, 0.6302)
+
+[node name="Single door" parent="." instance=ExtResource("5_5bnm7")]
+transform = Transform3D(-1.12277e-07, 2.15882, 0, -0.0344269, -1.26477e-09, 1.54986, 2.56837, 9.43565e-08, 0.0207746, -0.801788, 1.28994, -0.443912)
+
+[node name="ObjectSprite" type="Node3D" parent="Single door"]
+transform = Transform3D(8.40585e-07, -0.14, -5.21818e-07, -0.14, -8.40585e-07, 1.17996e-08, -1.18027e-08, 5.21818e-07, -0.14, 0.178662, 0.36816, 0.0381049)
+
+[node name="SpriteRenderer" type="Node" parent="Single door/ObjectSprite"]
+
+[node name="Black" type="Node3D" parent="."]
+transform = Transform3D(-1.40465, -9.09459e-08, 3.82137e-15, 0, -4.5473e-08, -1, 1.22798e-07, -1.0403, 4.37114e-08, 0.003, 1.268, 0.0489)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Black"]
+gi_mode = 2
+mesh = SubResource("ArrayMesh_btesd")
+surface_material_override/0 = ExtResource("6_gt3dl")
+
+[editable path="Counter_solid"]
+[editable path="Counter_hole"]
+[editable path="Single door"]

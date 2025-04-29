@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_vdkvd"]
+[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_v5q4n"]
+
+[node name="PlatesCounter_Visual" type="Node3D"]
+
+[node name="KitchenCounter" type="Node3D" parent="."]
+transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="KitchenCounter"]
+gi_mode = 2
+mesh = ExtResource("1_vdkvd")
+surface_material_override/0 = ExtResource("2_v5q4n")
+
+[node name="CircleSprite" type="Node3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 1.268, 0)
+
+[node name="SpriteRenderer" type="Node" parent="CircleSprite"]

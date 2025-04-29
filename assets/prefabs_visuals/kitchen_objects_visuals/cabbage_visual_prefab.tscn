@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/meshes/Cabbage.gltf" id="1_e2aw5"]
+[ext_resource type="Material" path="res://assets/meshes/extracted/Cabbage.material" id="2_o6772"]
+
+[node name="Cabbage_Visual" type="Node3D"]
+
+[node name="Lattuce" parent="." instance=ExtResource("1_e2aw5")]
+transform = Transform3D(2.70981, 0.120977, 0.381959, -0.166683, 2.7151, 0.322586, -0.364342, -0.342359, 2.69326, 0, 0, 0)
+
+[node name="Lettuce" parent="Lattuce" index="0"]
+surface_material_override/0 = ExtResource("2_o6772")
+
+[editable path="Lattuce"]

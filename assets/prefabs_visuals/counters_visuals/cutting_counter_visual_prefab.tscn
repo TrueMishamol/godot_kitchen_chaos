@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="AnimationLibrary" path="res://assets/animations/cutting_counter/cutting_counter_library.res" id="1_24g6m"]
+[ext_resource type="AnimationNodeBlendTree" path="res://assets/animations/cutting_counter/cutting_counter_controller.res" id="2_fejye"]
+[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="3_6ejgj"]
+[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="4_kgtrf"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Chopping Board.gltf" id="5_ntef6"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Knife.gltf" id="6_god3c"]
+
+[node name="CuttingCounter_Visual" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("1_24g6m")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+deterministic = false
+root_motion_track = NodePath("%GeneralSkeleton:Root")
+root_motion_local = false
+tree_root = ExtResource("2_fejye")
+anim_player = NodePath("../AnimationPlayer")
+metadata/Cut = false
+metadata/guid_fileid_to_animation_name = {
+"8e51262abb6b5fa4288bd453b7cfb7a6:7400000": "CuttingCounterIdle",
+"d7dc3ae032292ec4790e41ed41f65f1d:7400000": "CuttingCounterCut"
+}
+
+[node name="KitchenCounter" type="Node3D" parent="."]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="KitchenCounter"]
+gi_mode = 2
+mesh = ExtResource("3_6ejgj")
+surface_material_override/0 = ExtResource("4_kgtrf")
+
+[node name="Chopping Board" parent="." instance=ExtResource("5_ntef6")]
+transform = Transform3D(1.82, 0, 0, 0, 1.82, 0, 0, 0, 1.82, 0, 1.291, 0)
+
+[node name="Knife" parent="." instance=ExtResource("6_god3c")]
+transform = Transform3D(-1.00576, -1.19911, -1.17991, 1.49148, 0.000286369, -1.27164, 0.778153, -1.5504, 0.91233, -0.414, 1.896, 0.389)
+
+[node name="Trail" type="Node3D" parent="Knife"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.021, 0, -0.34)
+visible = false
+
+[node name="TrailRenderer" type="Node" parent="Knife/Trail"]
+
+[editable path="Chopping Board"]
+[editable path="Knife"]
