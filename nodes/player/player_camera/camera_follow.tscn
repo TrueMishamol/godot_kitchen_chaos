@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://0yc2j1l7n4gw"]
+
+[ext_resource type="Script" uid="uid://xxf3mnv0ev7r" path="res://nodes/player/player_camera/camera_follow.gd" id="1_gwpgl"]
+
+[node name="CameraFollow" type="Node" node_paths=PackedStringArray("_camera", "_target")]
+script = ExtResource("1_gwpgl")
+_camera = NodePath("")
+_target = NodePath("")

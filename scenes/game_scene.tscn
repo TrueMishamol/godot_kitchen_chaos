@@ -1,13 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=9 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="Texture2D" uid="uid://ckjg7vs8ik3cx" path="res://assets/textures/button_background.png" id="2_bw6k5"]
-[ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://assets/prefabs_visuals/player_visual.scn" id="2_onqr8"]
-[ext_resource type="PackedScene" uid="uid://cwo8y6cu6uh42" path="res://assets/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.scn" id="4_bw6k5"]
-[ext_resource type="PackedScene" uid="uid://phd4x1mmlswt" path="res://assets/prefabs_visuals/counters_visuals/cutting_counter_visual_prefab.scn" id="5_b5spy"]
-[ext_resource type="PackedScene" uid="uid://cevp38ptaqtil" path="res://assets/prefabs_visuals/counters_visuals/stove_counter_visual_prefab.scn" id="6_utbpp"]
-[ext_resource type="PackedScene" uid="uid://d122oakvqmbhq" path="res://assets/prefabs_visuals/kitchen_objects_visuals/tomato_visual_prefab.scn" id="7_mw25s"]
-[ext_resource type="PackedScene" uid="uid://c81s01xsxcd7f" path="res://assets/prefabs_visuals/kitchen_objects_visuals/cabbage_visual_prefab.scn" id="8_tcjrq"]
+[ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dshgbuyfixo5y" path="res://visuals/environment/camera_attributes_practical.tres" id="10_tcjrq"]
 [ext_resource type="PackedScene" uid="uid://ccnhq41ek4wxw" path="res://modules/vignette/vignette.tscn" id="11_tcjrq"]
@@ -28,33 +23,6 @@ size = Vector2(40, 40)
 
 [node name="Vignette" parent="CanvasLayer" instance=ExtResource("11_tcjrq")]
 
-[node name="Floor" type="MeshInstance3D" parent="."]
-material_override = ExtResource("1_ycayy")
-mesh = SubResource("PlaneMesh_onqr8")
-
-[node name="PlayerVisual" parent="." instance=ExtResource("2_onqr8")]
-transform = Transform3D(0.980481, 0, 0.196613, 0, 1, 0, -0.196613, 0, 0.980481, -1.08306, 0, -1.5661)
-
-[node name="ClearCounter_Visual" parent="." instance=ExtResource("4_bw6k5")]
-transform = Transform3D(0.986652, 0, -0.162844, 0, 1, 0, 0.162844, 0, 0.986652, 1.40612, -4.76837e-07, -2.09469)
-
-[node name="CuttingCounter_Visual" parent="." instance=ExtResource("5_b5spy")]
-transform = Transform3D(0.948655, 0, -0.316312, 0, 1, 0, 0.316312, 0, 0.948655, 3.01346, 0, -1.60646)
-
-[node name="StoveCounter_Visual" parent="." instance=ExtResource("6_utbpp")]
-transform = Transform3D(0.813365, 0, 0.581754, 0, 1, 0, -0.581754, 0, 0.813365, -3.39093, 0, -1.03118)
-
-[node name="Tomato_Visual" parent="." instance=ExtResource("7_mw25s")]
-transform = Transform3D(-0.999827, 0, -0.0186041, 0, 1, 0, 0.0186041, 0, -0.999827, 0.924105, 0, -0.5694)
-
-[node name="Cabbage_Visual" parent="." instance=ExtResource("8_tcjrq")]
-transform = Transform3D(-0.999827, 0, -0.0186041, 0, 1, 0, 0.0186041, 0, -0.999827, 1.75368, 0, 0.00085628)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 21.5, 21.3)
-current = true
-fov = 20.0
-
 [node name="Environment" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
@@ -66,3 +34,14 @@ transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0
 light_color = Color(0.86454, 0.886074, 0.900303, 1)
 light_energy = 0.6
 shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 21.5, 21.3)
+current = true
+fov = 20.0
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ycayy")
+mesh = SubResource("PlaneMesh_onqr8")
+
+[node name="Player" parent="." instance=ExtResource("6_rurhu")]

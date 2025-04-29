@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://brpatk8ap3rgr"]
+
+[ext_resource type="Script" uid="uid://0pku7wof1nhi" path="res://nodes/player/player_camera/player_camera.gd" id="1_i716v"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://nodes/player/player_camera/camera_shake.tscn" id="1_j1k6k"]
+[ext_resource type="PackedScene" uid="uid://0yc2j1l7n4gw" path="res://nodes/player/player_camera/camera_follow.tscn" id="2_tpgn6"]
+
+[node name="PlayerCamera" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 21, 21)
+fov = 20.0
+script = ExtResource("1_i716v")
+
+[node name="CameraShake" parent="." instance=ExtResource("1_j1k6k")]
+
+[node name="CameraFollow" parent="." instance=ExtResource("2_tpgn6")]
