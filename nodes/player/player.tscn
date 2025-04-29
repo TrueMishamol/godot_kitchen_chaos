@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clljgky0x46j2" path="res://assets/prefabs_visuals/player_visual.scn" id="3_fn53c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
-radius = 0.35
+radius = 0.65459
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Movement", "_PlayerVisual")]
 script = ExtResource("1_4raw8")
