@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bb6w6ipkc5uqg"
+uid="uid://dexa5qlf6t8s8"
 path="res://.godot/imported/sfx_delivery_fail_02.wav-999647b12c234f8871a48be9bd19f3cc.sample"
 
 [deps]
@@ -21,4 +21,4 @@ edit/normalize=false
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
-compress/mode=2
+compress/mode=0

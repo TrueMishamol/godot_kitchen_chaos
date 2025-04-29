@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ycb5cirgywp"
-path="res://.godot/imported/bread_icon.png-3a315e3d3ea5d2c5cdeb233a2fab5886.ctex"
+uid="uid://dqhv0kqhcxmml"
+path="res://.godot/imported/appicon_kitchen_chaos.png-9d673d27fd633ed330717484dbf10325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/app_icons/bread_icon.png"
-dest_files=["res://.godot/imported/bread_icon.png-3a315e3d3ea5d2c5cdeb233a2fab5886.ctex"]
+source_file="res://assets/app_icons/appicon_kitchen_chaos.png"
+dest_files=["res://.godot/imported/appicon_kitchen_chaos.png-9d673d27fd633ed330717484dbf10325.ctex"]
 
 [params]
 

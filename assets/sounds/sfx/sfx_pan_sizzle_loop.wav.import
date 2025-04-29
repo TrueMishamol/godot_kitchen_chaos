@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://8ecwd83afq2k"
+uid="uid://dkrbs5n4uedoc"
 path="res://.godot/imported/sfx_pan_sizzle_loop.wav-623285f203f4e77f357a5629a966673d.sample"
 
 [deps]
@@ -21,4 +21,4 @@ edit/normalize=false
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
-compress/mode=2
+compress/mode=0

@@ -2,7 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://ddq5adlwoqt4m"
+uid="uid://btd6ol7gowmta"
 path="res://.godot/imported/sfx_footstep_02_02.wav-d26a009f6e0b7fecb30f4c9b358c63bb.sample"
 
 [deps]
@@ -21,4 +21,4 @@ edit/normalize=false
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
-compress/mode=2
+compress/mode=0
