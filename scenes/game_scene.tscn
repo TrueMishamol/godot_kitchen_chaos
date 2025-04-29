@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=5 format=3 uid="uid://2fmgobf58r4c"]
 
-[ext_resource type="Material" uid="uid://kgaj2kyhq148" path="res://visuals/materials/floor.tres" id="1_w5aja"]
+[ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
+[ext_resource type="Texture2D" uid="uid://t6c7yqveeadl" path="res://assets/textures/button_background.png" id="2_bw6k5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3j0m"]
+albedo_texture = ExtResource("2_bw6k5")
+uv1_scale = Vector3(5, 5, 5)
+uv1_triplanar = true
+texture_filter = 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_onqr8"]
-material = ExtResource("1_w5aja")
-size = Vector2(10, 10)
+material = SubResource("StandardMaterial3D_y3j0m")
+size = Vector2(40, 40)
 
 [node name="GameScene" type="Node3D"]
 
 [node name="Floor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ycayy")
 mesh = SubResource("PlaneMesh_onqr8")
