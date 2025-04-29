@@ -5,6 +5,7 @@ public partial class Player : CharacterBody3D {
 
 
 	[Export] private Movement _Movement;
+	// [Export] private Interaction _Interaction;
 	[Export] private PlayerVisual _PlayerVisual;
 
 

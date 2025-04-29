@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce5hwwuchw5nc"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_w5f6c"]
+[ext_resource type="Script" uid="uid://ccedbrliq16k8" path="res://nodes/counters/ClearCounter.cs" id="2_q2m74"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.tscn" id="2_we1s5"]
+
+[node name="ClearCounter" instance=ExtResource("1_w5f6c")]
+script = ExtResource("2_q2m74")
+
+[node name="ClearCounter_Visual" parent="." index="1" instance=ExtResource("2_we1s5")]

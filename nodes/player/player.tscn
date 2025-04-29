@@ -1,19 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbhqocqlgqjo6"]
+[gd_scene load_steps=6 format=3 uid="uid://dbhqocqlgqjo6"]
 
 [ext_resource type="Script" uid="uid://p5vsqgowb28t" path="res://nodes/player/Player.cs" id="1_4raw8"]
 [ext_resource type="Script" uid="uid://d0ys77qx4m5jq" path="res://nodes/player/Movement.cs" id="2_khfle"]
 [ext_resource type="PackedScene" uid="uid://j3bsq36mrl5u" path="res://assets/prefabs_visuals/player_visual.tscn" id="3_fn53c"]
+[ext_resource type="Script" uid="uid://b3urrthyuwnc" path="res://nodes/player/Interaction.cs" id="3_osu55"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
 radius = 0.65459
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Movement", "_PlayerVisual")]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_4raw8")
 _Movement = NodePath("Movement")
 _PlayerVisual = NodePath("PlayerVisual")
 
 [node name="Movement" type="Node" parent="."]
 script = ExtResource("2_khfle")
+
+[node name="Interaction" type="Node3D" parent="." node_paths=PackedStringArray("_Raycast")]
+script = ExtResource("3_osu55")
+_Raycast = NodePath("RayCast3D")
+
+[node name="RayCast3D" type="RayCast3D" parent="Interaction"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, 0, 2)
+collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

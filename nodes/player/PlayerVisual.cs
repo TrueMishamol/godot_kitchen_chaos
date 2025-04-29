@@ -24,5 +24,3 @@ public partial class PlayerVisual : Node3D {
 	}
 
 }
-
-
