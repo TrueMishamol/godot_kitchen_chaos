@@ -8,10 +8,11 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
 radius = 0.65459
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Movement", "_PlayerVisual")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Interaction", "_Movement", "_PlayerVisual")]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_4raw8")
+_Interaction = NodePath("Interaction")
 _Movement = NodePath("Movement")
 _PlayerVisual = NodePath("PlayerVisual")
 

@@ -4,14 +4,22 @@ public partial class Player : CharacterBody3D {
 
 
 
+	public static Player Instance { get; private set; }
+
+	[Export] public Interaction _Interaction { get; private set; }
+
 	[Export] private Movement _Movement;
-	// [Export] private Interaction _Interaction;
 	[Export] private PlayerVisual _PlayerVisual;
 
 
 
 
 	public override void _EnterTree() {
+		if (Instance != null) {
+			GD.PushError("There is more than one Player.Instance");
+		}
+		Instance = this;
+
 		//# Set Multiplayer Authority
 		// if (int.TryParse(Name, out int id)) {
 		// 	SetMultiplayerAuthority(id);
@@ -21,7 +29,10 @@ public partial class Player : CharacterBody3D {
 	}
 
 	public override void _Ready() {
-		_Movement.Player = this;
-		_PlayerVisual.PlayerMovement = _Movement;
+		if (_Movement != null)
+			_Movement.Player = this;
+
+		if (_PlayerVisual != null)
+			_PlayerVisual.PlayerMovement = _Movement;
 	}
 }

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cu7vg4rp5hv3k"]
 
-[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_o177e"]
-[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_sdwmq"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_o177e"]
+[ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_sdwmq"]
 
 [node name="ClearCounter_Visual" type="Node3D"]
 

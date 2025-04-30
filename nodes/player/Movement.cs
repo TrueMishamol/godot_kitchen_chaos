@@ -34,7 +34,8 @@ public partial class Movement : Node {
 		if (!Player.IsMultiplayerAuthority())
 			return;
 
-		_inputDirection = Input.GetVector("go_left", "go_right", "go_forward", "go_back").Normalized();
+		// _inputDirection = Input.GetVector("go_left", "go_right", "go_forward", "go_back").Normalized();
+		_inputDirection = GameInput.GetMovementVectorNormalized();
 		_horizontalVelocity = new Vector2(Player.Velocity.X, Player.Velocity.Z);
 		_verticalVelocity = 0;
 
