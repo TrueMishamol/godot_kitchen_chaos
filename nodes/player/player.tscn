@@ -8,13 +8,14 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
 radius = 0.65459
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Interaction", "_Movement", "_PlayerVisual")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_Interaction", "_Movement", "_PlayerVisual", "_HoldingPoint")]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_4raw8")
 _Interaction = NodePath("Interaction")
 _Movement = NodePath("Movement")
 _PlayerVisual = NodePath("PlayerVisual")
+_HoldingPoint = NodePath("HoldingPoint")
 
 [node name="Movement" type="Node" parent="."]
 script = ExtResource("2_khfle")
@@ -33,3 +34,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_kk2rg")
 
 [node name="PlayerVisual" parent="." instance=ExtResource("3_fn53c")]
+
+[node name="HoldingPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 1)

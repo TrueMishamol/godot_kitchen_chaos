@@ -8,15 +8,13 @@ public partial class Interaction : Node {
 
 	private const string INTERACT = "interact";
 
-	// public Player Player { private get; set; }
+	public Player Player { private get; set; }
 
 	[Export] private RayCast3D _Raycast;
 
 	private ClearCounter f_selectedCounter;
 	private ClearCounter _selectedCounter {
-		get {
-			return f_selectedCounter;
-		}
+		get => f_selectedCounter;
 		set {
 			f_selectedCounter = value;
 			OnSelectedCounterChanged?.Invoke(value);
@@ -38,7 +36,7 @@ public partial class Interaction : Node {
 
 	private void GameInput_OnInteractPressed() {
 		if (_selectedCounter != null) {
-			_selectedCounter.Interact();
+			_selectedCounter.Interact(Player);
 		}
 	}
 

@@ -9,16 +9,8 @@ public partial class Movement : Node {
 	[Export] private float _RotationAcceleration = 10.0f;
 
 	public Player Player { private get; set; }
-	public bool IsWalking {
-		get {
-			return _inputDirection != Vector2.Zero;
-		}
-	}
-	// public bool IsMoving {
-	// 	get {
-	// 		return _horizontalVelocity != Vector2.Zero;
-	// 	}
-	// }
+	public bool IsWalking => _inputDirection != Vector2.Zero;
+	// public bool IsMoving => _horizontalVelocity != Vector2.Zero;
 
 	private Vector2 _inputDirection = Vector2.Zero;
 	private Vector2 _horizontalVelocity = Vector2.Zero;

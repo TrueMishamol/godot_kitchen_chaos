@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Player : CharacterBody3D {
+public partial class Player : CharacterBody3D, IKitchenObjectParent {
 
 
 
@@ -10,7 +10,11 @@ public partial class Player : CharacterBody3D {
 
 	[Export] private Movement _Movement;
 	[Export] private PlayerVisual _PlayerVisual;
+	[Export] public Node3D _HoldingPoint;
 
+	//# IKitchenObjectParent
+	public Node3D KitchenObjectHoldingContainer => _HoldingPoint;
+	public KitchenObject KitchenObject { get; set; }
 
 
 
@@ -31,6 +35,9 @@ public partial class Player : CharacterBody3D {
 	public override void _Ready() {
 		if (_Movement != null)
 			_Movement.Player = this;
+
+		if (_Interaction != null)
+			_Interaction.Player = this;
 
 		if (_PlayerVisual != null)
 			_PlayerVisual.PlayerMovement = _Movement;
