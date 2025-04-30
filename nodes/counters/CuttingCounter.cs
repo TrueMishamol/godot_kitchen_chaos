@@ -3,20 +3,23 @@ using Godot;
 public partial class CuttingCounter : BaseCounter {
 
 
-	[Export] public KitchenObjectResource _KitchenObjectResource { get; private set; }
+	[Export] public CuttingRecipesListResource _CuttingRecipesListResource;
 
 
 	public override void Interact(Player player) {
 		if (KitchenObject == null) {
-			//# Empty
+			//# Counter EMPTY
 			if (player.KitchenObject != null) {
-				//# NOT Emptyhanded
-				player.KitchenObject.KitchenObjectParent = this;
+				//# Player HAS object
+				if (HasRecipeWithInput(player.KitchenObject._KitchenObjectResource)) {
+					// Object has recipe
+					player.KitchenObject.KitchenObjectParent = this;
+				}
 			}
 		} else {
-			//# NOT Empty
+			//# Counter HAS object
 			if (player.KitchenObject == null) {
-				//# Emptyhanded
+				//# Player EMPTY-handed
 				KitchenObject.KitchenObjectParent = player;
 			}
 		}
@@ -24,8 +27,30 @@ public partial class CuttingCounter : BaseCounter {
 
 	public override void InteractAlternate(Player player) {
 		if (KitchenObject != null) {
+			KitchenObjectResource outputKitchenObjectResource = GetOutputForInput(KitchenObject._KitchenObjectResource);
+			if (outputKitchenObjectResource == null)
+				return;
+
 			KitchenObject.DestroySelf();
-			KitchenObject.SpawnKitchenObject(_KitchenObjectResource, this);
+			KitchenObject.SpawnKitchenObject(outputKitchenObjectResource, this);
 		}
+	}
+
+	private bool HasRecipeWithInput(KitchenObjectResource input) {
+		foreach (CuttingRecipeResource recipe in _CuttingRecipesListResource._CuttingRecipeResources) {
+			if (recipe._Input == input) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private KitchenObjectResource GetOutputForInput(KitchenObjectResource input) {
+		foreach (CuttingRecipeResource recipe in _CuttingRecipesListResource._CuttingRecipeResources) {
+			if (recipe._Input == input) {
+				return recipe._Output;
+			}
+		}
+		return null;
 	}
 }

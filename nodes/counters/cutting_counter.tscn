@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_ksloa"]
 [ext_resource type="Script" uid="uid://bk4cjlw4y0vj0" path="res://nodes/counters/CuttingCounter.cs" id="2_fm0jt"]
-[ext_resource type="Resource" uid="uid://dhbmbtlkmrm8" path="res://resources/kitchen_objects/meat_patty_uncooked.tres" id="3_8x5mh"]
+[ext_resource type="Resource" uid="uid://c7f7mo4qsqh6n" path="res://resources/cutting_recipes/_cutting_recipes_list.tres" id="3_ksloa"]
 [ext_resource type="PackedScene" path="res://assets/prefabs_visuals/counters_visuals/cutting_counter_visual_prefab.tscn" id="4_4qfgg"]
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="5_l0da3"]
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="6_p2rj7"]
@@ -11,7 +11,7 @@
 
 [node name="CuttingCounter" instance=ExtResource("1_ksloa")]
 script = ExtResource("2_fm0jt")
-_KitchenObjectResource = ExtResource("3_8x5mh")
+_CuttingRecipesListResource = ExtResource("3_ksloa")
 
 [node name="CuttingCounter_Visual" parent="." index="2" instance=ExtResource("4_4qfgg")]
 

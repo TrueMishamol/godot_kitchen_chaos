@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CuttingRecipeResource" load_steps=4 format=3 uid="uid://b1by8rctfeteq"]
+
+[ext_resource type="Resource" uid="uid://lu5xl8vku4vi" path="res://resources/kitchen_objects/tomato.tres" id="1_rhayq"]
+[ext_resource type="Resource" uid="uid://cc4k365k5h8ty" path="res://resources/kitchen_objects/tomato_slices.tres" id="2_fi38g"]
+[ext_resource type="Script" uid="uid://bqn3xght3jdvb" path="res://resources/cutting_recipes/CuttingRecipeResource.cs" id="3_yybaq"]
+
+[resource]
+script = ExtResource("3_yybaq")
+_Input = ExtResource("1_rhayq")
+_Output = ExtResource("2_fi38g")
+metadata/_custom_type_script = "uid://bqn3xght3jdvb"

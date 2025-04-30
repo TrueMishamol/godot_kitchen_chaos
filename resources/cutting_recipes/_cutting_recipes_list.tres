@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CuttingRecipesListResource" load_steps=5 format=3 uid="uid://c7f7mo4qsqh6n"]
+
+[ext_resource type="Resource" uid="uid://cqeh2jkbcjavu" path="res://resources/cutting_recipes/cabbage_to_slices.tres" id="1_kslod"]
+[ext_resource type="Script" uid="uid://b5bdjc5xrmynt" path="res://resources/cutting_recipes/CuttingRecipesListResource.cs" id="1_vtyet"]
+[ext_resource type="Resource" uid="uid://m4jhi0mc367h" path="res://resources/cutting_recipes/cheese_to_slices.tres" id="2_4qrqk"]
+[ext_resource type="Resource" uid="uid://b1by8rctfeteq" path="res://resources/cutting_recipes/tomato_to_slices.tres" id="3_ny47l"]
+
+[resource]
+script = ExtResource("1_vtyet")
+_CuttingRecipeResources = Array[Object]([ExtResource("1_kslod"), ExtResource("2_4qrqk"), ExtResource("3_ny47l")])
+metadata/_custom_type_script = "uid://b5bdjc5xrmynt"
