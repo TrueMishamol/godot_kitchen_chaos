@@ -3,16 +3,32 @@ using Godot;
 public partial class ClearCounter : Node3D {
 
 
-	[Export] private Node3D _CounterTopPoint;
+	[Export] public Node3D _CounterTopPoint { get; private set; }
 	[Export] private KitchenObjectResource _KitchenObjectResource;
+
+	[Export] private ClearCounter _TmpClearCounterReparent;
+
+	public KitchenObject KitchenObject;
 
 
 
 	public void Interact() {
-		GD.Print(this);
+		if (KitchenObject == null) {
+			SpawnKitchenObject();
+		} else {
+			//! TMP
+			Reparent();
+		}
+	}
 
+	private void SpawnKitchenObject() {
 		PackedScene packedScene = GD.Load<PackedScene>(_KitchenObjectResource._SceneFilePath);
-		Node3D kitchenObjectInstance = packedScene.Instantiate<Node3D>();
-		_CounterTopPoint.AddChild(kitchenObjectInstance);
+		KitchenObject kitchenObjectInstance = packedScene.Instantiate<KitchenObject>();
+
+		kitchenObjectInstance.ClearCounter = this;
+	}
+
+	private void Reparent() {
+		KitchenObject.ClearCounter = _TmpClearCounterReparent;
 	}
 }

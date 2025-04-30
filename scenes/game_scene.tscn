@@ -49,8 +49,9 @@ mesh = SubResource("PlaneMesh_onqr8")
 
 [node name="Player" parent="." instance=ExtResource("6_rurhu")]
 
-[node name="ClearCounter" parent="." instance=ExtResource("8_b5spy")]
+[node name="ClearCounter" parent="." node_paths=PackedStringArray("_TmpClearCounterReparent") instance=ExtResource("8_b5spy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.73924)
+_TmpClearCounterReparent = NodePath("../ClearCounter2")
 
 [node name="ClearCounter2" parent="." instance=ExtResource("8_b5spy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -3.73924)
