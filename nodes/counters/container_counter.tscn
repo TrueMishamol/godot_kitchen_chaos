@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://dxfc1eet3gcfg"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_gqh2s"]
+[ext_resource type="Script" uid="uid://bxnpyh7vn8lgj" path="res://nodes/counters/ContainerCounter.cs" id="2_golx1"]
+[ext_resource type="PackedScene" uid="uid://bp8bykqtdccuw" path="res://assets/prefabs_visuals/counters_visuals/container_counter_visual_prefab.tscn" id="2_jh3tj"]
+[ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_golx1"]
+[ext_resource type="Resource" uid="uid://lu5xl8vku4vi" path="res://resources/kitchen_objects/tomato.tres" id="3_vvhc5"]
+[ext_resource type="PackedScene" uid="uid://dg2th4bl0ij26" path="res://assets/meshes/Counter_solid.gltf" id="4_vvhc5"]
+[ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="5_i5krr"]
+[ext_resource type="PackedScene" uid="uid://cfbdebge5dot4" path="res://assets/meshes/Counter_hole.gltf" id="6_fb7ys"]
+[ext_resource type="PackedScene" uid="uid://c5ba02pljcpne" path="res://assets/meshes/Single door.gltf" id="7_h8be8"]
+
+[node name="ContainerCounter" instance=ExtResource("1_gqh2s")]
+script = ExtResource("2_golx1")
+_KitchenObjectResource = ExtResource("3_vvhc5")
+
+[node name="ContainerCounter_Visual" parent="." index="2" node_paths=PackedStringArray("_ContainerCounter") instance=ExtResource("2_jh3tj")]
+_ContainerCounter = NodePath("..")
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+visible = false
+script = ExtResource("3_golx1")
+_Counter = NodePath("..")
+
+[node name="Counter_solid" parent="Selected" index="0" instance=ExtResource("4_vvhc5")]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, -0.00601022, 0, 0)
+
+[node name="Counter_003" parent="Selected/Counter_solid" index="0"]
+material_override = ExtResource("5_i5krr")
+
+[node name="Counter_hole" parent="Selected" index="1" instance=ExtResource("6_fb7ys")]
+transform = Transform3D(1.65, 0, 0, 0, -6.99382e-08, 1.65, 0, -1.6, -7.21238e-08, 0.00900274, 0.68, 0.6302)
+
+[node name="Counter_001" parent="Selected/Counter_hole" index="0"]
+material_override = ExtResource("5_i5krr")
+
+[node name="Single door" parent="Selected" index="2" instance=ExtResource("7_h8be8")]
+transform = Transform3D(-1.12277e-07, 2.15882, 0, -0.0344269, -1.26477e-09, 1.54986, 2.56837, 9.43565e-08, 0.0207746, -0.801788, 1.28994, -0.443912)
+
+[node name="Counter_004" parent="Selected/Single door" index="0"]
+material_override = ExtResource("5_i5krr")
+
+[editable path="Selected/Counter_solid"]
+[editable path="Selected/Counter_hole"]
+[editable path="Selected/Single door"]

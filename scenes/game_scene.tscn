@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=11 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="PackedScene" uid="uid://ce5hwwuchw5nc" path="res://nodes/counters/clear_counter.tscn" id="8_b5spy"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
+[ext_resource type="PackedScene" uid="uid://dxfc1eet3gcfg" path="res://nodes/counters/container_counter.tscn" id="9_utbpp"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dshgbuyfixo5y" path="res://visuals/environment/camera_attributes_practical.tres" id="10_tcjrq"]
 [ext_resource type="PackedScene" uid="uid://ccnhq41ek4wxw" path="res://modules/camera_effects/vignette/vignette.tscn" id="11_tcjrq"]
 
@@ -49,12 +50,14 @@ mesh = SubResource("PlaneMesh_onqr8")
 
 [node name="Player" parent="." instance=ExtResource("6_rurhu")]
 
-[node name="ClearCounter" parent="." node_paths=PackedStringArray("_TmpClearCounterReparent") instance=ExtResource("8_b5spy")]
+[node name="ClearCounter" parent="." instance=ExtResource("8_b5spy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.73924)
-_TmpClearCounterReparent = NodePath("../ClearCounter2")
 
 [node name="ClearCounter2" parent="." instance=ExtResource("8_b5spy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0, -3.73924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.73924)
 
 [node name="ClearCounter3" parent="." instance=ExtResource("8_b5spy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -3.73924)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.73924)
+
+[node name="ContainerCounter" parent="." instance=ExtResource("9_utbpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -3.7)

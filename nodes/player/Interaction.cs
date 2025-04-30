@@ -4,7 +4,7 @@ using System;
 public partial class Interaction : Node {
 
 
-	public event Action<ClearCounter> OnSelectedCounterChanged;
+	public event Action<BaseCounter> OnSelectedCounterChanged;
 
 	private const string INTERACT = "interact";
 
@@ -12,8 +12,8 @@ public partial class Interaction : Node {
 
 	[Export] private RayCast3D _Raycast;
 
-	private ClearCounter f_selectedCounter;
-	private ClearCounter _selectedCounter {
+	private BaseCounter f_selectedCounter;
+	private BaseCounter _selectedCounter {
 		get => f_selectedCounter;
 		set {
 			f_selectedCounter = value;
@@ -43,7 +43,7 @@ public partial class Interaction : Node {
 
 
 	private void HandleInteractions() {
-		if (_Raycast.GetCollider() is ClearCounter raycastHit) {
+		if (_Raycast.GetCollider() is BaseCounter raycastHit) {
 			if (raycastHit != _selectedCounter) {
 				_selectedCounter = raycastHit;
 			}

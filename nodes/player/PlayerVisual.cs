@@ -13,10 +13,6 @@ public partial class PlayerVisual : Node3D {
 
 
 
-	public override void _EnterTree() {
-	}
-
-
 	public override void _Process(double delta) {
 		bool isWalking = PlayerMovement.IsWalking;
 		_AnimationTree.Set(IDLE, !isWalking);
