@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccnhq41ek4wxw"]
 
-[ext_resource type="Shader" uid="uid://qn5bgw00ilt5" path="res://modules/vignette/vignette.gdshader" id="1_070jd"]
+[ext_resource type="Shader" uid="uid://qn5bgw00ilt5" path="res://modules/camera_effects/vignette/vignette.gdshader" id="1_070jd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tqxxy"]
 shader = ExtResource("1_070jd")

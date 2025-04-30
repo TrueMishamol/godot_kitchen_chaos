@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KitchenObjectResource" load_steps=3 format=3 uid="uid://lu5xl8vku4vi"]
+
+[ext_resource type="Script" uid="uid://c70kr14e3w85c" path="res://resources/kitchen_objects/KitchenObjectResource.cs" id="1_3of65"]
+[ext_resource type="Texture2D" uid="uid://dgiwaiqej66mx" path="res://assets/textures/icons/tomato.png" id="2_ta016"]
+
+[resource]
+script = ExtResource("1_3of65")
+_Name = "Tomato"
+_SceneFilePath = "uid://c7tsead8liky7"
+_Sprite = ExtResource("2_ta016")
+metadata/_custom_type_script = "uid://c70kr14e3w85c"

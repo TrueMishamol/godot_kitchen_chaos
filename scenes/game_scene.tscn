@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
-[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_shake/camera_shake.tscn" id="4_b5spy"]
-[ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_follow/camera_follow.tscn" id="5_utbpp"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
+[ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_effects/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="PackedScene" uid="uid://ce5hwwuchw5nc" path="res://nodes/counters/clear_counter.tscn" id="8_b5spy"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
 [ext_resource type="CameraAttributesPractical" uid="uid://dshgbuyfixo5y" path="res://visuals/environment/camera_attributes_practical.tres" id="10_tcjrq"]
-[ext_resource type="PackedScene" uid="uid://ccnhq41ek4wxw" path="res://modules/vignette/vignette.tscn" id="11_tcjrq"]
+[ext_resource type="PackedScene" uid="uid://ccnhq41ek4wxw" path="res://modules/camera_effects/vignette/vignette.tscn" id="11_tcjrq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_onqr8"]
 material = ExtResource("1_ycayy")

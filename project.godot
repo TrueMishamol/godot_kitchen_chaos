@@ -21,7 +21,7 @@ config/icon="uid://dqhv0kqhcxmml"
 
 [autoload]
 
-GameInput="*res://scripts/game_input/autoload/game_input.tscn"
+GameInput="*res://modules/game_input/autoload/game_input.tscn"
 
 [display]
 

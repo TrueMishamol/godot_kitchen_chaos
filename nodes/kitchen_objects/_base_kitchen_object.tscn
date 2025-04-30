@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://x8iakaslthop"]
+
+[ext_resource type="Script" uid="uid://po2hyqgk2mw4" path="res://nodes/kitchen_objects/KitchenObject.cs" id="1_akwfy"]
+
+[node name="KitchenObject" type="Node3D"]
+script = ExtResource("1_akwfy")
