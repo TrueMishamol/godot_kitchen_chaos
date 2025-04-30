@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KitchenObjectResource" load_steps=3 format=3 uid="uid://cr1viukwiaond"]
+
+[ext_resource type="Texture2D" uid="uid://cgd2sxq1st0gm" path="res://assets/textures/icons/plate.png" id="1_kx45k"]
+[ext_resource type="Script" uid="uid://c70kr14e3w85c" path="res://resources/kitchen_objects/KitchenObjectResource.cs" id="1_mytv5"]
+
+[resource]
+script = ExtResource("1_mytv5")
+_Name = "Plate"
+_SceneFilePath = "uid://ciwk24a0ah75g"
+_Sprite = ExtResource("1_kx45k")
+metadata/_custom_type_script = "uid://c70kr14e3w85c"

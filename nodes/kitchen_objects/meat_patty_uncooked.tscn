@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuyvcf6n82xri"]
+
+[ext_resource type="PackedScene" uid="uid://x8iakaslthop" path="res://nodes/kitchen_objects/_base_kitchen_object.tscn" id="1_0opb8"]
+[ext_resource type="Resource" uid="uid://dhbmbtlkmrm8" path="res://resources/kitchen_objects/meat_patty_uncooked.tres" id="2_u8kgp"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/meat_patty_uncooked_visual_prefab.tscn" id="3_dn2mo"]
+
+[node name="MeatPattyUncooked" instance=ExtResource("1_0opb8")]
+_KitchenObjectResource = ExtResource("2_u8kgp")
+
+[node name="MeatPattyUncooked_Visual" parent="." index="0" instance=ExtResource("3_dn2mo")]

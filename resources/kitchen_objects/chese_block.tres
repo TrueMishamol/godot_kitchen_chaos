@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KitchenObjectResource" load_steps=3 format=3 uid="uid://be80thumk64ff"]
+
+[ext_resource type="Texture2D" uid="uid://boy487qvm4jnt" path="res://assets/textures/icons/cheese_block.png" id="1_3krdj"]
+[ext_resource type="Script" uid="uid://c70kr14e3w85c" path="res://resources/kitchen_objects/KitchenObjectResource.cs" id="1_e31ce"]
+
+[resource]
+script = ExtResource("1_e31ce")
+_Name = "Chese Block"
+_SceneFilePath = "uid://c1d5txo186ia2"
+_Sprite = ExtResource("1_3krdj")
+metadata/_custom_type_script = "uid://c70kr14e3w85c"

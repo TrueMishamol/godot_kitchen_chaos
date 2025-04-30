@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6g3kmqkp62ol"]
+
+[ext_resource type="PackedScene" uid="uid://x8iakaslthop" path="res://nodes/kitchen_objects/_base_kitchen_object.tscn" id="1_2gtn6"]
+[ext_resource type="Resource" uid="uid://cc4k365k5h8ty" path="res://resources/kitchen_objects/tomato_slices.tres" id="2_2gtn6"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/tomato_slices_visual_prefab.tscn" id="3_1llnk"]
+
+[node name="TomatoSlices" instance=ExtResource("1_2gtn6")]
+_KitchenObjectResource = ExtResource("2_2gtn6")
+
+[node name="TomatoSlices_Visual" parent="." index="0" instance=ExtResource("3_1llnk")]

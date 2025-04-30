@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KitchenObjectResource" load_steps=3 format=3 uid="uid://cibwtyj7jnpc"]
+
+[ext_resource type="Script" uid="uid://c70kr14e3w85c" path="res://resources/kitchen_objects/KitchenObjectResource.cs" id="1_epvb2"]
+[ext_resource type="Texture2D" uid="uid://b1ugrkxy43308" path="res://assets/textures/icons/cabbage.png" id="1_na85v"]
+
+[resource]
+script = ExtResource("1_epvb2")
+_Name = "Cabbage"
+_SceneFilePath = "uid://bqletb38ww87l"
+_Sprite = ExtResource("1_na85v")
+metadata/_custom_type_script = "uid://c70kr14e3w85c"

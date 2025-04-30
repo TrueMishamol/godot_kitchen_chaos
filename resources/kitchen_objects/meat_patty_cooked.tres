@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KitchenObjectResource" load_steps=3 format=3 uid="uid://durfit5tuaveu"]
+
+[ext_resource type="Texture2D" uid="uid://cieiqo2j8l3rr" path="res://assets/textures/icons/meat_patty_cooked.png" id="1_ehp6q"]
+[ext_resource type="Script" uid="uid://c70kr14e3w85c" path="res://resources/kitchen_objects/KitchenObjectResource.cs" id="1_oxh6h"]
+
+[resource]
+script = ExtResource("1_oxh6h")
+_Name = "Meat Patty Cooked"
+_SceneFilePath = "uid://cnolum6uppkoe"
+_Sprite = ExtResource("1_ehp6q")
+metadata/_custom_type_script = "uid://c70kr14e3w85c"
