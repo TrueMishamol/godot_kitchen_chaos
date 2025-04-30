@@ -16,4 +16,8 @@ public partial class BaseCounter : Node3D, IKitchenObjectParent {
 
 	}
 
+	public virtual void InteractAlternate(Player player) {
+
+	}
+
 }

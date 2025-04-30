@@ -6,8 +6,6 @@ public partial class Interaction : Node {
 
 	public event Action<BaseCounter> OnSelectedCounterChanged;
 
-	private const string INTERACT = "interact";
-
 	public Player Player { private get; set; }
 
 	[Export] private RayCast3D _Raycast;
@@ -24,8 +22,9 @@ public partial class Interaction : Node {
 
 
 
-	public override void _EnterTree() {
+	public override void _Ready() {
 		GameInput.OnInteractPressed += GameInput_OnInteractPressed;
+		GameInput.OnInteractAlternatePressed += GameInput_OnInteractAlternatePressed;
 	}
 
 	public override void _Process(double delta) {
@@ -37,6 +36,12 @@ public partial class Interaction : Node {
 	private void GameInput_OnInteractPressed() {
 		if (_selectedCounter != null) {
 			_selectedCounter.Interact(Player);
+		}
+	}
+
+	private void GameInput_OnInteractAlternatePressed() {
+		if (_selectedCounter != null) {
+			_selectedCounter.InteractAlternate(Player);
 		}
 	}
 

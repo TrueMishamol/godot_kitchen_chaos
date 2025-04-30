@@ -1,6 +1,10 @@
 using Godot;
 
-public partial class ClearCounter : BaseCounter {
+public partial class CuttingCounter : BaseCounter {
+
+
+	[Export] public KitchenObjectResource _KitchenObjectResource { get; private set; }
+
 
 	public override void Interact(Player player) {
 		if (KitchenObject == null) {
@@ -15,6 +19,13 @@ public partial class ClearCounter : BaseCounter {
 				//# Emptyhanded
 				KitchenObject.KitchenObjectParent = player;
 			}
+		}
+	}
+
+	public override void InteractAlternate(Player player) {
+		if (KitchenObject != null) {
+			KitchenObject.DestroySelf();
+			KitchenObject.SpawnKitchenObject(_KitchenObjectResource, this);
 		}
 	}
 }

@@ -20,6 +20,28 @@ public partial class KitchenObject : Node3D {
 
 
 
+
+	public static KitchenObject SpawnKitchenObject(KitchenObjectResource kitchenObjectResource, IKitchenObjectParent kitchenObjectParent) {
+		// Spawn new Kitchen Object
+		PackedScene packedScene = GD.Load<PackedScene>(kitchenObjectResource._SceneFilePath);
+		KitchenObject kitchenObjectInstance = packedScene.Instantiate<KitchenObject>();
+
+		// Give it to a player or counter
+		kitchenObjectInstance.KitchenObjectParent = kitchenObjectParent;
+
+		// Return Kitchen Object
+		return kitchenObjectInstance;
+	}
+
+
+
+
+	public void DestroySelf() {
+		KitchenObjectParent.KitchenObject = null;
+
+		QueueFree();
+	}
+
 	private void SetKitchenObjectParent(IKitchenObjectParent newKitchenObjectParent) {
 		if (f_kitchenObjectParent != null) {
 			f_kitchenObjectParent.KitchenObject = null;

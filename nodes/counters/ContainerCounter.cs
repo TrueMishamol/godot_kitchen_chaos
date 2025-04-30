@@ -12,12 +12,7 @@ public partial class ContainerCounter : BaseCounter {
 
 	public override void Interact(Player player) {
 		if (player.KitchenObject == null) {
-			// Spawn new Kitchen Object
-			PackedScene packedScene = GD.Load<PackedScene>(_KitchenObjectResource._SceneFilePath);
-			KitchenObject kitchenObjectInstance = packedScene.Instantiate<KitchenObject>();
-
-			// Give it to a player
-			kitchenObjectInstance.KitchenObjectParent = player;
+			KitchenObject.SpawnKitchenObject(_KitchenObjectResource, player);
 
 			OnPlayerGrabObject?.Invoke();
 		}
