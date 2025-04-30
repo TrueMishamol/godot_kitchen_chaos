@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bp8bykqtdccuw"]
+[gd_scene load_steps=8 format=4 uid="uid://bp8bykqtdccuw"]
 
 [ext_resource type="Script" uid="uid://elc2jlirobch" path="res://nodes/counters/ContainerCounterVisual.cs" id="1_g8ica"]
 [ext_resource type="AnimationLibrary" uid="uid://ceuo58whr4xjc" path="res://assets/animations/container_counter/container_counter_library.res" id="1_y6cfu"]
 [ext_resource type="PackedScene" uid="uid://dg2th4bl0ij26" path="res://assets/meshes/Counter_solid.gltf" id="3_g8ica"]
-[ext_resource type="PackedScene" uid="uid://cfbdebge5dot4" path="res://assets/meshes/Counter_hole.gltf" id="4_pmfpm"]
 [ext_resource type="PackedScene" uid="uid://c5ba02pljcpne" path="res://assets/meshes/Single door.gltf" id="5_5bnm7"]
-[ext_resource type="Texture2D" uid="uid://boy487qvm4jnt" path="res://assets/textures/icons/cheese_block.png" id="6_cedse"]
+[ext_resource type="Texture2D" uid="uid://cxh4pop4pulbr" path="res://assets/textures/circle_dashed.png" id="5_y6cfu"]
 [ext_resource type="Material" uid="uid://ui4i1a35f6ie" path="res://assets/materials/black.material" id="6_gt3dl"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
@@ -22,9 +21,10 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAPwAAAL8AAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAAAAAAAAvwAAAD8AAAAA/////////7//////////v/////////+//////////78=")
 }]
 
-[node name="ContainerCounter_Visual" type="Node3D" node_paths=PackedStringArray("_AnimationPlayer")]
+[node name="ContainerCounter_Visual" type="Node3D" node_paths=PackedStringArray("_AnimationPlayer", "_ObjectSprite")]
 script = ExtResource("1_g8ica")
 _AnimationPlayer = NodePath("AnimationPlayer")
+_ObjectSprite = NodePath("Single door/ObjectSprite")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -34,19 +34,20 @@ libraries = {
 [node name="Counter_solid" parent="." instance=ExtResource("3_g8ica")]
 transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, -0.00601022, 0, 0)
 
-[node name="Counter_hole" parent="." instance=ExtResource("4_pmfpm")]
-transform = Transform3D(1.65, 0, 0, 0, -6.99382e-08, 1.65, 0, -1.6, -7.21238e-08, 0.00900274, 0.68, 0.6302)
-visible = false
+[node name="Counter_solid2" parent="." instance=ExtResource("3_g8ica")]
+transform = Transform3D(1.70287, 0, 0, 0, -6.76682e-08, 1.70287, 0, -1.54807, -7.4435e-08, -0.00601022, 0.639163, 0.6)
 
 [node name="Single door" parent="." instance=ExtResource("5_5bnm7")]
 transform = Transform3D(-1.12277e-07, 2.15882, 0, -0.0344269, -1.26477e-09, 1.54986, 2.56837, 9.43565e-08, 0.0207746, -0.801788, 1.28994, -0.443912)
 
 [node name="ObjectSprite" type="Sprite3D" parent="Single door"]
-transform = Transform3D(-8.4363e-09, -0.162, -6.98492e-10, 0.193, -7.08124e-09, 2.77556e-17, -9.36751e-17, -6.98492e-10, 0.162, 0.181132, 0.371099, 0.0381598)
-texture = ExtResource("6_cedse")
+transform = Transform3D(-7.08124e-09, -0.162, -1.16415e-09, 0.162, -7.08124e-09, 6.34272e-17, -1.14314e-16, -1.16415e-09, 0.162, 0.181132, 0.371099, 0.0381598)
+double_sided = false
+render_priority = -1
+texture = ExtResource("5_y6cfu")
 
 [node name="Black" type="Node3D" parent="."]
-transform = Transform3D(-1.40465, -9.09459e-08, 3.82137e-15, 0, -4.5473e-08, -1, 1.22798e-07, -1.0403, 4.37114e-08, 0.003, 1.268, 0.0489)
+transform = Transform3D(-1.24504, -8.34914e-08, 3.58284e-15, 0, -4.17457e-08, -0.937579, 1.08844e-07, -0.95503, 4.09829e-08, 0.003, 1.29561, 0.0489)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Black"]
 gi_mode = 2
@@ -54,5 +55,5 @@ mesh = SubResource("ArrayMesh_btesd")
 surface_material_override/0 = ExtResource("6_gt3dl")
 
 [editable path="Counter_solid"]
-[editable path="Counter_hole"]
+[editable path="Counter_solid2"]
 [editable path="Single door"]

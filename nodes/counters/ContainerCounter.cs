@@ -6,7 +6,8 @@ public partial class ContainerCounter : BaseCounter {
 
 	public event Action OnPlayerGrabObject;
 
-	[Export] private KitchenObjectResource _KitchenObjectResource;
+	[Export] public KitchenObjectResource _KitchenObjectResource { get; private set; }
+
 
 
 	public override void Interact(Player player) {
