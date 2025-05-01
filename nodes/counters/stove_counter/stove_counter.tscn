@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_fpv3j"]
 [ext_resource type="Script" uid="uid://cqr6mxvw8jmmc" path="res://nodes/counters/stove_counter/StoveCounter.cs" id="2_3pyv3"]
-[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/counters_visuals/stove_counter_visual_prefab.tscn" id="2_sqo3o"]
+[ext_resource type="PackedScene" uid="uid://csi42j52htjl3" path="res://assets/prefabs_visuals/counters_visuals/stove_counter_visual_prefab.tscn" id="2_sqo3o"]
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_3pyv3"]
 [ext_resource type="Resource" uid="uid://oy53hn2i20y3" path="res://resources/frying_recipes/_frying_recipes_list.tres" id="3_fv50d"]
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_fv50d"]

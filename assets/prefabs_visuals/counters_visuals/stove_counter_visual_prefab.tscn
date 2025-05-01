@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="4_xncvk"]
 [ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="5_spb4e"]
 [ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="6_f1piw"]
+[ext_resource type="Material" uid="uid://pnaagqfacq25" path="res://visuals/materials/sizzling.tres" id="7_wkmo7"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
 resource_name = "Quad"
@@ -49,16 +50,9 @@ scale_min = 0.5
 scale_max = 1.3
 scale_curve = SubResource("CurveTexture_wkmo7")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jpfn"]
-transparency = 1
-albedo_color = Color(1, 0.898134, 0.669014, 0.517647)
-
-[sub_resource type="SphereMesh" id="SphereMesh_wkmo7"]
-material = SubResource("StandardMaterial3D_6jpfn")
-radius = 0.05
-height = 0.1
-radial_segments = 8
-rings = 4
+[sub_resource type="QuadMesh" id="QuadMesh_wkmo7"]
+material = ExtResource("7_wkmo7")
+size = Vector2(0.2, 0.2)
 
 [node name="StoveCounter_Visual" type="Node3D"]
 
@@ -100,6 +94,6 @@ amount = 9
 lifetime = 0.5
 randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_6jpfn")
-draw_pass_1 = SubResource("SphereMesh_wkmo7")
+draw_pass_1 = SubResource("QuadMesh_wkmo7")
 
 [editable path="Frying Pan"]
