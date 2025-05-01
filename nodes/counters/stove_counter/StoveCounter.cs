@@ -3,6 +3,12 @@ using Godot;
 public partial class StoveCounter : BaseCounter {
 
 
+	// private enum State {
+	// 	Idle,
+	// 	Frying,
+	// 	Burning,
+	// }
+
 	[Export] private FryingRecipesListResource _FryingRecipesListResource;
 	[Export] private Timer _Timer;
 
@@ -22,16 +28,10 @@ public partial class StoveCounter : BaseCounter {
 	}
 
 	private void Timer_OnTimeout() {
-		//! Fried
-		GD.Print("FRIED");
-
-		_Timer.Stop();
-
-		KitchenObject.DestroySelf();
-		KitchenObject.SpawnKitchenObject(_currentFryingRecipeResource._Output, this);
-
-		CheckKitchenObjectAndStartTimer();
+		OnFried();
 	}
+
+
 
 
 	public override void Interact(Player player) {
@@ -58,6 +58,17 @@ public partial class StoveCounter : BaseCounter {
 	}
 
 
+
+
+	private void OnFried() {
+		_Timer.Stop();
+
+		GD.Print("FRIED");
+		KitchenObject.DestroySelf();
+		KitchenObject.SpawnKitchenObject(_currentFryingRecipeResource._Output, this);
+
+		CheckKitchenObjectAndStartTimer();
+	}
 
 	private void CheckKitchenObjectAndStartTimer() {
 		if (KitchenObject == null)

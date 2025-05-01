@@ -8,5 +8,5 @@
 script = ExtResource("1_osawj")
 _Input = ExtResource("1_dic38")
 _Output = ExtResource("2_50k58")
-_FryingTimerMax = 3.0
+_FryingTimerMax = 5.0
 metadata/_custom_type_script = "uid://2glh7ops4rt1"

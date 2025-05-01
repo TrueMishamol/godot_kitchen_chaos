@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=4]
+[gd_scene load_steps=14 format=4 uid="uid://csi42j52htjl3"]
 
-[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_6jpfn"]
-[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_wkmo7"]
-[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Stove Counter.Cube_004.mesh" id="3_vgrj4"]
-[ext_resource type="Material" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="4_xncvk"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Frying Pan.gltf" id="5_spb4e"]
-[ext_resource type="Material" path="res://assets/materials/stove_red_glow.material" id="6_f1piw"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_6jpfn"]
+[ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_wkmo7"]
+[ext_resource type="ArrayMesh" uid="uid://xrj3pdyo7cgp" path="res://assets/meshes/extracted/Stove Counter.Cube_004.mesh" id="3_vgrj4"]
+[ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="4_xncvk"]
+[ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="5_spb4e"]
+[ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="6_f1piw"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
 resource_name = "Quad"
@@ -23,6 +23,42 @@ _surfaces = [{
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_eb1ek"]
 data = PackedVector3Array(-0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0)
+
+[sub_resource type="Curve" id="Curve_6jpfn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wkmo7"]
+curve = SubResource("Curve_6jpfn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6jpfn"]
+emission_shape_scale = Vector3(0.42, 1, 0.42)
+emission_shape = 6
+emission_ring_axis = Vector3(0, -1, 0)
+emission_ring_height = 0.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 1.5
+initial_velocity_max = 3.0
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 0.999978
+gravity = Vector3(0, -9, 0)
+scale_min = 0.5
+scale_max = 1.3
+scale_curve = SubResource("CurveTexture_wkmo7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jpfn"]
+transparency = 1
+albedo_color = Color(1, 0.898134, 0.669014, 0.517647)
+
+[sub_resource type="SphereMesh" id="SphereMesh_wkmo7"]
+material = SubResource("StandardMaterial3D_6jpfn")
+radius = 0.05
+height = 0.1
+radial_segments = 8
+rings = 4
 
 [node name="StoveCounter_Visual" type="Node3D"]
 
@@ -45,13 +81,6 @@ surface_material_override/0 = ExtResource("4_xncvk")
 [node name="Frying Pan" parent="." instance=ExtResource("5_spb4e")]
 transform = Transform3D(1.3793, 0, 1.44828, 0, 2, 0, -1.44828, 0, 1.3793, -0.048, 1.375, 0)
 
-[node name="SizzlingParticles" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.047, 1.432, -0.018)
-
-[node name="ParticleSystem" type="Node" parent="SizzlingParticles"]
-
-[node name="ParticleSystemRenderer" type="Node" parent="SizzlingParticles"]
-
 [node name="StoveOnVisual" type="Node3D" parent="."]
 transform = Transform3D(0.828344, 0, 0, 0, -4.00075e-08, -1, 0, 0.915266, -4.37114e-08, -0.047, 1.395, -0.039)
 
@@ -64,5 +93,13 @@ surface_material_override/0 = ExtResource("6_f1piw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StoveOnVisual/MeshCollider"]
 shape = SubResource("ConcavePolygonShape3D_eb1ek")
+
+[node name="SizzlingParticles" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047, 1.48222, -0.018)
+amount = 9
+lifetime = 0.5
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_6jpfn")
+draw_pass_1 = SubResource("SphereMesh_wkmo7")
 
 [editable path="Frying Pan"]
