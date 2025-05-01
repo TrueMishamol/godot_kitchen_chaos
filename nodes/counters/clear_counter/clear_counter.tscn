@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ce5hwwuchw5nc"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_w5f6c"]
-[ext_resource type="Script" uid="uid://ccedbrliq16k8" path="res://nodes/counters/ClearCounter.cs" id="2_q2m74"]
+[ext_resource type="Script" uid="uid://ccedbrliq16k8" path="res://nodes/counters/clear_counter/ClearCounter.cs" id="2_q2m74"]
 [ext_resource type="PackedScene" uid="uid://cu7vg4rp5hv3k" path="res://assets/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.tscn" id="2_we1s5"]
 [ext_resource type="Resource" uid="uid://lu5xl8vku4vi" path="res://resources/kitchen_objects/tomato.tres" id="3_l5boh"]
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="4_4yslb"]

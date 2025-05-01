@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxfc1eet3gcfg"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_gqh2s"]
-[ext_resource type="Script" uid="uid://bxnpyh7vn8lgj" path="res://nodes/counters/ContainerCounter.cs" id="2_golx1"]
+[ext_resource type="Script" uid="uid://bxnpyh7vn8lgj" path="res://nodes/counters/container_counter/ContainerCounter.cs" id="2_golx1"]
 [ext_resource type="PackedScene" uid="uid://bp8bykqtdccuw" path="res://assets/prefabs_visuals/counters_visuals/container_counter_visual_prefab.tscn" id="2_jh3tj"]
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_golx1"]
 [ext_resource type="PackedScene" uid="uid://dg2th4bl0ij26" path="res://assets/meshes/Counter_solid.gltf" id="4_vvhc5"]

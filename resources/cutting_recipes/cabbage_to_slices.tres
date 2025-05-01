@@ -8,4 +8,5 @@
 script = ExtResource("3_ym0vr")
 _Input = ExtResource("1_j4qd6")
 _Output = ExtResource("2_6knpq")
+_CuttingProgressMax = 5
 metadata/_custom_type_script = "uid://bqn3xght3jdvb"

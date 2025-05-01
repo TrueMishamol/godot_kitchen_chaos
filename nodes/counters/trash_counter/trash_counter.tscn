@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfn12lqysapk5"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_n1kyj"]
+[ext_resource type="Script" uid="uid://brsfhcnpl2mbx" path="res://nodes/counters/trash_counter/TrashCounter.cs" id="2_7lil7"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/counters_visuals/trash_counter_visual_prefab.tscn" id="2_q4qmg"]
+[ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_7lil7"]
+[ext_resource type="PackedScene" uid="uid://c75kewbpo51ug" path="res://assets/meshes/Trash bin.gltf" id="4_5q08c"]
+[ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="5_65quh"]
+
+[node name="TrashCounter" instance=ExtResource("1_n1kyj")]
+script = ExtResource("2_7lil7")
+
+[node name="TrashCounter_Visual" parent="." index="2" instance=ExtResource("2_q4qmg")]
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+visible = false
+script = ExtResource("3_7lil7")
+_Counter = NodePath("..")
+
+[node name="Trash bin" parent="Selected" index="0" instance=ExtResource("4_5q08c")]
+transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 0, 0)
+
+[node name="trash bin" parent="Selected/Trash bin" index="0"]
+material_override = ExtResource("5_65quh")
+
+[editable path="Selected/Trash bin"]

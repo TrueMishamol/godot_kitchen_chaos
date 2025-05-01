@@ -1,10 +1,9 @@
 using Godot;
 
 [GlobalClass]
-public partial class CuttingRecipeResource : Resource {
+public partial class FryingRecipeResource : Resource {
 
 	[Export] public KitchenObjectResource _Input;
 	[Export] public KitchenObjectResource _Output;
-	[Export] public int _CuttingProgressMax = 3;
-
+	[Export] public float _FryingTimerMax = 3.0f;
 }

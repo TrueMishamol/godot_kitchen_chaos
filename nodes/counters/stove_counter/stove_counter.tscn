@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=4 uid="uid://b1aqmbnrigw2y"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_fpv3j"]
+[ext_resource type="Script" uid="uid://cqr6mxvw8jmmc" path="res://nodes/counters/stove_counter/StoveCounter.cs" id="2_3pyv3"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/counters_visuals/stove_counter_visual_prefab.tscn" id="2_sqo3o"]
+[ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_3pyv3"]
+[ext_resource type="Resource" uid="uid://oy53hn2i20y3" path="res://resources/frying_recipes/_frying_recipes_list.tres" id="3_fv50d"]
+[ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_fv50d"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="5_0xpme"]
+[ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="6_7n8ob"]
+[ext_resource type="ArrayMesh" uid="uid://xrj3pdyo7cgp" path="res://assets/meshes/extracted/Stove Counter.Cube_004.mesh" id="7_qxhae"]
+[ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="8_gm2br"]
+[ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="9_ipdad"]
+[ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="10_cu13x"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
+resource_name = "Quad"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.5, 0, 1.00001, 1, 1e-05),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAACAPwAAAAA="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AQAAAAIAAwABAAIA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAPwAAAL8AAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAAAAAAAAvwAAAD8AAAAA/////////7//////////v/////////+//////////78=")
+}]
+
+[node name="StoveCounter" node_paths=PackedStringArray("_Timer") instance=ExtResource("1_fpv3j")]
+script = ExtResource("2_3pyv3")
+_FryingRecipesListResource = ExtResource("3_fv50d")
+_Timer = NodePath("Timer")
+
+[node name="CounterTopPoint" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425768, 1.5, -0.00370617)
+
+[node name="StoveCounter_Visual" parent="." index="2" instance=ExtResource("2_sqo3o")]
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+visible = false
+script = ExtResource("3_3pyv3")
+_Counter = NodePath("..")
+
+[node name="Counter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/Counter" index="0"]
+material_override = ExtResource("4_fv50d")
+gi_mode = 2
+mesh = ExtResource("5_0xpme")
+surface_material_override/0 = ExtResource("6_7n8ob")
+
+[node name="Stove" type="Node3D" parent="Selected" index="1"]
+transform = Transform3D(1.67, 0, 0, 0, 1.67, 0, 0, 0, 1.67, -0.043, 1.431, 0.07)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/Stove" index="0"]
+material_override = ExtResource("4_fv50d")
+gi_mode = 2
+mesh = ExtResource("7_qxhae")
+surface_material_override/0 = ExtResource("8_gm2br")
+
+[node name="Frying Pan" parent="Selected" index="2" instance=ExtResource("9_ipdad")]
+transform = Transform3D(1.3793, 0, 1.44828, 0, 2, 0, -1.44828, 0, 1.3793, -0.048, 1.375, 0)
+
+[node name="Cylinder_003" parent="Selected/Frying Pan" index="0"]
+material_override = ExtResource("4_fv50d")
+
+[node name="StoveOnVisual" type="Node3D" parent="Selected" index="3"]
+transform = Transform3D(0.828344, 0, 0, 0, -4.00075e-08, -1, 0, 0.915266, -4.37114e-08, -0.047, 1.395, -0.039)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/StoveOnVisual" index="0"]
+material_override = ExtResource("4_fv50d")
+gi_mode = 2
+mesh = SubResource("ArrayMesh_btesd")
+surface_material_override/0 = ExtResource("10_cu13x")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+one_shot = true
+
+[editable path="Selected/Frying Pan"]

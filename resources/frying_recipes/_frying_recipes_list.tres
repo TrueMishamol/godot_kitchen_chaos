@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FryingRecipesListResource" load_steps=4 format=3 uid="uid://oy53hn2i20y3"]
+
+[ext_resource type="Resource" uid="uid://ymbsm33ha26r" path="res://resources/frying_recipes/meat_patty_cooked_to_burned.tres" id="1_eftae"]
+[ext_resource type="Script" uid="uid://d0efliyul5ly6" path="res://resources/frying_recipes/FryingRecipesListResource.cs" id="1_v551x"]
+[ext_resource type="Resource" uid="uid://tdf2yevsxr3l" path="res://resources/frying_recipes/meat_patty_uncooked_to_cooked.tres" id="2_jajr8"]
+
+[resource]
+script = ExtResource("1_v551x")
+_FryingRecipeResources = Array[Object]([ExtResource("1_eftae"), ExtResource("2_jajr8")])
+metadata/_custom_type_script = "uid://d0efliyul5ly6"

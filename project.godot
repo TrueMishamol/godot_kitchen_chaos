@@ -48,6 +48,10 @@ folder_colors={
 "res://wip/": "gray"
 }
 
+[gui]
+
+theme/custom="uid://twt5lj8fbool"
+
 [input]
 
 go_left={

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://bp8bykqtdccuw"]
 
-[ext_resource type="Script" uid="uid://elc2jlirobch" path="res://nodes/counters/ContainerCounterVisual.cs" id="1_g8ica"]
+[ext_resource type="Script" uid="uid://elc2jlirobch" path="res://nodes/counters/container_counter/ContainerCounterVisual.cs" id="1_g8ica"]
 [ext_resource type="AnimationLibrary" uid="uid://ceuo58whr4xjc" path="res://assets/animations/container_counter/container_counter_library.res" id="1_y6cfu"]
 [ext_resource type="PackedScene" uid="uid://dg2th4bl0ij26" path="res://assets/meshes/Counter_solid.gltf" id="3_g8ica"]
 [ext_resource type="PackedScene" uid="uid://c5ba02pljcpne" path="res://assets/meshes/Single door.gltf" id="5_5bnm7"]

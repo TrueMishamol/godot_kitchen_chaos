@@ -1,5 +1,3 @@
-using Godot;
-
 public partial class ClearCounter : BaseCounter {
 
 	public override void Interact(Player player) {

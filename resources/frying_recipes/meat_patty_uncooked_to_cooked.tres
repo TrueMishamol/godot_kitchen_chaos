@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FryingRecipeResource" load_steps=4 format=3 uid="uid://tdf2yevsxr3l"]
+
+[ext_resource type="Resource" uid="uid://durfit5tuaveu" path="res://resources/kitchen_objects/meat_patty_cooked.tres" id="1_dic38"]
+[ext_resource type="Script" uid="uid://2glh7ops4rt1" path="res://resources/frying_recipes/FryingRecipeResource.cs" id="1_osawj"]
+[ext_resource type="Resource" uid="uid://dex56pfu3yqr3" path="res://resources/kitchen_objects/meat_patty_burned.tres" id="2_50k58"]
+
+[resource]
+script = ExtResource("1_osawj")
+_Input = ExtResource("1_dic38")
+_Output = ExtResource("2_50k58")
+_FryingTimerMax = 3.0
+metadata/_custom_type_script = "uid://2glh7ops4rt1"
