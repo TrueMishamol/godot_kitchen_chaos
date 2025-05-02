@@ -2,15 +2,17 @@ public partial class ClearCounter : BaseCounter {
 
 	public override void Interact(Player player) {
 		if (KitchenObject == null) {
-			//# Empty
+			// Counter EMPTY
 			if (player.KitchenObject != null) {
-				//# NOT Emptyhanded
+				// Player HAS object
+				//# Player drops the object
 				player.KitchenObject.KitchenObjectParent = this;
 			}
 		} else {
-			//# NOT Empty
+			// Counter HAS object
 			if (player.KitchenObject == null) {
-				//# Emptyhanded
+				// Player EMPTY-handed
+				//# Player grabs the object
 				KitchenObject.KitchenObjectParent = player;
 			}
 		}

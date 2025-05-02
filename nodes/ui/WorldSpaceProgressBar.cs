@@ -14,7 +14,7 @@ public partial class WorldSpaceProgressBar : Node3D {
 
 	public override void _Ready() {
 		if (_IHasProgress is IHasProgress _hasProgress) {
-			_hasProgress.OnProgressChanged += CuttingCounter_OnProgressChanged;
+			_hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
 		} else {
 			GD.PushError(nameof(_IHasProgress) + " Doesn't have script " + nameof(IHasProgress));
 		}
@@ -24,7 +24,7 @@ public partial class WorldSpaceProgressBar : Node3D {
 		Hide();
 	}
 
-	private void CuttingCounter_OnProgressChanged(float progress) {
+	private void HasProgress_OnProgressChanged(float progress) {
 		_ProgressBar.Value = progress;
 
 		if (progress == 0f || progress == 1f) {

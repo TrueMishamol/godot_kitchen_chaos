@@ -17,8 +17,6 @@ public partial class StoveCounter : BaseCounter, IHasProgress {
 	[Export] private FryingRecipesListResource _FryingRecipesListResource;
 	[Export] private Timer _Timer;
 
-	// private float _fryingProgress;
-
 	private State f_currentState;
 	private State _currentState {
 		get => f_currentState;

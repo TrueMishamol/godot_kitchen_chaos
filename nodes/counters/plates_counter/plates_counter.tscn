@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqabgu21t6u30"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_nd3li"]
+[ext_resource type="Script" uid="uid://b16xaktq4d4y8" path="res://nodes/counters/plates_counter/PlatesCounter.cs" id="2_1qniw"]
+[ext_resource type="PackedScene" uid="uid://t7ogo5ipnq8c" path="res://assets/prefabs_visuals/counters_visuals/plates_counter_visual_prefab.tscn" id="2_iusyx"]
+[ext_resource type="Resource" uid="uid://cr1viukwiaond" path="res://resources/kitchen_objects/plate.tres" id="3_igb2a"]
+[ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_v0no1"]
+[ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_3ok20"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="5_1qniw"]
+[ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="6_igb2a"]
+
+[node name="PlatesCounter" node_paths=PackedStringArray("_Timer") instance=ExtResource("1_nd3li")]
+script = ExtResource("2_1qniw")
+_PlateKitchenObjectResource = ExtResource("3_igb2a")
+_Timer = NodePath("Timer")
+
+[node name="PlatesCounter_Visual" parent="." index="2" node_paths=PackedStringArray("_PlatesCounter", "_CounterTopPoint") instance=ExtResource("2_iusyx")]
+_PlatesCounter = NodePath("..")
+_CounterTopPoint = NodePath("../CounterTopPoint")
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+visible = false
+script = ExtResource("3_v0no1")
+_Counter = NodePath("..")
+
+[node name="KitchenCounter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 1.7, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/KitchenCounter" index="0"]
+material_override = ExtResource("4_3ok20")
+gi_mode = 2
+mesh = ExtResource("5_1qniw")
+surface_material_override/0 = ExtResource("6_igb2a")
+
+[node name="Timer" type="Timer" parent="." index="4"]
+one_shot = true

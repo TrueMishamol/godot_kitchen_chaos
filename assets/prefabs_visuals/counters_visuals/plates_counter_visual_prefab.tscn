@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://t7ogo5ipnq8c"]
 
-[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_vdkvd"]
-[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_v5q4n"]
+[ext_resource type="Script" uid="uid://51r16057wtex" path="res://nodes/counters/plates_counter/PlatesCounterVisual.cs" id="1_idtsi"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_vdkvd"]
+[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/plate_visual_prefab.tscn" id="2_cqf81"]
+[ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_v5q4n"]
+[ext_resource type="Texture2D" uid="uid://cxh4pop4pulbr" path="res://assets/textures/circle_dashed.png" id="3_v5q4n"]
 
 [node name="PlatesCounter_Visual" type="Node3D"]
+script = ExtResource("1_idtsi")
+_PlateVisualScene = ExtResource("2_cqf81")
 
 [node name="KitchenCounter" type="Node3D" parent="."]
 transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 1.7, 0, 0, 0)
@@ -13,7 +18,7 @@ gi_mode = 2
 mesh = ExtResource("1_vdkvd")
 surface_material_override/0 = ExtResource("2_v5q4n")
 
-[node name="CircleSprite" type="Node3D" parent="."]
+[node name="CircleSprite" type="Sprite3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, -3.0598e-08, -0.7, 0, 0.7, -3.0598e-08, 0, 1.268, 0)
-
-[node name="SpriteRenderer" type="Node" parent="CircleSprite"]
+render_priority = -1
+texture = ExtResource("3_v5q4n")
