@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b1aqmbnrigw2y"]
+[gd_scene load_steps=15 format=4 uid="uid://b1aqmbnrigw2y"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_fpv3j"]
 [ext_resource type="Script" uid="uid://cqr6mxvw8jmmc" path="res://nodes/counters/stove_counter/StoveCounter.cs" id="2_3pyv3"]
@@ -12,6 +12,7 @@
 [ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="8_gm2br"]
 [ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="9_ipdad"]
 [ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="10_cu13x"]
+[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/world_space_progress_bar.tscn" id="13_fv50d"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
 resource_name = "Quad"
@@ -35,7 +36,8 @@ _Timer = NodePath("Timer")
 [node name="CounterTopPoint" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0425768, 1.5, -0.00370617)
 
-[node name="StoveCounter_Visual" parent="." index="2" instance=ExtResource("2_sqo3o")]
+[node name="StoveCounter_Visual" parent="." index="2" node_paths=PackedStringArray("_StoveCounter") instance=ExtResource("2_sqo3o")]
+_StoveCounter = NodePath("..")
 
 [node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
 transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
@@ -78,5 +80,9 @@ surface_material_override/0 = ExtResource("10_cu13x")
 
 [node name="Timer" type="Timer" parent="." index="4"]
 one_shot = true
+
+[node name="WorldSpaceProgressBar" parent="." index="5" node_paths=PackedStringArray("_IHasProgress") instance=ExtResource("13_fv50d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+_IHasProgress = NodePath("..")
 
 [editable path="Selected/Frying Pan"]

@@ -1,9 +1,9 @@
 using Godot;
 using System;
 
-public partial class CuttingCounter : BaseCounter {
+public partial class CuttingCounter : BaseCounter, IHasProgress {
 
-
+	// IHasProgress
 	public event Action<float> OnProgressChanged;
 
 	[Export] public CuttingRecipesListResource _CuttingRecipesListResource;

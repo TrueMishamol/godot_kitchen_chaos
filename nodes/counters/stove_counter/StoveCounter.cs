@@ -1,30 +1,47 @@
 using Godot;
+using System;
 
-public partial class StoveCounter : BaseCounter {
+public partial class StoveCounter : BaseCounter, IHasProgress {
 
+	// IHasProgress
+	public event Action<float> OnProgressChanged;
 
-	// private enum State {
-	// 	Idle,
-	// 	Frying,
-	// 	Burning,
-	// }
+	public event Action<State> OnStateChanged;
+
+	public enum State {
+		Idle,
+		Frying,
+		Burning,
+	}
 
 	[Export] private FryingRecipesListResource _FryingRecipesListResource;
 	[Export] private Timer _Timer;
 
 	// private float _fryingProgress;
 
+	private State f_currentState;
+	private State _currentState {
+		get => f_currentState;
+		set {
+			f_currentState = value;
+			// GD.Print(value);
+			OnStateChanged?.Invoke(value);
+		}
+	}
 	private FryingRecipeResource _currentFryingRecipeResource;
 
 
 
 
 	public override void _Ready() {
+		_currentState = State.Idle;
+
 		_Timer.Timeout += Timer_OnTimeout;
 	}
 
 	public override void _Process(double delta) {
-		//! Display ProgressBar
+		float progress = 1f - (float)(_Timer.TimeLeft / _Timer.WaitTime);
+		OnProgressChanged?.Invoke(progress);
 	}
 
 	private void Timer_OnTimeout() {
@@ -53,6 +70,8 @@ public partial class StoveCounter : BaseCounter {
 				// Player EMPTY-handed
 				//# Player grabs the object
 				KitchenObject.KitchenObjectParent = player;
+
+				CheckKitchenObjectAndStartTimer();
 			}
 		}
 	}
@@ -61,9 +80,7 @@ public partial class StoveCounter : BaseCounter {
 
 
 	private void OnFried() {
-		_Timer.Stop();
-
-		GD.Print("FRIED");
+		GD.Print("FRIED " + KitchenObject);
 		KitchenObject.DestroySelf();
 		KitchenObject.SpawnKitchenObject(_currentFryingRecipeResource._Output, this);
 
@@ -71,12 +88,27 @@ public partial class StoveCounter : BaseCounter {
 	}
 
 	private void CheckKitchenObjectAndStartTimer() {
-		if (KitchenObject == null)
+		if (KitchenObject == null) {
+			//# No object
+			_Timer.Stop();
+			_currentState = State.Idle;
 			return;
+		}
 		if (HasRecipeWithInput(KitchenObject._KitchenObjectResource)) {
+			//# Has recipe
 			_currentFryingRecipeResource = GetFryingRecipeResourceWithInput(KitchenObject._KitchenObjectResource);
 			_Timer.WaitTime = _currentFryingRecipeResource._FryingTimerMax;
 			_Timer.Start();
+
+			if (_currentFryingRecipeResource._IsBurning) {
+				_currentState = State.Burning;
+			} else {
+				_currentState = State.Frying;
+			}
+		} else {
+			//# No recipe
+			_Timer.Stop();
+			_currentState = State.Idle;
 		}
 	}
 

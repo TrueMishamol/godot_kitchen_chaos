@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://wdoyien2v3p3"]
+
+[ext_resource type="Script" uid="uid://b60jhr3rbk8no" path="res://nodes/ui/WorldSpaceProgressBar.cs" id="1_x68gx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ksloa"]
+viewport_path = NodePath("SubViewport")
+
+[node name="WorldSpaceProgressBar" type="Node3D" node_paths=PackedStringArray("_ProgressBar")]
+script = ExtResource("1_x68gx")
+_ProgressBar = NodePath("SubViewport/ProgressBar")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+texture = SubResource("ViewportTexture_ksloa")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(122, 29)
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 121.0
+offset_bottom = 28.0
+max_value = 1.0
+value = 0.5
+show_percentage = false

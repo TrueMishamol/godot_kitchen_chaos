@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://csi42j52htjl3"]
+[gd_scene load_steps=15 format=4 uid="uid://csi42j52htjl3"]
 
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_6jpfn"]
+[ext_resource type="Script" uid="uid://bqhoms7a8b6fc" path="res://nodes/counters/stove_counter/StoveCounterVisual.cs" id="1_vgrj4"]
 [ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_wkmo7"]
 [ext_resource type="ArrayMesh" uid="uid://xrj3pdyo7cgp" path="res://assets/meshes/extracted/Stove Counter.Cube_004.mesh" id="3_vgrj4"]
 [ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="4_xncvk"]
@@ -54,7 +55,9 @@ scale_curve = SubResource("CurveTexture_wkmo7")
 material = ExtResource("7_wkmo7")
 size = Vector2(0.2, 0.2)
 
-[node name="StoveCounter_Visual" type="Node3D"]
+[node name="StoveCounter_Visual" type="Node3D" node_paths=PackedStringArray("_StoveOnVisualNodes")]
+script = ExtResource("1_vgrj4")
+_StoveOnVisualNodes = [NodePath("StoveOnVisual"), NodePath("SizzlingParticles")]
 
 [node name="Counter" type="Node3D" parent="."]
 transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
@@ -77,6 +80,7 @@ transform = Transform3D(1.3793, 0, 1.44828, 0, 2, 0, -1.44828, 0, 1.3793, -0.048
 
 [node name="StoveOnVisual" type="Node3D" parent="."]
 transform = Transform3D(0.828344, 0, 0, 0, -4.00075e-08, -1, 0, 0.915266, -4.37114e-08, -0.047, 1.395, -0.039)
+visible = false
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="StoveOnVisual"]
 gi_mode = 2
@@ -90,6 +94,7 @@ shape = SubResource("ConcavePolygonShape3D_eb1ek")
 
 [node name="SizzlingParticles" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.047, 1.48222, -0.018)
+visible = false
 amount = 9
 lifetime = 0.5
 randomness = 1.0

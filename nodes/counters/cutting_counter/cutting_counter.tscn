@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtyokdwsmrdd1"]
+[gd_scene load_steps=10 format=3 uid="uid://dtyokdwsmrdd1"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_ksloa"]
 [ext_resource type="Script" uid="uid://bk4cjlw4y0vj0" path="res://nodes/counters/cutting_counter/CuttingCounter.cs" id="2_fm0jt"]
@@ -8,10 +8,7 @@
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="6_p2rj7"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="7_iasr1"]
 [ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="8_vnjq4"]
-[ext_resource type="Script" uid="uid://b60jhr3rbk8no" path="res://nodes/counters/cutting_counter/WorldSpaceProgressBar.cs" id="9_oqc7n"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_ksloa"]
-viewport_path = NodePath("WorldSpaceProgressBar/SubViewport")
+[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/world_space_progress_bar.tscn" id="9_oqc7n"]
 
 [node name="CuttingCounter" instance=ExtResource("1_ksloa")]
 script = ExtResource("2_fm0jt")
@@ -35,26 +32,6 @@ gi_mode = 2
 mesh = ExtResource("7_iasr1")
 surface_material_override/0 = ExtResource("8_vnjq4")
 
-[node name="WorldSpaceProgressBar" type="Node3D" parent="." index="4" node_paths=PackedStringArray("_CuttingCounter", "_ProgressBar")]
+[node name="WorldSpaceProgressBar" parent="." index="4" node_paths=PackedStringArray("_IHasProgress") instance=ExtResource("9_oqc7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
-script = ExtResource("9_oqc7n")
-_CuttingCounter = NodePath("..")
-_ProgressBar = NodePath("SubViewport/ProgressBar")
-
-[node name="Sprite3D" type="Sprite3D" parent="WorldSpaceProgressBar" index="0"]
-billboard = 1
-texture = SubResource("ViewportTexture_ksloa")
-
-[node name="SubViewport" type="SubViewport" parent="WorldSpaceProgressBar" index="1"]
-disable_3d = true
-transparent_bg = true
-size = Vector2i(122, 29)
-
-[node name="ProgressBar" type="ProgressBar" parent="WorldSpaceProgressBar/SubViewport" index="0"]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 121.0
-offset_bottom = 28.0
-max_value = 1.0
-value = 0.5
-show_percentage = false
+_IHasProgress = NodePath("..")
