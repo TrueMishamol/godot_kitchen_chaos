@@ -70,6 +70,16 @@ public partial class StoveCounter : BaseCounter, IHasProgress {
 				KitchenObject.KitchenObjectParent = player;
 
 				CheckKitchenObjectAndStartTimer();
+			} else {
+				// Player HAS object
+				if (player.KitchenObject.TryGetPlate(out PlateKitchenObject plateKitchenObject)) {
+					// Player is holding a Plate
+					//# Plate
+					if (plateKitchenObject.TryAddIngredient(KitchenObject._KitchenObjectResource)) {
+						KitchenObject.DestroySelf();
+						CheckKitchenObjectAndStartTimer();
+					}
+				}
 			}
 		}
 	}
@@ -78,7 +88,7 @@ public partial class StoveCounter : BaseCounter, IHasProgress {
 
 
 	private void OnFried() {
-		GD.Print("FRIED " + KitchenObject);
+		// GD.Print("FRIED " + KitchenObject);
 		KitchenObject.DestroySelf();
 		KitchenObject.SpawnKitchenObject(_currentFryingRecipeResource._Output, this);
 

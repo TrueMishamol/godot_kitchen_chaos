@@ -33,6 +33,15 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 				// Player EMPTY-handed
 				//# Player grabs the object
 				KitchenObject.KitchenObjectParent = player;
+			} else {
+				// Player HAS object
+				if (player.KitchenObject.TryGetPlate(out PlateKitchenObject plateKitchenObject)) {
+					// Player is holding a Plate
+					//# Plate
+					if (plateKitchenObject.TryAddIngredient(KitchenObject._KitchenObjectResource)) {
+						KitchenObject.DestroySelf();
+					}
+				}
 			}
 		}
 	}

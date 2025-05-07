@@ -5,7 +5,7 @@ public partial class WorldSpaceProgressBar : Node3D {
 
 	// External
 	[Export] private Node _IHasProgress;
-	private IHasProgress _hasProgress;
+	// private IHasProgress _hasProgress;
 
 	// Internal
 	[Export] private ProgressBar _ProgressBar;

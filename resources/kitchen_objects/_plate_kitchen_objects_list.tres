@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KitchenObjectsListResource" load_steps=8 format=3 uid="uid://dpi2lrp8accp0"]
+
+[ext_resource type="Resource" uid="uid://etdmn4q46ycv" path="res://resources/kitchen_objects/bread.tres" id="1_f3bd3"]
+[ext_resource type="Script" uid="uid://cqe1l7h256hj3" path="res://resources/kitchen_objects/KitchenObjectsListResource.cs" id="1_k50ef"]
+[ext_resource type="Resource" uid="uid://nm6stlw1s1b7" path="res://resources/kitchen_objects/cabbage_sliced.tres" id="2_isw8f"]
+[ext_resource type="Resource" uid="uid://dpm5dskp4brx3" path="res://resources/kitchen_objects/chese_slice.tres" id="3_t0m4g"]
+[ext_resource type="Resource" uid="uid://durfit5tuaveu" path="res://resources/kitchen_objects/meat_patty_cooked.tres" id="4_uukc8"]
+[ext_resource type="Resource" uid="uid://dex56pfu3yqr3" path="res://resources/kitchen_objects/meat_patty_burned.tres" id="5_7uj4x"]
+[ext_resource type="Resource" uid="uid://cc4k365k5h8ty" path="res://resources/kitchen_objects/tomato_slices.tres" id="6_tbgu7"]
+
+[resource]
+script = ExtResource("1_k50ef")
+_KitchenObjectResources = Array[Object]([ExtResource("1_f3bd3"), ExtResource("2_isw8f"), ExtResource("3_t0m4g"), ExtResource("4_uukc8"), ExtResource("5_7uj4x"), ExtResource("6_tbgu7")])
+metadata/_custom_type_script = "uid://cqe1l7h256hj3"

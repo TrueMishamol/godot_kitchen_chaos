@@ -35,6 +35,17 @@ public partial class KitchenObject : Node3D {
 
 
 
+	public bool TryGetPlate(out PlateKitchenObject plateKitchenObject) {
+		if (this is PlateKitchenObject) {
+			plateKitchenObject = this as PlateKitchenObject;
+			return true;
+		} else {
+			plateKitchenObject = null;
+			return false;
+		}
+	}
+
+
 
 	public void DestroySelf() {
 		KitchenObjectParent.KitchenObject = null;
