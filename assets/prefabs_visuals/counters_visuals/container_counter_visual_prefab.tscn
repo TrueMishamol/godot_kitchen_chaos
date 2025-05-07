@@ -43,7 +43,6 @@ transform = Transform3D(-1.12277e-07, 2.15882, 0, -0.0344269, -1.26477e-09, 1.54
 [node name="ObjectSprite" type="Sprite3D" parent="Single door"]
 transform = Transform3D(-7.08124e-09, -0.162, -1.16415e-09, 0.162, -7.08124e-09, 6.34272e-17, -1.14314e-16, -1.16415e-09, 0.162, 0.181132, 0.371099, 0.0381598)
 double_sided = false
-render_priority = -1
 texture = ExtResource("5_y6cfu")
 
 [node name="Black" type="Node3D" parent="."]

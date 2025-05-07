@@ -12,12 +12,9 @@ public partial class PlateIconsUi : Node3D {
 
 
 
-
-	public override void _EnterTree() {
-		_IconTemplate.Hide();
-	}
-
 	public override void _Ready() {
+		_IconTemplate.Hide();
+
 		_PlateKitchenObject.OnIngredientAdded += PlateKitchenObject_OnIngredientAdded;
 	}
 

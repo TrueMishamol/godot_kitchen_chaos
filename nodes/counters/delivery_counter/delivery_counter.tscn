@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://duqettq6plpwl"]
+
+[ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_3so1y"]
+[ext_resource type="Script" uid="uid://b3yjd6xxpa3ai" path="res://nodes/counters/delivery_counter/DeliveryCounter.cs" id="2_5c13o"]
+[ext_resource type="PackedScene" uid="uid://c1oi4e0yer7yg" path="res://assets/prefabs_visuals/counters_visuals/delivery_counter_visual_prefab.tscn" id="2_moqls"]
+[ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_vjahp"]
+[ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_5c13o"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="5_g3wyk"]
+[ext_resource type="Material" uid="uid://bsyvhjskiv8o5" path="res://assets/meshes/extracted/Kitchen Counter_Blue.material" id="6_khdvh"]
+
+[node name="DeliveryCounter" instance=ExtResource("1_3so1y")]
+script = ExtResource("2_5c13o")
+
+[node name="DeliveryCounter_Visual" parent="." index="2" instance=ExtResource("2_moqls")]
+
+[node name="Selected" type="Node3D" parent="." index="3" node_paths=PackedStringArray("_Counter")]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+script = ExtResource("3_vjahp")
+_Counter = NodePath("..")
+
+[node name="KitchenCounter" type="Node3D" parent="Selected" index="0"]
+transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Selected/KitchenCounter" index="0"]
+material_override = ExtResource("4_5c13o")
+gi_mode = 2
+mesh = ExtResource("5_g3wyk")
+surface_material_override/0 = ExtResource("6_khdvh")

@@ -1,8 +1,8 @@
 shader_type spatial;
 
 
-uniform vec4 _TopColor : source_color = vec4(0,0,1,1);	// Gradient top color
-uniform vec4 _BottomColor : source_color = vec4(1,0,0,1);	// Gradient bottom color
+uniform vec4 _TopColor : source_color = vec4(0,0,1,1);
+uniform vec4 _BottomColor : source_color = vec4(1,0,0,1);
 
 
 

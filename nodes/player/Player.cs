@@ -18,7 +18,7 @@ public partial class Player : CharacterBody3D, IKitchenObjectParent {
 
 
 
-	public override void _EnterTree() {
+	public Player() {
 		if (Instance != null) {
 			GD.PushError("There is more than one Player.Instance");
 		}

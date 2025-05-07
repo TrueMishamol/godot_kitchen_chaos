@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cxi0y4buajm8g"]
+
+[ext_resource type="Shader" uid="uid://by8ggn5gbjrjn" path="res://visuals/shader_materials/moving/moving.gdshader" id="1_wn8j1"]
+[ext_resource type="Texture2D" uid="uid://dd326q4tqvt1o" path="res://assets/textures/arrow.png" id="2_a8h16"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wn8j1")
+shader_parameter/_Texture = ExtResource("2_a8h16")
+shader_parameter/_ScrollSpeed = Vector2(-1, 0)

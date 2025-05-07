@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://c1oi4e0yer7yg"]
 
-[ext_resource type="ArrayMesh" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_q5y5d"]
-[ext_resource type="Material" path="res://assets/meshes/extracted/Kitchen Counter_Blue.material" id="2_ejure"]
+[ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_q5y5d"]
+[ext_resource type="Material" uid="uid://bsyvhjskiv8o5" path="res://assets/meshes/extracted/Kitchen Counter_Blue.material" id="2_ejure"]
+[ext_resource type="Material" uid="uid://cxi0y4buajm8g" path="res://visuals/shader_materials/moving/delivery_counter_arrows.tres" id="3_ejure"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_126b1"]
+size = Vector2(1, 1)
 
 [node name="DeliveryCounter_Visual" type="Node3D"]
 
@@ -12,3 +16,8 @@ transform = Transform3D(1.65, 0, 0, 0, 1.5, 0, 0, 0, 1.65, 0, 0, 0)
 gi_mode = 2
 mesh = ExtResource("1_q5y5d")
 surface_material_override/0 = ExtResource("2_ejure")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.26923, 0.0275812)
+material_override = ExtResource("3_ejure")
+mesh = SubResource("PlaneMesh_126b1")
