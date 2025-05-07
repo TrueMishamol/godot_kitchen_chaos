@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="6_p2rj7"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="7_iasr1"]
 [ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="8_vnjq4"]
-[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/world_space_progress_bar.tscn" id="9_oqc7n"]
+[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/progress_bar/world_space_progress_bar.tscn" id="9_oqc7n"]
 
 [node name="CuttingCounter" instance=ExtResource("1_ksloa")]
 script = ExtResource("2_fm0jt")

@@ -12,7 +12,7 @@
 [ext_resource type="Material" uid="uid://i2h2qjgon0vm" path="res://assets/meshes/extracted/Stove Counter.Stove.material" id="8_gm2br"]
 [ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="9_ipdad"]
 [ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="10_cu13x"]
-[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/world_space_progress_bar.tscn" id="13_fv50d"]
+[ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/progress_bar/world_space_progress_bar.tscn" id="13_fv50d"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
 resource_name = "Quad"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://51r16057wtex" path="res://nodes/counters/plates_counter/PlatesCounterVisual.cs" id="1_idtsi"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="1_vdkvd"]
-[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/plate_visual_prefab.tscn" id="2_cqf81"]
+[ext_resource type="PackedScene" uid="uid://382fln68pw6o" path="res://assets/prefabs_visuals/kitchen_objects_visuals/plate_visual_prefab.tscn" id="2_cqf81"]
 [ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="2_v5q4n"]
 [ext_resource type="Texture2D" uid="uid://cxh4pop4pulbr" path="res://assets/textures/circle_dashed.png" id="3_v5q4n"]
 

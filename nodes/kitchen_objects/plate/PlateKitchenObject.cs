@@ -10,7 +10,7 @@ public partial class PlateKitchenObject : KitchenObject {
 
 	[Export] private KitchenObjectsListResource _ValidKitchenObjects;
 
-	private List<KitchenObjectResource> kitchenObjectResourcesList = new List<KitchenObjectResource>();
+	public List<KitchenObjectResource> KitchenObjectResourcesList { get; } = new List<KitchenObjectResource>();
 
 
 
@@ -20,13 +20,14 @@ public partial class PlateKitchenObject : KitchenObject {
 			return false;
 		}
 
-		if (kitchenObjectResourcesList.Contains(kitchenObjectResource)) {
+		if (KitchenObjectResourcesList.Contains(kitchenObjectResource)) {
 			// Already has this type
 			return false;
 		}
 
+		KitchenObjectResourcesList.Add(kitchenObjectResource);
 		OnIngredientAdded?.Invoke(kitchenObjectResource);
-		kitchenObjectResourcesList.Add(kitchenObjectResource);
+
 		return true;
 	}
 

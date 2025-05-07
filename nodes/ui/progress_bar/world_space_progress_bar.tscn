@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://wdoyien2v3p3"]
 
-[ext_resource type="Script" uid="uid://b60jhr3rbk8no" path="res://nodes/ui/WorldSpaceProgressBar.cs" id="1_x68gx"]
+[ext_resource type="Script" uid="uid://b60jhr3rbk8no" path="res://nodes/ui/progress_bar/WorldSpaceProgressBar.cs" id="1_x68gx"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ksloa"]
 viewport_path = NodePath("SubViewport")

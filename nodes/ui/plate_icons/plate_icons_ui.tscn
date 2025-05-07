@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://yoy0j6e8i4o5"]
+
+[ext_resource type="StyleBox" uid="uid://taquf3eq4gy8" path="res://visuals/ui_theme/style_boxes/white_circle.tres" id="1_8o27o"]
+[ext_resource type="Script" uid="uid://tkpnkp0yjkd3" path="res://nodes/ui/plate_icons/PlateIconsUi.cs" id="1_cbo2f"]
+[ext_resource type="Texture2D" uid="uid://2jkyr6n3qxeh" path="res://assets/textures/kitchen_chaos_logo.png" id="2_cbo2f"]
+[ext_resource type="Script" uid="uid://cgiygw6xx8ssl" path="res://nodes/ui/plate_icons/PlateIconSingleUi.cs" id="3_m28y3"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ksloa"]
+viewport_path = NodePath("SubViewport")
+
+[node name="PlateIconUi" type="Node3D" node_paths=PackedStringArray("_IconsContainer", "_IconTemplate")]
+script = ExtResource("1_cbo2f")
+_IconsContainer = NodePath("SubViewport/IconsContainer")
+_IconTemplate = NodePath("SubViewport/IconsContainer/IconTemplate")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+offset = Vector2(0, 44)
+billboard = 1
+texture = SubResource("ViewportTexture_ksloa")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(130, 130)
+
+[node name="IconsContainer" type="HFlowContainer" parent="SubViewport"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 129.0
+offset_bottom = 129.0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+alignment = 1
+reverse_fill = true
+
+[node name="IconTemplate" type="PanelContainer" parent="SubViewport/IconsContainer" node_paths=PackedStringArray("_TextureRect")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_8o27o")
+script = ExtResource("3_m28y3")
+_TextureRect = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="SubViewport/IconsContainer/IconTemplate"]
+layout_mode = 2
+texture = ExtResource("2_cbo2f")
+expand_mode = 1
+stretch_mode = 5

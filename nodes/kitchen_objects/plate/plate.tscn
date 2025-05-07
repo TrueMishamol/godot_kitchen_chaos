@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciwk24a0ah75g"]
+[gd_scene load_steps=8 format=3 uid="uid://ciwk24a0ah75g"]
 
 [ext_resource type="PackedScene" uid="uid://x8iakaslthop" path="res://nodes/kitchen_objects/_base_kitchen_object.tscn" id="1_mjg4p"]
 [ext_resource type="Script" uid="uid://boeydlhxr3hoc" path="res://nodes/kitchen_objects/plate/PlateKitchenObject.cs" id="2_4p0ji"]
 [ext_resource type="Resource" uid="uid://dpi2lrp8accp0" path="res://resources/kitchen_objects/_plate_kitchen_objects_list.tres" id="3_bf0dc"]
 [ext_resource type="Resource" uid="uid://cr1viukwiaond" path="res://resources/kitchen_objects/plate.tres" id="4_k5c8e"]
-[ext_resource type="PackedScene" path="res://assets/prefabs_visuals/kitchen_objects_visuals/plate_visual_prefab.tscn" id="5_jv0c7"]
+[ext_resource type="PackedScene" uid="uid://382fln68pw6o" path="res://assets/prefabs_visuals/kitchen_objects_visuals/plate_visual_prefab.tscn" id="5_jv0c7"]
 [ext_resource type="PackedScene" uid="uid://c5rc65ec3b7ar" path="res://assets/prefabs_visuals/plate_complete_visual.tscn" id="6_66q7p"]
+[ext_resource type="PackedScene" uid="uid://yoy0j6e8i4o5" path="res://nodes/ui/plate_icons/plate_icons_ui.tscn" id="7_4p0ji"]
 
 [node name="Plate" instance=ExtResource("1_mjg4p")]
 script = ExtResource("2_4p0ji")
@@ -15,4 +16,8 @@ _KitchenObjectResource = ExtResource("4_k5c8e")
 [node name="Plate_Visual" parent="." index="0" instance=ExtResource("5_jv0c7")]
 
 [node name="PlateCompleteVisual" parent="." index="1" node_paths=PackedStringArray("_PlateKitchenObject") instance=ExtResource("6_66q7p")]
+_PlateKitchenObject = NodePath("..")
+
+[node name="PlateIconUi" parent="." index="2" node_paths=PackedStringArray("_PlateKitchenObject") instance=ExtResource("7_4p0ji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 _PlateKitchenObject = NodePath("..")
