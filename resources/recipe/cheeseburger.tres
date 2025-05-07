@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeResource" load_steps=5 format=3 uid="uid://buxb25k3s2na8"]
+
+[ext_resource type="Resource" uid="uid://durfit5tuaveu" path="res://resources/kitchen_objects/meat_patty_cooked.tres" id="1_n7mkl"]
+[ext_resource type="Resource" uid="uid://etdmn4q46ycv" path="res://resources/kitchen_objects/bread.tres" id="2_ex805"]
+[ext_resource type="Resource" uid="uid://dpm5dskp4brx3" path="res://resources/kitchen_objects/chese_slice.tres" id="3_fnqvb"]
+[ext_resource type="Script" uid="uid://wl62rx2bi0jx" path="res://resources/recipe/RecipeResource.cs" id="4_mx73t"]
+
+[resource]
+script = ExtResource("4_mx73t")
+_Name = "Ceeseburger"
+_KitchenObjectResourcesList = Array[Object]([ExtResource("1_n7mkl"), ExtResource("2_ex805"), ExtResource("3_fnqvb")])
+metadata/_custom_type_script = "uid://wl62rx2bi0jx"

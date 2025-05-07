@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipesListResource" load_steps=6 format=3 uid="uid://d2rytyephrm6t"]
+
+[ext_resource type="Script" uid="uid://dgwv5002ym4j1" path="res://resources/recipe/RecipesListResource.cs" id="1_dh3wo"]
+[ext_resource type="Resource" uid="uid://sh7oaf5qowgr" path="res://resources/recipe/burger.tres" id="1_g0okd"]
+[ext_resource type="Resource" uid="uid://buxb25k3s2na8" path="res://resources/recipe/cheeseburger.tres" id="2_2wl3e"]
+[ext_resource type="Resource" uid="uid://cq8woqb78ugue" path="res://resources/recipe/mega_burger.tres" id="3_aqdck"]
+[ext_resource type="Resource" uid="uid://b85didgwck4qd" path="res://resources/recipe/salad.tres" id="4_agcpm"]
+
+[resource]
+script = ExtResource("1_dh3wo")
+_Recipes = Array[Object]([ExtResource("1_g0okd"), ExtResource("2_2wl3e"), ExtResource("3_aqdck"), ExtResource("4_agcpm")])
+metadata/_custom_type_script = "uid://dgwv5002ym4j1"

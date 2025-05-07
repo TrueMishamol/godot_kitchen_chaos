@@ -1,7 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=23 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
+[ext_resource type="Script" uid="uid://y1qqdibecv5f" path="res://scripts/DeliveryManager.cs" id="4_ro0ie"]
+[ext_resource type="Resource" uid="uid://d2rytyephrm6t" path="res://resources/recipe/_recipes_list.tres" id="5_103ce"]
 [ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_effects/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="PackedScene" uid="uid://ce5hwwuchw5nc" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="8_b5spy"]
@@ -42,6 +44,15 @@ light_color = Color(0.86454, 0.886074, 0.900303, 1)
 light_energy = 0.6
 shadow_enabled = true
 metadata/_edit_lock_ = true
+
+[node name="DeliveryManager" type="Node" parent="." node_paths=PackedStringArray("_SpawnRecipeTimer")]
+script = ExtResource("4_ro0ie")
+_RecipesListResource = ExtResource("5_103ce")
+_SpawnRecipeTimer = NodePath("SpawnRecipeTimer")
+
+[node name="SpawnRecipeTimer" type="Timer" parent="DeliveryManager"]
+wait_time = 4.0
+autostart = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 30, 30)
