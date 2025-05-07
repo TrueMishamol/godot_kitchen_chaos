@@ -1,18 +1,18 @@
 using Godot;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 public partial class PlateKitchenObject : KitchenObject {
 
 
+	public event Action<KitchenObjectResource> OnIngredientAdded;
+
 	[Export] private KitchenObjectsListResource _ValidKitchenObjects;
 
 	private List<KitchenObjectResource> kitchenObjectResourcesList = new List<KitchenObjectResource>();
 
 
-	// public override void _EnterTree() {
-	// 	kitchenObjectResourcesList = new List<KitchenObjectResource>();
-	// }
 
 	public bool TryAddIngredient(KitchenObjectResource kitchenObjectResource) {
 		if (!_ValidKitchenObjects._KitchenObjectResources.Contains(kitchenObjectResource)) {
@@ -25,6 +25,7 @@ public partial class PlateKitchenObject : KitchenObject {
 			return false;
 		}
 
+		OnIngredientAdded?.Invoke(kitchenObjectResource);
 		kitchenObjectResourcesList.Add(kitchenObjectResource);
 		return true;
 	}

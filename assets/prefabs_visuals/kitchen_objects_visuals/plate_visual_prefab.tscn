@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://382fln68pw6o"]
 
-[ext_resource type="PackedScene" path="res://assets/meshes/Plate.gltf" id="1_vm4cu"]
+[ext_resource type="PackedScene" uid="uid://dm5dly8sgjc7o" path="res://assets/meshes/Plate.gltf" id="1_vm4cu"]
 
 [node name="Plate_Visual" type="Node3D"]
 
