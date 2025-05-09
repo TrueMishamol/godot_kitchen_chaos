@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=25 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://cp2v7u4ev35q3" path="res://nodes/ui/delivery_manager_ui/delivery_manager_ui.tscn" id="2_103ce"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://d2rytyephrm6t" path="res://resources/recipe/_recipes_list.tres" id="5_103ce"]
 [ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_effects/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
+[ext_resource type="AudioStream" uid="uid://dh0brcggy5b0i" path="res://assets/sounds/music/music.wav" id="7_pb36m"]
 [ext_resource type="PackedScene" uid="uid://ce5hwwuchw5nc" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="8_b5spy"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
 [ext_resource type="PackedScene" uid="uid://dxfc1eet3gcfg" path="res://nodes/counters/container_counter/container_counter.tscn" id="9_utbpp"]
@@ -56,6 +57,11 @@ _SpawnRecipeTimer = NodePath("SpawnRecipeTimer")
 [node name="SpawnRecipeTimer" type="Timer" parent="DeliveryManager"]
 wait_time = 4.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pb36m")
+volume_db = -10.0
+autoplay = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 30, 30)
