@@ -7,6 +7,6 @@
 
 [resource]
 script = ExtResource("4_mx73t")
-_Name = "Ceeseburger"
+_Name = "Cheeseburger"
 _KitchenObjectResourcesList = Array[Object]([ExtResource("1_n7mkl"), ExtResource("2_ex805"), ExtResource("3_fnqvb")])
 metadata/_custom_type_script = "uid://wl62rx2bi0jx"

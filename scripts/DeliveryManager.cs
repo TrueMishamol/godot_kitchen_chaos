@@ -1,15 +1,19 @@
 using Godot;
+using System;
 using System.Collections.Generic;
 
 public partial class DeliveryManager : Node {
 
+
+	public event Action OnRecipeSpawned;
+	public event Action OnRecipeCompleted;
 
 	public static DeliveryManager Instance { get; private set; }
 
 	[Export] private RecipesListResource _RecipesListResource;
 	[Export] private Timer _SpawnRecipeTimer;
 
-	private List<RecipeResource> _waitingRecipeResourcesList = new List<RecipeResource>();
+	public List<RecipeResource> WaitingRecipeResourcesList { get; private set; } = new List<RecipeResource>();
 	private int _waitingRecipesMax = 4;
 	private RandomNumberGenerator _randomNumberGenerator = new RandomNumberGenerator();
 
@@ -24,12 +28,14 @@ public partial class DeliveryManager : Node {
 	}
 
 	private void SpawnRecipeTimer_OnTimeout() {
-		if (_waitingRecipeResourcesList.Count < _waitingRecipesMax) {
+		if (WaitingRecipeResourcesList.Count < _waitingRecipesMax) {
 			int randomIndex = _randomNumberGenerator.RandiRange(0, _RecipesListResource._Recipes.Length - 1);
 			RecipeResource waitingRecipeResource = _RecipesListResource._Recipes[randomIndex];
-			_waitingRecipeResourcesList.Add(waitingRecipeResource);
+			WaitingRecipeResourcesList.Add(waitingRecipeResource);
 
-			GD.Print("Recipe " + randomIndex + " " + waitingRecipeResource._Name);
+			OnRecipeSpawned?.Invoke();
+
+			// GD.Print("Recipe " + randomIndex + " " + waitingRecipeResource._Name);
 		}
 	}
 
@@ -58,9 +64,11 @@ public partial class DeliveryManager : Node {
 				}
 				if (isPlateContentMatchesRecipe) {
 					//# Player delivered the correct recipe!
-					GD.Print("Player delivered the correct recipe!");
+					// GD.Print("Player delivered the correct recipe!");
 
-					_waitingRecipeResourcesList.Remove(waitingRecipeResource);
+					WaitingRecipeResourcesList.Remove(waitingRecipeResource);
+					OnRecipeCompleted?.Invoke();
+
 					return;
 				}
 			}

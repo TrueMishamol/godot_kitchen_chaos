@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp2v7u4ev35q3"]
+
+[ext_resource type="Script" uid="uid://celjwgyoua540" path="res://nodes/ui/delivery_manager_ui/DeliveryManagerUi.cs" id="1_3qb3k"]
+[ext_resource type="StyleBox" uid="uid://bw7wpyohtq01x" path="res://visuals/ui_theme/style_boxes/recipe_background.tres" id="1_b4a85"]
+[ext_resource type="Script" uid="uid://qp7nda4ca6dn" path="res://nodes/ui/delivery_manager_ui/DeliveryManagerSingleUi.cs" id="3_p47ab"]
+[ext_resource type="Texture2D" uid="uid://2jkyr6n3qxeh" path="res://assets/textures/kitchen_chaos_logo.png" id="4_16wii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pb36m"]
+content_margin_top = 16.0
+content_margin_bottom = 10.0
+
+[node name="DeliveryManagerUi" type="MarginContainer" node_paths=PackedStringArray("_Container", "_RecipeTemplate")]
+offset_right = 264.0
+offset_bottom = 190.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+script = ExtResource("1_3qb3k")
+_Container = NodePath("DeliveryManagerUi/RecipesContainer")
+_RecipeTemplate = NodePath("DeliveryManagerUi/RecipesContainer/RecipeTemplate")
+
+[node name="DeliveryManagerUi" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeliveryManagerUi"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pb36m")
+text = "RECIPES WAITING..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RecipesContainer" type="VBoxContainer" parent="DeliveryManagerUi"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RecipeTemplate" type="PanelContainer" parent="DeliveryManagerUi/RecipesContainer" node_paths=PackedStringArray("_RecipeNameLabel", "_IconsContainer", "_IconTemplate")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_b4a85")
+script = ExtResource("3_p47ab")
+_RecipeNameLabel = NodePath("VBoxContainer/RecipeNameLabel")
+_IconsContainer = NodePath("VBoxContainer/IconContainer")
+_IconTemplate = NodePath("VBoxContainer/IconContainer/IconTemplate")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeliveryManagerUi/RecipesContainer/RecipeTemplate"]
+layout_mode = 2
+
+[node name="RecipeNameLabel" type="Label" parent="DeliveryManagerUi/RecipesContainer/RecipeTemplate/VBoxContainer"]
+layout_mode = 2
+text = "New recipe..."
+
+[node name="IconContainer" type="HBoxContainer" parent="DeliveryManagerUi/RecipesContainer/RecipeTemplate/VBoxContainer"]
+layout_mode = 2
+
+[node name="IconTemplate" type="TextureRect" parent="DeliveryManagerUi/RecipesContainer/RecipeTemplate/VBoxContainer/IconContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("4_16wii")
+expand_mode = 1
+stretch_mode = 5

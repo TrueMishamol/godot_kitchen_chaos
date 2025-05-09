@@ -23,9 +23,8 @@ public partial class PlateIconsUi : Node3D {
 	}
 
 	private void UpdateVisual() {
-
 		foreach (Node child in _IconsContainer.GetChildren()) {
-			if (child == _IconTemplate) //! May delete it 'cause it is not just Node but Control
+			if (child == _IconTemplate)
 				continue;
 			child.QueueFree();
 		}

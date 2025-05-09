@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=24 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
+[ext_resource type="PackedScene" uid="uid://cp2v7u4ev35q3" path="res://nodes/ui/delivery_manager_ui/delivery_manager_ui.tscn" id="2_103ce"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
 [ext_resource type="Script" uid="uid://y1qqdibecv5f" path="res://scripts/DeliveryManager.cs" id="4_ro0ie"]
 [ext_resource type="Resource" uid="uid://d2rytyephrm6t" path="res://resources/recipe/_recipes_list.tres" id="5_103ce"]
@@ -31,6 +32,8 @@ size = Vector2(50.535, 40)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Vignette" parent="CanvasLayer" instance=ExtResource("11_tcjrq")]
+
+[node name="DeliveryManagerUi" parent="CanvasLayer" instance=ExtResource("2_103ce")]
 
 [node name="Environment" type="Node" parent="."]
 
