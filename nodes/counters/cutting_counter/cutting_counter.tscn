@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtyokdwsmrdd1"]
+[gd_scene load_steps=10 format=3 uid="uid://dtyokdwsmrdd1"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_ksloa"]
 [ext_resource type="Script" uid="uid://bk4cjlw4y0vj0" path="res://nodes/counters/cutting_counter/CuttingCounter.cs" id="2_fm0jt"]
@@ -9,8 +9,6 @@
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="7_iasr1"]
 [ext_resource type="Material" uid="uid://c4r3hfq46shig" path="res://assets/meshes/extracted/Kitchen Counter.Kitchen Counter.material" id="8_vnjq4"]
 [ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/progress_bar/world_space_progress_bar.tscn" id="9_oqc7n"]
-[ext_resource type="AudioStream" uid="uid://qrjwnoiirbc8" path="res://assets/sounds/sfx_random/sfx_chop.tres" id="10_4c8xu"]
-[ext_resource type="Script" uid="uid://ceaiy3m6bi50b" path="res://nodes/counters/cutting_counter/CuttingCounterAudio.cs" id="11_6a2e4"]
 
 [node name="CuttingCounter" instance=ExtResource("1_ksloa")]
 script = ExtResource("2_fm0jt")
@@ -37,8 +35,3 @@ surface_material_override/0 = ExtResource("8_vnjq4")
 [node name="WorldSpaceProgressBar" parent="." index="4" node_paths=PackedStringArray("_IHasProgress") instance=ExtResource("9_oqc7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
 _IHasProgress = NodePath("..")
-
-[node name="AudioStreamPlayer3D" parent="." index="5" node_paths=PackedStringArray("_CuttingCounter")]
-script = ExtResource("11_6a2e4")
-_CuttingCounter = NodePath("..")
-_SfxChop = ExtResource("10_4c8xu")
