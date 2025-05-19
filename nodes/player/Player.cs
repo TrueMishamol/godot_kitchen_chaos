@@ -1,8 +1,11 @@
 using Godot;
+using System;
 
 public partial class Player : CharacterBody3D, IKitchenObjectParent {
 
 
+
+	public event Action OnPickedSomething;
 
 	public static Player Instance { get; private set; }
 
@@ -14,7 +17,15 @@ public partial class Player : CharacterBody3D, IKitchenObjectParent {
 
 	//# IKitchenObjectParent
 	public Node3D KitchenObjectHoldingContainer => _HoldingPoint;
-	public KitchenObject KitchenObject { get; set; }
+	private KitchenObject b_kitchenObject;
+	public KitchenObject KitchenObject {
+		get => b_kitchenObject;
+		set {
+			b_kitchenObject = value;
+			if (value != null)
+				OnPickedSomething?.Invoke();
+		}
+	}
 
 
 

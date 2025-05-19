@@ -8,7 +8,8 @@ public partial class SelectedCounterVisual : Node3D {
 
 
 	public override void _Ready() {
-		Player.Instance._Interaction.OnSelectedCounterChanged += PlayerInteraction_OnSelectedCounterChanged;
+		if (Player.Instance != null)
+			Player.Instance._Interaction.OnSelectedCounterChanged += PlayerInteraction_OnSelectedCounterChanged;
 	}
 
 	private void PlayerInteraction_OnSelectedCounterChanged(BaseCounter selectedCounter) {

@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://ym3m2bos8eb0"]
+
+[ext_resource type="AudioStream" uid="uid://xolrd3lmq6io" path="res://assets/sounds/sfx/sfx_trash_01.wav" id="1_64yva"]
+[ext_resource type="AudioStream" uid="uid://b6bgw87sndvtd" path="res://assets/sounds/sfx/sfx_trash_02.wav" id="2_upyrx"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_64yva")
+stream_1/stream = ExtResource("2_upyrx")

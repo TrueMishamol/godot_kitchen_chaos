@@ -5,16 +5,16 @@ public partial class KitchenObject : Node3D {
 
 	[Export] public KitchenObjectResource _KitchenObjectResource { get; private set; }
 
-	private IKitchenObjectParent f_kitchenObjectParent;
+	private IKitchenObjectParent b_kitchenObjectParent;
 	public IKitchenObjectParent KitchenObjectParent {
-		get => f_kitchenObjectParent;
+		get => b_kitchenObjectParent;
 		set {
 			if (value.KitchenObject != null) {
 				GD.PushError(nameof(IKitchenObjectParent) + " already has a KitchenObject");
 				return;
 			}
 			SetKitchenObjectParent(value);
-			f_kitchenObjectParent = value;
+			b_kitchenObjectParent = value;
 		}
 	}
 
@@ -54,8 +54,8 @@ public partial class KitchenObject : Node3D {
 	}
 
 	private void SetKitchenObjectParent(IKitchenObjectParent newKitchenObjectParent) {
-		if (f_kitchenObjectParent != null) {
-			f_kitchenObjectParent.KitchenObject = null;
+		if (b_kitchenObjectParent != null) {
+			b_kitchenObjectParent.KitchenObject = null;
 		}
 
 		// Reparent

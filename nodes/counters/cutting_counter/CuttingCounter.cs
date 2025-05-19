@@ -5,6 +5,7 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 
 	// IHasProgress
 	public event Action<float> OnProgressChanged;
+	public event Action OnCut;
 
 	[Export] public CuttingRecipesListResource _CuttingRecipesListResource;
 
@@ -53,7 +54,8 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 			CuttingRecipeResource cuttingRecipeResource = GetCuttingRecipeResourceWithInput(KitchenObject._KitchenObjectResource);
 
 			OnProgressChanged?.Invoke((float)_cuttingProgress / cuttingRecipeResource._CuttingProgressMax);
-
+			OnCut?.Invoke();
+			
 			if (_cuttingProgress >= cuttingRecipeResource._CuttingProgressMax) {
 				KitchenObjectResource outputKitchenObjectResource = GetOutputForInput(KitchenObject._KitchenObjectResource);
 				// if (outputKitchenObjectResource == null)

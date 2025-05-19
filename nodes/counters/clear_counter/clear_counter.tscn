@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce5hwwuchw5nc"]
+[gd_scene load_steps=8 format=3 uid="uid://ce5hwwuchw5nc"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_w5f6c"]
 [ext_resource type="Script" uid="uid://ccedbrliq16k8" path="res://nodes/counters/clear_counter/ClearCounter.cs" id="2_q2m74"]
 [ext_resource type="PackedScene" uid="uid://cu7vg4rp5hv3k" path="res://assets/prefabs_visuals/counters_visuals/clear_counter_visual_prefab.tscn" id="2_we1s5"]
-[ext_resource type="Resource" uid="uid://lu5xl8vku4vi" path="res://resources/kitchen_objects/tomato.tres" id="3_l5boh"]
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="4_4yslb"]
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_q013q"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="5_4yslb"]
@@ -11,7 +10,6 @@
 
 [node name="ClearCounter" instance=ExtResource("1_w5f6c")]
 script = ExtResource("2_q2m74")
-_KitchenObjectResource = ExtResource("3_l5boh")
 
 [node name="ClearCounter_Visual" parent="." index="2" instance=ExtResource("2_we1s5")]
 

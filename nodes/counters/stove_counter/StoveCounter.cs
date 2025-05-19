@@ -17,11 +17,11 @@ public partial class StoveCounter : BaseCounter, IHasProgress {
 	[Export] private FryingRecipesListResource _FryingRecipesListResource;
 	[Export] private Timer _Timer;
 
-	private State f_currentState;
+	private State b_currentState;
 	private State _currentState {
-		get => f_currentState;
+		get => b_currentState;
 		set {
-			f_currentState = value;
+			b_currentState = value;
 			// GD.Print(value);
 			OnStateChanged?.Invoke(value);
 		}

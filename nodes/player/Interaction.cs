@@ -10,11 +10,11 @@ public partial class Interaction : Node {
 
 	[Export] private RayCast3D _Raycast;
 
-	private BaseCounter f_selectedCounter;
+	private BaseCounter b_selectedCounter;
 	private BaseCounter _selectedCounter {
-		get => f_selectedCounter;
+		get => b_selectedCounter;
 		set {
-			f_selectedCounter = value;
+			b_selectedCounter = value;
 			OnSelectedCounterChanged?.Invoke(value);
 		}
 	}

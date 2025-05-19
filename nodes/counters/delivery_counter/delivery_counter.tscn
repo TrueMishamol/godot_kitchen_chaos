@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://duqettq6plpwl"]
+[gd_scene load_steps=11 format=3 uid="uid://duqettq6plpwl"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_3so1y"]
 [ext_resource type="Script" uid="uid://b3yjd6xxpa3ai" path="res://nodes/counters/delivery_counter/DeliveryCounter.cs" id="2_5c13o"]
@@ -7,6 +7,9 @@
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="4_5c13o"]
 [ext_resource type="ArrayMesh" uid="uid://dtbveym5ntoq6" path="res://assets/meshes/extracted/Kitchen Counter.Counter.mesh" id="5_g3wyk"]
 [ext_resource type="Material" uid="uid://bsyvhjskiv8o5" path="res://assets/meshes/extracted/Kitchen Counter_Blue.material" id="6_khdvh"]
+[ext_resource type="Script" uid="uid://d1l6iruclk25k" path="res://nodes/counters/delivery_counter/DeliveryCounterAudio.cs" id="8_g3wyk"]
+[ext_resource type="AudioStream" uid="uid://dt8qng522yt0m" path="res://assets/sounds/sfx_random/sfx_delivery_fail.tres" id="9_5ndq8"]
+[ext_resource type="AudioStream" uid="uid://br6jg6k72x3cf" path="res://assets/sounds/sfx_random/sfx_delivery_success.tres" id="10_uedu7"]
 
 [node name="DeliveryCounter" instance=ExtResource("1_3so1y")]
 script = ExtResource("2_5c13o")
@@ -26,3 +29,8 @@ material_override = ExtResource("4_5c13o")
 gi_mode = 2
 mesh = ExtResource("5_g3wyk")
 surface_material_override/0 = ExtResource("6_khdvh")
+
+[node name="AudioStreamPlayer3D" parent="." index="4"]
+script = ExtResource("8_g3wyk")
+_SfxDeliveryFail = ExtResource("9_5ndq8")
+_SfxDeliverySuccess = ExtResource("10_uedu7")

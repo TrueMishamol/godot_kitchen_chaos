@@ -58,16 +58,20 @@ _SpawnRecipeTimer = NodePath("SpawnRecipeTimer")
 wait_time = 4.0
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_pb36m")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.694658, 0.71934, 0, -0.71934, 0.694658, 0, 30, 30)
 current = true
 fov = 20.0
 metadata/_edit_lock_ = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
+current = true
 
 [node name="CameraShake" parent="Camera3D" node_paths=PackedStringArray("_Camera") instance=ExtResource("4_b5spy")]
 _Camera = NodePath("..")

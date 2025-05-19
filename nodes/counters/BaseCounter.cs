@@ -1,14 +1,25 @@
 using Godot;
+using System;
 
 public partial class BaseCounter : Node3D, IKitchenObjectParent {
 
+
+	public event Action OnObjectDrop;
 
 	[Export] public Node3D _CounterTopPoint;
 
 	//# IKitchenObjectParent
 	public Node3D KitchenObjectHoldingContainer => _CounterTopPoint;
-	public KitchenObject KitchenObject { get; set; }
-
+	private KitchenObject b_kitchenObject;
+	public KitchenObject KitchenObject {
+		get => b_kitchenObject;
+		set {
+			b_kitchenObject = value;
+			if (value != null) {
+				OnObjectDrop?.Invoke();
+			}
+		}
+	}
 
 
 

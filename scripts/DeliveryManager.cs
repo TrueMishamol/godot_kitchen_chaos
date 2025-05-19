@@ -7,6 +7,8 @@ public partial class DeliveryManager : Node {
 
 	public event Action OnRecipeSpawned;
 	public event Action OnRecipeCompleted;
+	public event Action OnRecipeSuccess;
+	public event Action OnRecipeFailed;
 
 	public static DeliveryManager Instance { get; private set; }
 
@@ -68,6 +70,7 @@ public partial class DeliveryManager : Node {
 
 					WaitingRecipeResourcesList.Remove(waitingRecipeResource);
 					OnRecipeCompleted?.Invoke();
+					OnRecipeSuccess?.Invoke();
 
 					return;
 				}
@@ -76,6 +79,8 @@ public partial class DeliveryManager : Node {
 
 		//# No matches found!
 		// Player did NOT deliver a correct recipe!
-		GD.Print("Player did NOT deliver a correct recipe!");
+		// GD.Print("Player did NOT deliver a correct recipe!");
+
+		OnRecipeFailed?.Invoke();
 	}
 }

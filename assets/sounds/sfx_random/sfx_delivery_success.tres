@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://br6jg6k72x3cf"]
+
+[ext_resource type="AudioStream" uid="uid://80ndpr6hs8sq" path="res://assets/sounds/sfx/sfx_delivery_success_01.wav" id="1_ro1gf"]
+[ext_resource type="AudioStream" uid="uid://d1erro05u7pbt" path="res://assets/sounds/sfx/sfx_delivery_success_02.wav" id="2_sh277"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_ro1gf")
+stream_1/stream = ExtResource("2_sh277")

@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://dryo4ixdvygsv"]
+
+[ext_resource type="AudioStream" uid="uid://b6tbxqlfbuip3" path="res://assets/sounds/sfx/sfx_warning_01.wav" id="1_360dl"]
+[ext_resource type="AudioStream" uid="uid://ytptn22ou10y" path="res://assets/sounds/sfx/sfx_warning_02.wav" id="2_s4aqo"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_360dl")
+stream_1/stream = ExtResource("2_s4aqo")
