@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=26 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://cp2v7u4ev35q3" path="res://nodes/ui/delivery_manager_ui/delivery_manager_ui.tscn" id="2_103ce"]
+[ext_resource type="Script" uid="uid://b838rx5drkds3" path="res://scripts/GameStates.cs" id="2_xgstd"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
 [ext_resource type="Script" uid="uid://y1qqdibecv5f" path="res://scripts/DeliveryManager.cs" id="4_ro0ie"]
 [ext_resource type="Resource" uid="uid://d2rytyephrm6t" path="res://resources/recipe/_recipes_list.tres" id="5_103ce"]
@@ -29,6 +30,20 @@ material = ExtResource("1_ycayy")
 size = Vector2(50.535, 40)
 
 [node name="GameScene" type="Node3D"]
+
+[node name="GameStates" type="Node" parent="." node_paths=PackedStringArray("_WaitingToStartTimer", "_CountdownToStartTimer", "_GamePlayingTimer")]
+script = ExtResource("2_xgstd")
+_WaitingToStartTimer = NodePath("WaitingToStartTimer")
+_CountdownToStartTimer = NodePath("CountdownToStartTimer")
+_GamePlayingTimer = NodePath("GamePlayingTimer")
+
+[node name="WaitingToStartTimer" type="Timer" parent="GameStates"]
+
+[node name="CountdownToStartTimer" type="Timer" parent="GameStates"]
+wait_time = 3.0
+
+[node name="GamePlayingTimer" type="Timer" parent="GameStates"]
+wait_time = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

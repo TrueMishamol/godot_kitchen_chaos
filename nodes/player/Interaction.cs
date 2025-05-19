@@ -34,12 +34,18 @@ public partial class Interaction : Node {
 
 
 	private void GameInput_OnInteractPressed() {
+		if (!GameStates.Instance.IsGamePlaying)
+			return;
+
 		if (_selectedCounter != null) {
 			_selectedCounter.Interact(Player);
 		}
 	}
 
 	private void GameInput_OnInteractAlternatePressed() {
+		if (!GameStates.Instance.IsGamePlaying)
+			return;
+
 		if (_selectedCounter != null) {
 			_selectedCounter.InteractAlternate(Player);
 		}
@@ -48,6 +54,11 @@ public partial class Interaction : Node {
 
 
 	private void HandleInteractions() {
+		if (!GameStates.Instance.IsGamePlaying) {
+			_selectedCounter = null;
+			return;
+		}
+
 		if (_Raycast.GetCollider() is BaseCounter raycastHit) {
 			if (raycastHit != _selectedCounter) {
 				_selectedCounter = raycastHit;
