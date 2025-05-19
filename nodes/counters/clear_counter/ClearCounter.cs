@@ -7,6 +7,7 @@ public partial class ClearCounter : BaseCounter {
 				// Player HAS object
 				//# Player drops the object
 				player.KitchenObject.KitchenObjectParent = this;
+				InvokeOnObjectDrop();
 			}
 		} else {
 			// Counter HAS object

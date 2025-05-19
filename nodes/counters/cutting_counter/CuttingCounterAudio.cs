@@ -4,7 +4,7 @@ public partial class CuttingCounterAudio : BaseCounterAudio {
 
 
 	// External
-	[Export] private CuttingCounter _CuttingCounter; //! The same as in BaseCounterAudio
+	[Export] private CuttingCounter _CuttingCounter;
 
 	[Export] private AudioStream _SfxChop;
 

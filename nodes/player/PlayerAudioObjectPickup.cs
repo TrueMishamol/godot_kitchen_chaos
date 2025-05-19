@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class PlayerAudio : AudioStreamPlayer3D {
+public partial class PlayerAudioObjectPickup : AudioStreamPlayer3D {
 
 
 	[Export] private AudioStream _SfxObjectPickup;

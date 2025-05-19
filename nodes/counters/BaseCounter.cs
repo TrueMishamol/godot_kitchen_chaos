@@ -16,7 +16,7 @@ public partial class BaseCounter : Node3D, IKitchenObjectParent {
 		set {
 			b_kitchenObject = value;
 			if (value != null) {
-				OnObjectDrop?.Invoke();
+				// OnObjectDrop?.Invoke(); //! not here
 			}
 		}
 	}
@@ -29,6 +29,10 @@ public partial class BaseCounter : Node3D, IKitchenObjectParent {
 
 	public virtual void InteractAlternate(Player player) {
 
+	}
+
+	protected void InvokeOnObjectDrop() {
+		OnObjectDrop?.Invoke();
 	}
 
 }

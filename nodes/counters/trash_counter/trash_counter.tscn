@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfn12lqysapk5"]
+[gd_scene load_steps=9 format=3 uid="uid://cfn12lqysapk5"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_n1kyj"]
 [ext_resource type="Script" uid="uid://brsfhcnpl2mbx" path="res://nodes/counters/trash_counter/TrashCounter.cs" id="2_7lil7"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://f7f70doeaj5j" path="res://nodes/counters/SelectedCounterVisual.cs" id="3_7lil7"]
 [ext_resource type="PackedScene" uid="uid://c75kewbpo51ug" path="res://assets/meshes/Trash bin.gltf" id="4_5q08c"]
 [ext_resource type="Material" uid="uid://5eqern31ku55" path="res://assets/materials/counter_selected.material" id="5_65quh"]
+[ext_resource type="Script" uid="uid://cytt0qis65xq5" path="res://nodes/counters/trash_counter/TrashCounterAudio.cs" id="7_65quh"]
+[ext_resource type="AudioStream" uid="uid://ym3m2bos8eb0" path="res://assets/sounds/sfx_random/sfx_trash.tres" id="8_jwufa"]
 
 [node name="TrashCounter" instance=ExtResource("1_n1kyj")]
 script = ExtResource("2_7lil7")
@@ -23,5 +25,11 @@ transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 0, 0)
 
 [node name="trash bin" parent="Selected/Trash bin" index="0"]
 material_override = ExtResource("5_65quh")
+
+[node name="AudioStreamPlayer3D" parent="." index="4" node_paths=PackedStringArray("_TrashCounter", "_Counter")]
+script = ExtResource("7_65quh")
+_TrashCounter = NodePath("..")
+_SfxTrash = ExtResource("8_jwufa")
+_Counter = NodePath("..")
 
 [editable path="Selected/Trash bin"]

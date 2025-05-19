@@ -26,6 +26,7 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 
 					CuttingRecipeResource cuttingRecipeResource = GetCuttingRecipeResourceWithInput(KitchenObject._KitchenObjectResource);
 					OnProgressChanged?.Invoke((float)_cuttingProgress / cuttingRecipeResource._CuttingProgressMax);
+					InvokeOnObjectDrop();
 				}
 			}
 		} else {
@@ -34,6 +35,7 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 				// Player EMPTY-handed
 				//# Player grabs the object
 				KitchenObject.KitchenObjectParent = player;
+				OnProgressChanged?.Invoke(0f);
 			} else {
 				// Player HAS object
 				if (player.KitchenObject.TryGetPlate(out PlateKitchenObject plateKitchenObject)) {
@@ -55,7 +57,7 @@ public partial class CuttingCounter : BaseCounter, IHasProgress {
 
 			OnProgressChanged?.Invoke((float)_cuttingProgress / cuttingRecipeResource._CuttingProgressMax);
 			OnCut?.Invoke();
-			
+
 			if (_cuttingProgress >= cuttingRecipeResource._CuttingProgressMax) {
 				KitchenObjectResource outputKitchenObjectResource = GetOutputForInput(KitchenObject._KitchenObjectResource);
 				// if (outputKitchenObjectResource == null)

@@ -27,3 +27,6 @@ material_override = ExtResource("4_q013q")
 gi_mode = 2
 mesh = ExtResource("5_4yslb")
 surface_material_override/0 = ExtResource("6_l5boh")
+
+[node name="AudioStreamPlayer3D" parent="." index="4" node_paths=PackedStringArray("_Counter")]
+_Counter = NodePath("..")

@@ -20,8 +20,9 @@ shape = SubResource("BoxShape3D_ysypd")
 [node name="CounterTopPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." node_paths=PackedStringArray("_Counter")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1, 0)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+bus = &"Counters"
 script = ExtResource("2_cwolc")
-_Counter = NodePath("..")
 _SfxObjectDrop = ExtResource("3_7djuv")

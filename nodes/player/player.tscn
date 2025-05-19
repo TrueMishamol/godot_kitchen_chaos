@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbhqocqlgqjo6"]
+[gd_scene load_steps=10 format=3 uid="uid://dbhqocqlgqjo6"]
 
 [ext_resource type="Script" uid="uid://p5vsqgowb28t" path="res://nodes/player/Player.cs" id="1_4raw8"]
 [ext_resource type="Script" uid="uid://d0ys77qx4m5jq" path="res://nodes/player/Movement.cs" id="2_khfle"]
 [ext_resource type="PackedScene" uid="uid://j3bsq36mrl5u" path="res://assets/prefabs_visuals/player_visual.tscn" id="3_fn53c"]
 [ext_resource type="Script" uid="uid://b3urrthyuwnc" path="res://nodes/player/Interaction.cs" id="3_osu55"]
-[ext_resource type="Script" uid="uid://d2ktsc2g30oxx" path="res://nodes/player/PlayerAudio.cs" id="5_4j62c"]
+[ext_resource type="Script" uid="uid://d2ktsc2g30oxx" path="res://nodes/player/PlayerAudioObjectPickup.cs" id="5_4j62c"]
 [ext_resource type="AudioStream" uid="uid://cth128b60jv0b" path="res://assets/sounds/sfx_random/sfx_object_pickup.tres" id="6_hs1md"]
+[ext_resource type="Script" uid="uid://j8n15wkjg2ko" path="res://nodes/player/PlayerAudioFootsteps.cs" id="7_1fmtd"]
+[ext_resource type="AudioStream" uid="uid://bdn5tbbbxle32" path="res://assets/sounds/sfx_random/sfx_footstep.tres" id="7_5h4ma"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kk2rg"]
 radius = 0.65459
@@ -40,8 +42,18 @@ shape = SubResource("CapsuleShape3D_kk2rg")
 [node name="HoldingPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 1)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." node_paths=PackedStringArray("_Player")]
+[node name="ObjectPickup" type="AudioStreamPlayer3D" parent="HoldingPoint" node_paths=PackedStringArray("_Player")]
 bus = &"Player"
 script = ExtResource("5_4j62c")
 _SfxObjectPickup = ExtResource("6_hs1md")
-_Player = NodePath("..")
+_Player = NodePath("../..")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="." node_paths=PackedStringArray("_Movement", "_Timer")]
+stream = ExtResource("7_5h4ma")
+script = ExtResource("7_1fmtd")
+_Movement = NodePath("../Movement")
+_Timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="Footsteps"]
+wait_time = 0.25
+autostart = true

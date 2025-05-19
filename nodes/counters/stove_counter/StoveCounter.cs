@@ -60,6 +60,7 @@ public partial class StoveCounter : BaseCounter, IHasProgress {
 					player.KitchenObject.KitchenObjectParent = this;
 
 					CheckKitchenObjectAndStartTimer();
+					InvokeOnObjectDrop();
 				}
 			}
 		} else {

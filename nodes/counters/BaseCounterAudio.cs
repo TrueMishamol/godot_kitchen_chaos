@@ -11,11 +11,6 @@ public partial class BaseCounterAudio : AudioStreamPlayer3D {
 
 
 	public override void _Ready() {
-		GD.Print(_Counter.GetPath());
-		if (_Counter == null) {
-			// GD.PushError(this);
-			return;
-		}
 		_Counter.OnObjectDrop += () => {
 			Stream = _SfxObjectDrop;
 			Play();

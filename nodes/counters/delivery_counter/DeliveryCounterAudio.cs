@@ -9,7 +9,7 @@ public partial class DeliveryCounterAudio : BaseCounterAudio {
 
 
 	public override void _Ready() {
-		// base._Ready();
+		base._Ready();
 
 		DeliveryManager.Instance.OnRecipeSuccess += () => {
 			Stream = _SfxDeliverySuccess;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b1aqmbnrigw2y"]
+[gd_scene load_steps=17 format=4 uid="uid://b1aqmbnrigw2y"]
 
 [ext_resource type="PackedScene" uid="uid://wnumweg2bmy3" path="res://nodes/counters/_base_counter.tscn" id="1_fpv3j"]
 [ext_resource type="Script" uid="uid://cqr6mxvw8jmmc" path="res://nodes/counters/stove_counter/StoveCounter.cs" id="2_3pyv3"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bnnn6mrlytw6e" path="res://assets/meshes/Frying Pan.gltf" id="9_ipdad"]
 [ext_resource type="Material" uid="uid://cjn408d4ryvj8" path="res://assets/materials/stove_red_glow.material" id="10_cu13x"]
 [ext_resource type="PackedScene" uid="uid://wdoyien2v3p3" path="res://nodes/ui/progress_bar/world_space_progress_bar.tscn" id="13_fv50d"]
+[ext_resource type="Script" uid="uid://dgs1tipfycmm8" path="res://nodes/counters/stove_counter/StoveCounterAudio.cs" id="14_0xpme"]
+[ext_resource type="AudioStream" uid="uid://dkrbs5n4uedoc" path="res://assets/sounds/sfx/sfx_pan_sizzle_loop.wav" id="15_7n8ob"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_btesd"]
 resource_name = "Quad"
@@ -84,5 +86,15 @@ one_shot = true
 [node name="WorldSpaceProgressBar" parent="." index="5" node_paths=PackedStringArray("_IHasProgress") instance=ExtResource("13_fv50d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
 _IHasProgress = NodePath("..")
+
+[node name="AudioStreamPlayer3D" parent="." index="6" node_paths=PackedStringArray("_Counter")]
+_Counter = NodePath("..")
+
+[node name="Sizzling" type="AudioStreamPlayer3D" parent="." index="7" node_paths=PackedStringArray("_StoveCounter")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+bus = &"Counters"
+script = ExtResource("14_0xpme")
+_StoveCounter = NodePath("..")
+_SfxSizzle = ExtResource("15_7n8ob")
 
 [editable path="Selected/Frying Pan"]

@@ -35,3 +35,6 @@ surface_material_override/0 = ExtResource("6_igb2a")
 
 [node name="Timer" type="Timer" parent="." index="4"]
 one_shot = true
+
+[node name="AudioStreamPlayer3D" parent="." index="5" node_paths=PackedStringArray("_Counter")]
+_Counter = NodePath("..")
