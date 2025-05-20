@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://it7avsyuity1"]
+
+[ext_resource type="Texture2D" uid="uid://di4xxom4jfcgj" path="res://assets/textures/circle.svg" id="1_b63tc"]
+[ext_resource type="Script" uid="uid://bhvs8i3n6chrh" path="res://nodes/ui/game_playing_clock/GamePlayingClock.cs" id="1_eebrk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw4oa"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="GamePlayingClock" type="Control" node_paths=PackedStringArray("_ProgressBar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eebrk")
+_ProgressBar = NodePath("TextureProgressBar")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -114.0
+offset_top = 39.0
+offset_right = -45.0
+offset_bottom = 108.0
+grow_horizontal = 0
+max_value = 1.0
+step = 0.001
+value = 0.4
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("1_b63tc")
+texture_progress = ExtResource("1_b63tc")
+tint_under = Color(0.208014, 0.21482, 0.24261, 1)
+tint_progress = Color(0, 0.6, 1, 1)
+
+[node name="Panel" type="Panel" parent="TextureProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rw4oa")

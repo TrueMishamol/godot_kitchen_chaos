@@ -23,10 +23,19 @@ public partial class GameStates : Node {
 
 	public bool IsCountdownToStart => _state == State.CountdownToStart;
 	public bool IsGamePlaying => _state == State.GamePlaying;
+	public bool IsGameOver => _state == State.GameOver;
 	public float CountdownToStartTimerTime {
 		get {
 			if (_CountdownToStartTimer != null)
-				return (float)_CountdownToStartTimer.TimeLeft; //! double float or int
+				return (float)_CountdownToStartTimer.TimeLeft;
+			else
+				return 0f;
+		}
+	}
+	public float GamePlayingTimerTimeNormalized {
+		get {
+			if (_GamePlayingTimer != null)
+				return 1 - (float)(_GamePlayingTimer.TimeLeft / _GamePlayingTimer.WaitTime);
 			else
 				return 0f;
 		}

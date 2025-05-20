@@ -12,6 +12,8 @@ public partial class DeliveryManager : Node {
 
 	public static DeliveryManager Instance { get; private set; }
 
+	public int SuccessfullRecipesAmount { get; private set; } = 0;
+
 	[Export] private RecipesListResource _RecipesListResource;
 	[Export] private Timer _SpawnRecipeTimer;
 
@@ -69,6 +71,7 @@ public partial class DeliveryManager : Node {
 					// GD.Print("Player delivered the correct recipe!");
 
 					WaitingRecipeResourcesList.Remove(waitingRecipeResource);
+					SuccessfullRecipesAmount++;
 					OnRecipeCompleted?.Invoke();
 					OnRecipeSuccess?.Invoke();
 
