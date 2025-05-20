@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwvrps6walem1"]
+
+[ext_resource type="Script" uid="uid://evnomigx8qe" path="res://nodes/ui/game_start_countdown/GameStartCountdown.cs" id="1_iikac"]
+
+[node name="GameStartCountdown" type="RichTextLabel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0.6, 1, 1)
+theme_override_constants/outline_size = 90
+theme_override_font_sizes/bold_font_size = 185
+bbcode_enabled = true
+text = "[b]3"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_iikac")

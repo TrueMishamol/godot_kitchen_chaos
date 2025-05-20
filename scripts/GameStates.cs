@@ -1,10 +1,13 @@
 using Godot;
+using System;
 
 public partial class GameStates : Node {
 
 
 
 	public static GameStates Instance { get; private set; }
+
+	public event Action OnStateChanged;
 
 	[Export] private Timer _WaitingToStartTimer;
 	[Export] private Timer _CountdownToStartTimer;
@@ -18,7 +21,16 @@ public partial class GameStates : Node {
 		GameOver,
 	}
 
+	public bool IsCountdownToStart => _state == State.CountdownToStart;
 	public bool IsGamePlaying => _state == State.GamePlaying;
+	public float CountdownToStartTimerTime {
+		get {
+			if (_CountdownToStartTimer != null)
+				return (float)_CountdownToStartTimer.TimeLeft; //! double float or int
+			else
+				return 0f;
+		}
+	}
 
 	private State b_state = State.WaitingToStart;
 	private State _state {
@@ -46,6 +58,7 @@ public partial class GameStates : Node {
 				_WaitingToStartTimer.Timeout += () => {
 					_state = State.CountdownToStart;
 					_WaitingToStartTimer.QueueFree();
+					OnStateChanged?.Invoke();
 				};
 				break;
 			case State.CountdownToStart:
@@ -53,6 +66,7 @@ public partial class GameStates : Node {
 				_CountdownToStartTimer.Timeout += () => {
 					_state = State.GamePlaying;
 					_CountdownToStartTimer.QueueFree();
+					OnStateChanged?.Invoke();
 				};
 				break;
 			case State.GamePlaying:
@@ -60,6 +74,7 @@ public partial class GameStates : Node {
 				_GamePlayingTimer.Timeout += () => {
 					_state = State.GameOver;
 					_GamePlayingTimer.QueueFree();
+					OnStateChanged?.Invoke();
 				};
 				break;
 			case State.GameOver:

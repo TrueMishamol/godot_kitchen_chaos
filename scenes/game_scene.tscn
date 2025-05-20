@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=27 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://cp2v7u4ev35q3" path="res://nodes/ui/delivery_manager_ui/delivery_manager_ui.tscn" id="2_103ce"]
 [ext_resource type="Script" uid="uid://b838rx5drkds3" path="res://scripts/GameStates.cs" id="2_xgstd"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
 [ext_resource type="Script" uid="uid://y1qqdibecv5f" path="res://scripts/DeliveryManager.cs" id="4_ro0ie"]
+[ext_resource type="PackedScene" uid="uid://cwvrps6walem1" path="res://nodes/ui/game_start_countdown/game_start_countdown.tscn" id="4_xgstd"]
 [ext_resource type="Resource" uid="uid://d2rytyephrm6t" path="res://resources/recipe/_recipes_list.tres" id="5_103ce"]
 [ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_effects/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
@@ -50,6 +51,8 @@ wait_time = 10.0
 [node name="Vignette" parent="CanvasLayer" instance=ExtResource("11_tcjrq")]
 
 [node name="DeliveryManagerUi" parent="CanvasLayer" instance=ExtResource("2_103ce")]
+
+[node name="GameStartCountdown" parent="CanvasLayer" instance=ExtResource("4_xgstd")]
 
 [node name="Environment" type="Node" parent="."]
 

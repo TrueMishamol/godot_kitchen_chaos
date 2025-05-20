@@ -92,6 +92,7 @@ _Counter = NodePath("..")
 
 [node name="Sizzling" type="AudioStreamPlayer3D" parent="." index="7" node_paths=PackedStringArray("_StoveCounter")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
 bus = &"Counters"
 script = ExtResource("14_0xpme")
 _StoveCounter = NodePath("..")
