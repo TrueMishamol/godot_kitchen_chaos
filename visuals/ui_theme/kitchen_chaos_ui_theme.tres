@@ -1,4 +1,10 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://twt5lj8fbool"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://twt5lj8fbool"]
+
+[ext_resource type="StyleBox" uid="uid://d1d8nspsusefe" path="res://visuals/ui_theme/style_boxes/button/button_normal.tres" id="1_a08lw"]
+[ext_resource type="StyleBox" uid="uid://0g76esewkgsc" path="res://visuals/ui_theme/style_boxes/button/button_hover.tres" id="1_eekd5"]
+[ext_resource type="StyleBox" uid="uid://cqp6xrweia4hs" path="res://visuals/ui_theme/style_boxes/button/button_pressed.tres" id="3_lk1gj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eekd5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouy3k"]
 bg_color = Color(0.208014, 0.21482, 0.24261, 1)
@@ -15,5 +21,9 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [resource]
+Button/styles/focus = SubResource("StyleBoxEmpty_eekd5")
+Button/styles/hover = ExtResource("1_eekd5")
+Button/styles/normal = ExtResource("1_a08lw")
+Button/styles/pressed = ExtResource("3_lk1gj")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ouy3k")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_a08lw")

@@ -53,4 +53,8 @@ public partial class Player : CharacterBody3D, IKitchenObjectParent {
 		if (_PlayerVisual != null)
 			_PlayerVisual.PlayerMovement = _Movement;
 	}
+
+	public override void _ExitTree() {
+		Instance = null;
+	}
 }

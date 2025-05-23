@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpuqv8gcb7lt"]
+
+[ext_resource type="Script" uid="uid://d1ctm335b5qul" path="res://nodes/ui/main_menu/MainMenu.cs" id="1_uprux"]
+[ext_resource type="Texture2D" uid="uid://2jkyr6n3qxeh" path="res://assets/textures/kitchen_chaos_logo.png" id="2_4w6p3"]
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("_PlayButton", "_QuitButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uprux")
+_PlayButton = NodePath("PlayButton")
+_QuitButton = NodePath("QuitButton")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 57.0
+offset_right = 516.0
+offset_bottom = 319.0
+texture = ExtResource("2_4w6p3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = -242.0
+offset_right = 339.0
+offset_bottom = -158.0
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[b]PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = -139.0
+offset_right = 339.0
+offset_bottom = -77.0
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="QuitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1

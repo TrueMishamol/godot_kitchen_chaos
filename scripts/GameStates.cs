@@ -66,7 +66,7 @@ public partial class GameStates : Node {
 				_WaitingToStartTimer.Start();
 				_WaitingToStartTimer.Timeout += () => {
 					_state = State.CountdownToStart;
-					_WaitingToStartTimer.QueueFree();
+					// _WaitingToStartTimer.QueueFree();
 					OnStateChanged?.Invoke();
 				};
 				break;
@@ -74,7 +74,7 @@ public partial class GameStates : Node {
 				_CountdownToStartTimer.Start();
 				_CountdownToStartTimer.Timeout += () => {
 					_state = State.GamePlaying;
-					_CountdownToStartTimer.QueueFree();
+					// _CountdownToStartTimer.QueueFree();
 					OnStateChanged?.Invoke();
 				};
 				break;
@@ -82,7 +82,7 @@ public partial class GameStates : Node {
 				_GamePlayingTimer.Start();
 				_GamePlayingTimer.Timeout += () => {
 					_state = State.GameOver;
-					_GamePlayingTimer.QueueFree();
+					// _GamePlayingTimer.QueueFree();
 					OnStateChanged?.Invoke();
 				};
 				break;

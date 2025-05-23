@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://s0u2vct18ws6"]
+
+[ext_resource type="Script" uid="uid://dlrstg0fnpnp5" path="res://nodes/ui/game_pause_ui/GamePauseUi.cs" id="1_u8dlv"]
+
+[node name="GamePauseUi" type="Control" node_paths=PackedStringArray("_ResumeButton", "_MainMenuButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8dlv")
+_ResumeButton = NodePath("ResumeButton")
+_MainMenuButton = NodePath("MainMenuButton")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.207843, 0.215686, 0.243137, 0.490196)
+
+[node name="GameOverLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.126389
+anchor_right = 1.0
+anchor_bottom = 0.247222
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0.784314, 0, 1)
+theme_override_font_sizes/bold_font_size = 80
+bbcode_enabled = true
+text = "[b]PAUSED"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -50.0
+offset_right = 127.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ResumeButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[b]RESUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = 64.0
+offset_right = 127.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1

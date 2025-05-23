@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://da8gbmyxemu2m"]
+
+[ext_resource type="PackedScene" uid="uid://cpuqv8gcb7lt" path="res://nodes/ui/main_menu/main_menu.tscn" id="1_xhf6x"]
+[ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="2_6ad1t"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dshgbuyfixo5y" path="res://visuals/environment/camera_attributes_practical.tres" id="3_wbyn4"]
+[ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_8fdqi"]
+[ext_resource type="PackedScene" uid="uid://j3bsq36mrl5u" path="res://assets/prefabs_visuals/player_visual.tscn" id="6_6ad1t"]
+[ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="6_pw2k5"]
+[ext_resource type="Material" uid="uid://bby4a3y16y43e" path="res://assets/materials/player_body_blue.material" id="7_ofrqx"]
+[ext_resource type="Material" uid="uid://dxskhpetaba54" path="res://assets/materials/player_body_green.material" id="8_pw2k5"]
+[ext_resource type="Material" uid="uid://dkaty7xfncx1h" path="res://assets/materials/player_body_red.material" id="9_pe0bh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pe0bh"]
+material = ExtResource("6_pw2k5")
+size = Vector2(50.535, 40)
+
+[node name="MainMenuScene" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("1_xhf6x")]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = ExtResource("2_6ad1t")
+camera_attributes = ExtResource("3_wbyn4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 0, 0)
+light_color = Color(0.86454, 0.886074, 0.900303, 1)
+light_energy = 0.6
+shadow_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999936, -0.0112746, 0, 0.0112746, 0.999936, 0.211633, 1.03477, 8.56241)
+current = true
+fov = 30.0
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
+current = true
+
+[node name="CameraShake" parent="Camera3D" node_paths=PackedStringArray("_Camera") instance=ExtResource("4_8fdqi")]
+_Camera = NodePath("..")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("6_pw2k5")
+mesh = SubResource("PlaneMesh_pe0bh")
+metadata/_edit_lock_ = true
+
+[node name="PlayerVisual" parent="." instance=ExtResource("6_6ad1t")]
+transform = Transform3D(0.947869, 0, -0.318662, 0, 1, 0, 0.318662, 0, 0.947869, 1.05089, 0, 0)
+
+[node name="PlayerVisual2" parent="." instance=ExtResource("6_6ad1t")]
+transform = Transform3D(0.813141, 0, -0.582066, 0, 1, 0, 0.582066, 0, 0.813141, 0.161563, 0, -1.12569)
+
+[node name="MeshRenderer" parent="PlayerVisual2/Head" index="0"]
+material_override = ExtResource("7_ofrqx")
+
+[node name="MeshRenderer" parent="PlayerVisual2/Body" index="0"]
+material_override = ExtResource("7_ofrqx")
+
+[node name="PlayerVisual3" parent="." instance=ExtResource("6_6ad1t")]
+transform = Transform3D(0.908501, 0, -0.417883, 0, 1, 0, 0.417883, 0, 0.908501, 2.37064, 2.38419e-07, -2.9932)
+
+[node name="MeshRenderer" parent="PlayerVisual3/Head" index="0"]
+material_override = ExtResource("8_pw2k5")
+
+[node name="MeshRenderer" parent="PlayerVisual3/Body" index="0"]
+material_override = ExtResource("8_pw2k5")
+
+[node name="PlayerVisual4" parent="." instance=ExtResource("6_6ad1t")]
+transform = Transform3D(0.723714, 0, -0.6901, 0, 1, 0, 0.6901, 0, 0.723714, 2.68826, 0, -0.0372298)
+
+[node name="MeshRenderer" parent="PlayerVisual4/Head" index="0"]
+material_override = ExtResource("9_pe0bh")
+
+[node name="MeshRenderer" parent="PlayerVisual4/Body" index="0"]
+material_override = ExtResource("9_pe0bh")
+
+[editable path="PlayerVisual2"]
+[editable path="PlayerVisual3"]
+[editable path="PlayerVisual4"]

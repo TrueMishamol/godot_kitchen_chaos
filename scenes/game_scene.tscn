@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://2fmgobf58r4c"]
+[gd_scene load_steps=31 format=3 uid="uid://2fmgobf58r4c"]
 
 [ext_resource type="Material" uid="uid://c11gm3iq2rg85" path="res://assets/materials/floor.material" id="1_ycayy"]
 [ext_resource type="PackedScene" uid="uid://cp2v7u4ev35q3" path="res://nodes/ui/delivery_manager_ui/delivery_manager_ui.tscn" id="2_103ce"]
+[ext_resource type="Script" uid="uid://bsa1kavl3dc8r" path="res://scripts/GamePause.cs" id="2_r47aq"]
 [ext_resource type="Script" uid="uid://b838rx5drkds3" path="res://scripts/GameStates.cs" id="2_xgstd"]
 [ext_resource type="PackedScene" uid="uid://dcq12j2bl3dsc" path="res://modules/camera_effects/camera_shake/camera_shake.tscn" id="4_b5spy"]
 [ext_resource type="Script" uid="uid://y1qqdibecv5f" path="res://scripts/DeliveryManager.cs" id="4_ro0ie"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dpk0q26af3lf6" path="res://modules/camera_effects/camera_follow/camera_follow.tscn" id="5_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dbhqocqlgqjo6" path="res://nodes/player/player.tscn" id="6_rurhu"]
 [ext_resource type="AudioStream" uid="uid://dh0brcggy5b0i" path="res://assets/sounds/music/music.wav" id="7_pb36m"]
+[ext_resource type="PackedScene" uid="uid://s0u2vct18ws6" path="res://nodes/ui/game_pause_ui/game_pause_ui.tscn" id="8_6irsn"]
 [ext_resource type="PackedScene" uid="uid://ce5hwwuchw5nc" path="res://nodes/counters/clear_counter/clear_counter.tscn" id="8_b5spy"]
 [ext_resource type="Environment" uid="uid://csymolknbcmwa" path="res://visuals/environment/environment.tres" id="9_mw25s"]
 [ext_resource type="PackedScene" uid="uid://dxfc1eet3gcfg" path="res://nodes/counters/container_counter/container_counter.tscn" id="9_utbpp"]
@@ -41,14 +43,22 @@ _CountdownToStartTimer = NodePath("CountdownToStartTimer")
 _GamePlayingTimer = NodePath("GamePlayingTimer")
 
 [node name="WaitingToStartTimer" type="Timer" parent="GameStates"]
+one_shot = true
 
 [node name="CountdownToStartTimer" type="Timer" parent="GameStates"]
 wait_time = 3.0
+one_shot = true
 
 [node name="GamePlayingTimer" type="Timer" parent="GameStates"]
 wait_time = 10.0
+one_shot = true
+
+[node name="GamePause" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("2_r47aq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="Vignette" parent="CanvasLayer" instance=ExtResource("11_tcjrq")]
 
@@ -61,6 +71,8 @@ visible = false
 
 [node name="GameOver" parent="CanvasLayer" instance=ExtResource("5_ttvoq")]
 visible = false
+
+[node name="GamePauseUi" parent="CanvasLayer" instance=ExtResource("8_6irsn")]
 
 [node name="Environment" type="Node" parent="."]
 
@@ -85,6 +97,7 @@ wait_time = 4.0
 autostart = true
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("7_pb36m")
 volume_db = -10.0
 autoplay = true

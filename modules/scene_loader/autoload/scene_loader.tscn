@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://buliqv8iji6d1"]
+
+[ext_resource type="Script" uid="uid://fsiv8dpmidbs" path="res://modules/scene_loader/SceneLoader.cs" id="1_18aq4"]
+
+[node name="SceneLoader" type="Node"]
+process_mode = 3
+script = ExtResource("1_18aq4")
+MainMenuScenePath = "uid://da8gbmyxemu2m"
+GameScenePath = "uid://2fmgobf58r4c"
+LoadingScenePath = "uid://oqu16pxoamxt"

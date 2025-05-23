@@ -6,6 +6,7 @@ public partial class GameInput : Node {
 
 	public static event Action OnInteractPressed;
 	public static event Action OnInteractAlternatePressed;
+	public static event Action OnPausePressed;
 
 
 	private const string GO_LEFT = "go_left";
@@ -16,6 +17,7 @@ public partial class GameInput : Node {
 	private const string INTERACT = "interact";
 	private const string INTERACT_ALTERNATE = "interact_alternate";
 
+	private const string PAUSE = "pause";
 
 
 
@@ -30,6 +32,9 @@ public partial class GameInput : Node {
 		}
 		if (@event.IsActionPressed(INTERACT_ALTERNATE)) {
 			OnInteractAlternatePressed?.Invoke();
+		}
+		if (@event.IsActionPressed(PAUSE)) {
+			OnPausePressed?.Invoke();
 		}
 	}
 
